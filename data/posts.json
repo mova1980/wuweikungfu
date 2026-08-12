@@ -1,0 +1,46 @@
+[
+  {
+    "id": "p1",
+    "slug": "music-rhythm-wuwei",
+    "image": "/images/class.jpg",
+    "date": "2026-06-14",
+    "category": { "fa": "فلسفه", "en": "Philosophy", "zh": "哲学" },
+    "author": { "fa": "سیفو احسان شایانفر", "en": "Sifu Ehsan Shayanfar", "zh": "Ehsan Shayanfar 师父" },
+    "title": { "fa": "نقش موسیقی و ریتم در هنر رزمی وو وی کونگ فو", "en": "The Role of Music and Rhythm in Wu Wei Kung Fu", "zh": "音乐与节奏在无为功夫中的作用" },
+    "excerpt": { "fa": "ریتم، ضربانِ پنهان هر تکنیک است؛ از تنفس تا زنجیرهٔ ضربات، همه‌چیز موسیقی درونی دارد.", "en": "Rhythm is the hidden pulse of every technique; from breathing to chain punches, everything carries an inner music.", "zh": "节奏是每个技法隐藏的脉搏；从呼吸到连环冲拳，一切都蕴含内在的音乐。" },
+    "body": { "fa": "در وو وی کونگ فو، ریتم صرفاً یک مفهوم موسیقایی نیست؛ زبانِ بدن در گفت‌وگو با زمان است. هر تکنیک — از سادگی یک مشت مستقیم تا پیچیدگی چی سائو — دارای ضرباهنگی درونی است که اگر شاگرد آن را بشنود، حرکت از «تلاش» به «جریان» تبدیل می‌شود.\n\nتنفس، نخستین ساز این ارکستر است. دم و بازدم هماهنگ با انقباض و رهاسازی، همان چیزی است که چینیان «هماهنگی چی» می‌نامند. در تمرینات وو وی تائو، شاگردان ابتدا با متروم ذهنی تمرین می‌کنند؛ سپس این ریتم درونی می‌شود.\n\nزنجیرهٔ ضربات وینگ‌چون نمونهٔ کامل ریتمِ شکسته است: سرعت ثابت نیست، بلکه مانند موسیقی سنتی چینی، سکوت‌ها و انفجارها معنا می‌سازند. سیفو قهرمانی می‌گفت: «ضربه‌ای که ریتم ندارد، فقط حرکت دست است.»", "en": "In Wu Wei Kung Fu, rhythm is not merely a musical concept; it is the body's language in dialogue with time. Every technique — from a simple straight punch to the complexity of Chi Sau — carries an inner tempo. When the student learns to hear it, movement transforms from 'effort' into 'flow'.\n\nBreathing is the first instrument of this orchestra. Inhalation and exhalation synchronized with contraction and release is what the Chinese call 'harmony of Chi'. In Wu Wei Tao training, students first practice with a mental metronome; then the rhythm becomes internal.\n\nThe Wing Chun chain punch is the perfect example of broken rhythm: speed is not constant — like traditional Chinese music, silences and explosions create meaning. Sifu Ghahremani used to say: 'A strike without rhythm is just a hand moving.'", "zh": "在无为功夫中，节奏不仅是音乐概念，更是身体与时间对话的语言。每个技法——从简单的直拳到复杂的黐手——都有内在的节拍。当学员学会倾听它，动作便从「用力」化为「流动」。\n\n呼吸是这支乐团的第一件乐器。吸气与呼气与收缩、放松同步，正是中国人所说的「气之和谐」。在无为道训练中，学员先以心中的节拍器练习，而后节奏内化于心。\n\n咏春的连环冲拳是断奏节奏的完美范例：速度并非恒定——如同中国传统音乐，静默与爆发共同创造意义。Ghahremani 师父曾说：「没有节奏的打击，只是手在移动。」" }
+  },
+  {
+    "id": "p2",
+    "slug": "resistance-training-protein",
+    "image": "/images/kick.jpg",
+    "date": "2026-05-02",
+    "category": { "fa": "سلامتی", "en": "Health", "zh": "健康" },
+    "author": { "fa": "سیفو احسان شایانفر", "en": "Sifu Ehsan Shayanfar", "zh": "Ehsan Shayanfar 师父" },
+    "title": { "fa": "تأثیر تمرین مقاومتی بر سنتز و تجزیه پروتئین عضله اسکلتی", "en": "Resistance Training and Skeletal Muscle Protein Synthesis", "zh": "抗阻训练对骨骼肌蛋白质合成与分解的影响" },
+    "excerpt": { "fa": "نگاهی علمی به آنچه زیر پوستِ قدرت اتفاق می‌افتد؛ از سیگنال‌های آنابولیک تا ریکاوری هوشمند.", "en": "A scientific look at what happens beneath the skin of strength; from anabolic signaling to smart recovery.", "zh": "科学审视力量表象之下的机制：从合成代谢信号到智能恢复。" },
+    "body": { "fa": "تمرین مقاومتی محرک اصلی سنتز پروتئین عضله (MPS) است. پس از هر جلسهٔ تمرین قدرتی، مسیر سیگنالینگ mTOR فعال شده و تا ۴۸ ساعت میزان پروتئین‌سازی عضله افزایش می‌یابد. اما در همان زمان، تجزیهٔ پروتئین (MPB) نیز بالا می‌رود؛ تعادل این دو، همان قانون یین-یانگ در فیزیولوژی است.\n\nدر سیستم وو وی تائو، تمرینات قدرتی با اصل «حداکثر نتیجه با حداقل تقلا» طراحی می‌شوند: شدت کافی برای تحریک آنابولیک، بدون فرسودگی عصبی. مصرف ۲۰ تا ۴۰ گرم پروتئین باکیفیت در بازهٔ پس از تمرین، خواب کافی و مدیریت استرس (چی‌گونگ) سه ضلع ریکاوری هوشمندند.", "en": "Resistance training is the primary stimulus of muscle protein synthesis (MPS). After each strength session, the mTOR signaling pathway is activated and muscle protein building rises for up to 48 hours. Simultaneously, muscle protein breakdown (MPB) also increases; the balance between the two is the Yin-Yang law of physiology.\n\nIn the Wu Wei Tao system, strength work follows the principle of 'maximum result with minimum struggle': enough intensity to trigger anabolism, without neural burnout. Consuming 20–40g of quality protein post-training, sufficient sleep, and stress management (qigong) form the three sides of smart recovery.", "zh": "抗阻训练是肌肉蛋白质合成（MPS）的主要刺激。每次力量训练后，mTOR 信号通路被激活，肌肉蛋白质合成在长达 48 小时内升高。与此同时，蛋白质分解（MPB）也在增加；二者的平衡正是生理学中的阴阳法则。\n\n在无为道体系中，力量训练遵循「以最小的挣扎获得最大的成果」原则：强度足以触发合成代谢，却不造成神经疲劳。训练后摄入 20–40 克优质蛋白、充足睡眠与压力管理（气功）构成智能恢复的三边。" }
+  },
+  {
+    "id": "p3",
+    "slug": "three-section-staff",
+    "image": "/images/weapons.jpg",
+    "date": "2026-03-21",
+    "category": { "fa": "تکنیک", "en": "Technique", "zh": "技法" },
+    "author": { "fa": "سیفو احسان شایانفر", "en": "Sifu Ehsan Shayanfar", "zh": "Ehsan Shayanfar 师父" },
+    "title": { "fa": "چوب سه‌تکهٔ چینی (سانجیه‌گان): سلاحی نظامی یا ابزار تحول‌یافته از کشاورزی؟", "en": "The Chinese Three-Section Staff (Sanjiegun): Military Weapon or Farming Tool Evolved?", "zh": "中国三节棍：军事武器还是农具的演化？" },
+    "excerpt": { "fa": "سفری تاریخی به ریشه‌های یکی از دشوارترین و زیباترین سلاح‌های سرد کونگ فو.", "en": "A historical journey into the roots of one of Kung Fu's most difficult and beautiful weapons.", "zh": "探寻功夫中最难驾驭也最优美的冷兵器之一的历史根源。" },
+    "body": { "fa": "سانجیه‌گان (三节棍) از سه قطعه چوب هم‌اندازه تشکیل شده که با زنجیر یا طناب به هم متصل‌اند. روایت مشهور، ابداع آن را به «ژائو کوانگ‌یین»، بنیان‌گذار دودمان سونگ نسبت می‌دهد؛ اما شواهد تاریخی نشان می‌دهد که این سلاح احتمالاً از خرمن‌کوب‌های کشاورزی تکامل یافته است — درست مانند نانچاکو در اوکیناوا.\n\nدر وو وی تائو، آموزش سانجیه‌گان در سطوح پیشرفته آغاز می‌شود؛ زیرا این سلاح آینهٔ تمام‌نمای اصل وو وی است: کوچک‌ترین تقلا یا انقباض اضافه، چوب را به سمت خود شما بازمی‌گرداند. تنها با رهاسازی و هدایت نرمِ جریان حرکت است که سه قطعهٔ سرکش، به یک موج پیوسته تبدیل می‌شوند.", "en": "The Sanjiegun (三节棍) consists of three equal wooden sections connected by chain or rope. Legend attributes its invention to Zhao Kuangyin, founder of the Song dynasty; however, historical evidence suggests it likely evolved from agricultural flails — much like the Okinawan nunchaku.\n\nIn Wu Wei Tao, three-section staff training begins at advanced levels, because this weapon perfectly mirrors the Wu Wei principle: the slightest excess tension sends the staff back toward you. Only through release and soft guidance of momentum do the three unruly sections become one continuous wave.", "zh": "三节棍由三段等长的木棍以链条或绳索连接而成。传说其为宋朝开国皇帝赵匡胤所创；但历史证据表明，它更可能由农用连枷演化而来——正如冲绳的双节棍。\n\n在无为道中，三节棍训练始于高级阶段，因为这件兵器完美映照无为原则：稍有多余的紧张，棍便会反弹向你。唯有放松并柔和地引导动量，三段不驯的棍才化为一道连续的波。" }
+  },
+  {
+    "id": "p4",
+    "slug": "qigong-breath",
+    "image": "/images/qigong.jpg",
+    "date": "2026-01-30",
+    "category": { "fa": "چی‌گونگ", "en": "Qigong", "zh": "气功" },
+    "author": { "fa": "سیفو احسان شایانفر", "en": "Sifu Ehsan Shayanfar", "zh": "Ehsan Shayanfar 师父" },
+    "title": { "fa": "تنفس دان‌تیان: دروازهٔ ورود به چی‌گونگ", "en": "Dantian Breathing: The Gateway to Qigong", "zh": "丹田呼吸：气功的入门之门" },
+    "excerpt": { "fa": "چگونه سه دقیقه تنفس آگاهانه در روز، سیستم عصبی شما را بازتنظیم می‌کند.", "en": "How three minutes of conscious breathing a day resets your nervous system.", "zh": "每天三分钟的觉知呼吸如何重置你的神经系统。" },
+    "body": { "fa": "دان‌تیان پایینی، مرکز ثقل انرژی بدن در طب سنتی چینی است؛ نقطه‌ای سه انگشت زیر ناف. در چی‌گونگ به روش وو وی تائو، نخستین درس، بازگرداندن تنفس از قفسهٔ سینه به این مرکز است.\n\nتمرین ساده: بنشینید، ستون فقرات کشیده، شانه‌ها رها. با دم، تصور کنید نوری طلایی به دان‌تیان جاری می‌شود؛ با بازدم، تنش از تمام مفاصل خارج می‌شود. سه دقیقه، صبح و شب. پس از دو هفته، ضربان قلب استراحت پایین‌تر و کیفیت خواب بهتر خواهد شد — این، علمِ پنهان در دل سنت است.", "en": "The lower Dantian is the body's energetic center of gravity in traditional Chinese medicine — a point three fingers below the navel. In Wu Wei Tao qigong, the first lesson is returning the breath from the chest to this center.\n\nA simple practice: sit with a long spine and released shoulders. On the inhale, imagine golden light flowing into the Dantian; on the exhale, tension leaves every joint. Three minutes, morning and night. After two weeks, resting heart rate drops and sleep quality improves — this is the science hidden within tradition.", "zh": "下丹田是中医里身体能量的重心——脐下三指之处。在无为道气功中，第一课便是把呼吸从胸腔带回这个中心。\n\n简单练习：端坐，脊柱伸展，肩膀放松。吸气时，想象金色的光流入丹田；呼气时，紧张从所有关节中离开。早晚各三分钟。两周后，静息心率下降，睡眠质量改善——这便是隐藏在传统之中的科学。" }
+  }
+]

@@ -1,0 +1,175 @@
+{
+  "stats": {
+    "students": 350,
+    "years": 25,
+    "styles": 8,
+    "medals": 40
+  },
+  "hero": {
+    "slogan": {
+      "fa": "وسیع باش و تنها، سر به زیر و سخت",
+      "en": "Be vast and alone, humble and unyielding",
+      "zh": "浩瀚而孤独，谦逊而坚毅"
+    }
+  },
+  "payment": {
+    "mode": "mock",
+    "merchantId": "",
+    "gatewayName": {
+      "fa": "درگاه پرداخت امن وو وی",
+      "en": "Wu Wei Secure Payment Gateway",
+      "zh": "无为安全支付网关"
+    }
+  },
+  "ai": {
+    "baseUrl": "https://api.openai.com/v1",
+    "apiKey": "",
+    "model": "gpt-4o-mini"
+  },
+  "heroVideoNote": "hero",
+  "phone": "09123686344",
+  "email": "info@wuweikungfu.com",
+  "instagram": "sifu_shayanfar_chinese_kung_fu",
+  "aparat": "A_136369",
+  "timeline": [
+    {
+      "year": "۱۳۷۸ / 1999",
+      "fa": "آغاز مسیر با کاراته و کشتی در نوجوانی",
+      "en": "The journey begins with Karate and Wrestling",
+      "zh": "少年时代以空手道与摔跤开启旅程"
+    },
+    {
+      "year": "۱۳۸۴ / 2005",
+      "fa": "ورود به دنیای بوکس و مبارزات آزاد",
+      "en": "Entering the world of Boxing and free fighting",
+      "zh": "进入拳击与自由搏击的世界"
+    },
+    {
+      "year": "۱۳۹۰ / 2011",
+      "fa": "آشنایی با وینگ‌چون و کونگ فوی اصیل چینی",
+      "en": "Discovering Wing Chun and authentic Chinese Kung Fu",
+      "zh": "接触咏春与正宗中国功夫"
+    },
+    {
+      "year": "۱۳۹۵ / 2016",
+      "fa": "شاگردی نزد سیفو قهرمانی و ورود به سیستم وو وی تائو",
+      "en": "Studying under Sifu Ghahremani; entering the Wu Wei Tao system",
+      "zh": "师从 Ghahremani 师父，进入无为道体系"
+    },
+    {
+      "year": "۱۳۹۹ / 2020",
+      "fa": "دریافت نمایندگی رسمی وو وی تائو در استان البرز",
+      "en": "Becoming official Wu Wei Tao representative of Alborz Province",
+      "zh": "成为无为道阿尔博尔兹省官方代表"
+    },
+    {
+      "year": "۱۴۰۲ / 2023",
+      "fa": "انتشار کتاب «چی گونگ به روش کونگ فوی اصیل چینی»",
+      "en": "Publishing the book \"Qigong the Authentic Chinese Kung Fu Way\"",
+      "zh": "出版《正宗中国功夫之气功》一书"
+    },
+    {
+      "year": "۱۴۰۳ / 2024",
+      "fa": "ریاست فدراسیون ووشو غرب استان تهران",
+      "en": "Presidency of the Wushu Federation of West Tehran Province",
+      "zh": "出任德黑兰省西部武术联合会主席"
+    }
+  ],
+  "honors": [
+    {
+      "fa": "بیش از ۲۵ سال سابقهٔ ورزشی حرفه‌ای",
+      "en": "Over 25 years of professional athletic experience",
+      "zh": "超过 25 年的专业运动经验"
+    },
+    {
+      "fa": "مربی رسمی در ۸ رشتهٔ رزمی و قدرتی",
+      "en": "Certified coach in 8 martial and strength disciplines",
+      "zh": "8 个武术与体能项目的认证教练"
+    },
+    {
+      "fa": "نمایندهٔ رسمی وو وی تائو در استان البرز",
+      "en": "Official Wu Wei Tao representative of Alborz Province",
+      "zh": "无为道阿尔博尔兹省官方代表"
+    },
+    {
+      "fa": "رئیس فدراسیون ووشو غرب استان تهران",
+      "en": "President of the Wushu Federation of West Tehran",
+      "zh": "德黑兰省西部武术联合会主席"
+    },
+    {
+      "fa": "نویسندهٔ کتاب مرجع چی‌گونگ به روش وو وی تائو",
+      "en": "Author of the reference book on Wu Wei Tao Qigong",
+      "zh": "无为道气功权威著作作者"
+    }
+  ],
+  "coaches": [
+    {
+      "fa": "مربی ارشد بخش کودکان و نوجوانان",
+      "en": "Head coach, kids & teens division",
+      "zh": "少儿部总教练",
+      "name": {
+        "fa": "مربی رضا کاویانی",
+        "en": "Coach Reza Kaviani",
+        "zh": "Reza Kaviani 教练"
+      }
+    },
+    {
+      "fa": "مربی چی سائو و آدمک چوبی",
+      "en": "Chi Sau & Wooden Dummy instructor",
+      "zh": "黐手与木人桩教练",
+      "name": {
+        "fa": "مربی مهدی توکلی",
+        "en": "Coach Mahdi Tavakoli",
+        "zh": "Mahdi Tavakoli 教练"
+      }
+    },
+    {
+      "fa": "مربی چی‌گونگ و حرکات اصلاحی",
+      "en": "Qigong & corrective movement instructor",
+      "zh": "气功与矫正运动教练",
+      "name": {
+        "fa": "مربی سارا نیک‌نام",
+        "en": "Coach Sara Niknam",
+        "zh": "Sara Niknam 教练"
+      }
+    }
+  ],
+  "belts": [
+    {
+      "fa": "سفید — آغاز",
+      "en": "White — Beginning",
+      "zh": "白带——起点",
+      "color": "#F5F0E8"
+    },
+    {
+      "fa": "زرد — بیداری",
+      "en": "Yellow — Awakening",
+      "zh": "黄带——觉醒",
+      "color": "#E5C878"
+    },
+    {
+      "fa": "سبز — رشد",
+      "en": "Green — Growth",
+      "zh": "绿带——成长",
+      "color": "#4C9A6B"
+    },
+    {
+      "fa": "آبی — جریان",
+      "en": "Blue — Flow",
+      "zh": "蓝带——流动",
+      "color": "#3A6EA5"
+    },
+    {
+      "fa": "قهوه‌ای — ریشه",
+      "en": "Brown — Rooting",
+      "zh": "棕带——扎根",
+      "color": "#8B5E3C"
+    },
+    {
+      "fa": "مشکی — سکون",
+      "en": "Black — Stillness",
+      "zh": "黑带——静",
+      "color": "#C9A84C"
+    }
+  ]
+}

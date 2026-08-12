@@ -1,0 +1,8 @@
+[
+  { "id": "v1", "image": "/images/hero.jpg", "duration": "4:12", "category": { "fa": "تکنیک‌ها", "en": "Techniques", "zh": "技法" }, "title": { "fa": "زنجیرهٔ ضربات وینگ‌چون — آموزش گام‌به‌گام", "en": "Wing Chun Chain Punch — Step by Step", "zh": "咏春连环冲拳——分步教学" }, "src": "aparat:A_136369" },
+  { "id": "v2", "image": "/images/dummy.jpg", "duration": "7:45", "category": { "fa": "تکنیک‌ها", "en": "Techniques", "zh": "技法" }, "title": { "fa": "فرم اول آدمک چوبی", "en": "Wooden Dummy Form — Section One", "zh": "木人桩第一节" }, "src": "aparat:A_136369" },
+  { "id": "v3", "image": "/images/class.jpg", "duration": "12:30", "category": { "fa": "مسابقات", "en": "Competitions", "zh": "比赛" }, "title": { "fa": "گزیدهٔ مسابقات استانی ۱۴۰۴", "en": "Provincial Competition Highlights 2026", "zh": "2026 省级比赛集锦" }, "src": "aparat:A_136369" },
+  { "id": "v4", "image": "/images/sifu.jpg", "duration": "18:02", "category": { "fa": "مصاحبه‌ها", "en": "Interviews", "zh": "访谈" }, "title": { "fa": "گفت‌وگو با سیفو شایانفر دربارهٔ فلسفهٔ وو وی", "en": "A Conversation with Sifu Shayanfar on Wu Wei Philosophy", "zh": "与 Shayanfar 师父谈无为哲学" }, "src": "aparat:A_136369" },
+  { "id": "v5", "image": "/images/qigong.jpg", "duration": "9:21", "category": { "fa": "تکنیک‌ها", "en": "Techniques", "zh": "技法" }, "title": { "fa": "چی‌گونگ صبحگاهی — ۸ حرکت ابریشم", "en": "Morning Qigong — The 8 Silk Movements", "zh": "晨间气功——八段锦" }, "src": "aparat:A_136369" },
+  { "id": "v6", "image": "/images/weapons.jpg", "duration": "6:54", "category": { "fa": "مراسم", "en": "Ceremonies", "zh": "仪式" }, "title": { "fa": "مراسم اهدای کمربند — دورهٔ ۱۴۰۳", "en": "Belt Ceremony — Class of 2025", "zh": "2025 届授带仪式" }, "src": "aparat:A_136369" }
+]

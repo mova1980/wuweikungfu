@@ -1,0 +1,62 @@
+[
+  {
+    "id": "t1",
+    "slug": "hand-strikes",
+    "image": "/images/hero.jpg",
+    "icon": "拳",
+    "level": { "fa": "مبتدی تا پیشرفته", "en": "Beginner to Advanced", "zh": "初级至高级" },
+    "title": { "fa": "ضربات دست", "en": "Hand Strikes", "zh": "手法" },
+    "desc": { "fa": "زنجیرهٔ ضربات مستقیم وینگ‌چون، ضربات کف دست، انگشتان و آرنج در کوتاه‌ترین مسیر ممکن به هدف. اصل خط مرکزی، قلب این بخش است.", "en": "Wing Chun chain punches, palm strikes, finger jabs and elbows travelling the shortest possible path to the target. The centerline principle is the heart of this pillar.", "zh": "咏春连环冲拳、掌击、标指与肘法，以最短路径直取目标。中线原则是此支柱的核心。" },
+    "keys": { "fa": ["حفظ خط مرکزی", "رهاسازی شانه", "نیرو از زمین، نه از بازو"], "en": ["Guard the centerline", "Release the shoulder", "Power from the ground, not the arm"], "zh": ["守住中线", "放松肩膀", "力从地起，而非手臂"] }
+  },
+  {
+    "id": "t2",
+    "slug": "kicks",
+    "image": "/images/kick.jpg",
+    "icon": "腿",
+    "level": { "fa": "مبتدی تا پیشرفته", "en": "Beginner to Advanced", "zh": "初级至高级" },
+    "title": { "fa": "ضربات پا", "en": "Kicks", "zh": "腿法" },
+    "desc": { "fa": "ضربات پای کوتاه، سریع و پنهان وو وی تائو؛ همیشه زیر خط کمر، همیشه هم‌زمان با کار دست. پا در وو وی تائو ابزار قطع تعادل حریف است.", "en": "The short, fast and hidden kicks of Wu Wei Tao; always below the waist, always simultaneous with hand work. In Wu Wei Tao the leg is a tool for breaking the opponent's balance.", "zh": "无为道短促、迅疾、隐蔽的腿法；始终低于腰线，始终与手法同步。在无为道中，腿是破坏对手平衡的工具。" },
+    "keys": { "fa": ["ضربه بدون تلگراف", "تعادل روی یک پا", "هماهنگی دست و پا"], "en": ["Kick without telegraphing", "Balance on one leg", "Hand-foot coordination"], "zh": ["出腿不露先兆", "单腿平衡", "手脚协调"] }
+  },
+  {
+    "id": "t3",
+    "slug": "chi-sau",
+    "image": "/images/class.jpg",
+    "icon": "黐",
+    "level": { "fa": "متوسط", "en": "Intermediate", "zh": "中级" },
+    "title": { "fa": "چی سائو", "en": "Chi Sau", "zh": "黐手" },
+    "desc": { "fa": "«دست‌های چسبنده» — تمرین حساسیت لمسی که در آن شاگرد می‌آموزد نیت حریف را پیش از دیدن، از طریق تماس حس کند. چی سائو آزمایشگاه زندهٔ فلسفهٔ وو وی است.", "en": "'Sticky hands' — the tactile sensitivity drill where the student learns to feel the opponent's intention through contact before seeing it. Chi Sau is the living laboratory of Wu Wei philosophy.", "zh": "「黐手」——触觉敏感度训练，学员通过接触在看见之前感知对手的意图。黐手是无为哲学的活实验室。" },
+    "keys": { "fa": ["گوش دادن با پوست", "نرمی در تماس، قدرت در لحظه", "پر کردن خلأ حریف"], "en": ["Listening with the skin", "Softness in contact, power in the moment", "Filling the opponent's void"], "zh": ["以皮肤倾听", "接触时柔，出手时刚", "填补对手的空隙"] }
+  },
+  {
+    "id": "t4",
+    "slug": "weapons",
+    "image": "/images/weapons.jpg",
+    "icon": "械",
+    "level": { "fa": "پیشرفته", "en": "Advanced", "zh": "高级" },
+    "title": { "fa": "سلاح سرد", "en": "Weapons", "zh": "兵器" },
+    "desc": { "fa": "چوب بلند، شمشیرهای پروانه‌ای و چوب سه‌تکه (سانجیه‌گان). سلاح در وو وی تائو امتداد دست است؛ آینه‌ای که کوچک‌ترین تقلای اضافه را آشکار می‌کند.", "en": "Long pole, butterfly swords and the three-section staff (Sanjiegun). In Wu Wei Tao the weapon is an extension of the hand; a mirror revealing the slightest excess effort.", "zh": "长棍、蝴蝶双刀与三节棍。在无为道中，兵器是手的延伸，是一面照出丝毫多余用力的镜子。" },
+    "keys": { "fa": ["سلاح، امتداد بدن", "کنترل فاصله", "رهاسازی مچ"], "en": ["The weapon extends the body", "Distance control", "Wrist release"], "zh": ["兵器为身体之延伸", "距离控制", "手腕放松"] }
+  },
+  {
+    "id": "t5",
+    "slug": "grappling",
+    "image": "/images/sifu.jpg",
+    "icon": "摔",
+    "level": { "fa": "متوسط تا پیشرفته", "en": "Intermediate to Advanced", "zh": "中级至高级" },
+    "title": { "fa": "گراپلینگ", "en": "Grappling", "zh": "摔法" },
+    "desc": { "fa": "قفل‌های مفصلی (چین‌نا)، پرتاب‌ها و کنترل ایستاده. تلفیق تجربهٔ کشتی سیفو شایانفر با اصول چینی، این بخش را به یکی از متمایزترین بخش‌های سیستم تبدیل کرده است.", "en": "Joint locks (Chin Na), throws and standing control. The fusion of Sifu Shayanfar's wrestling background with Chinese principles makes this one of the system's most distinctive pillars.", "zh": "擒拿、摔投与站立控制。Shayanfar 师父的摔跤功底与中国原理相融合，使其成为体系中最具特色的支柱之一。" },
+    "keys": { "fa": ["زاویه به جای زور", "کنترل مرکز ثقل", "تسلیم بدون آسیب"], "en": ["Angle over force", "Control the center of gravity", "Submission without injury"], "zh": ["以角度代替蛮力", "控制重心", "制服而不伤害"] }
+  },
+  {
+    "id": "t6",
+    "slug": "wooden-dummy",
+    "image": "/images/dummy.jpg",
+    "icon": "桩",
+    "level": { "fa": "متوسط تا پیشرفته", "en": "Intermediate to Advanced", "zh": "中级至高级" },
+    "title": { "fa": "آدمک چوبی", "en": "Wooden Dummy", "zh": "木人桩" },
+    "desc": { "fa": "موک یان جونگ — استاد چوبی که هرگز خسته نمی‌شود. ۱۱۶ حرکت کلاسیک که زوایا، فاصله و جریان را در بدن حک می‌کنند.", "en": "Muk Yan Jong — the wooden master that never tires. The 116 classical movements engrave angles, distance and flow into the body.", "zh": "木人桩——永不疲倦的木头师父。116 式经典动作将角度、距离与流动铭刻于身。" },
+    "keys": { "fa": ["نرمی در برخورد با سختی", "زاویه‌سازی مداوم", "جریان بدون توقف"], "en": ["Softness against hardness", "Constant angling", "Uninterrupted flow"], "zh": ["以柔克刚", "不断变换角度", "流动不息"] }
+  }
+]
