@@ -46,7 +46,7 @@
     "icon": "摔",
     "level": { "fa": "متوسط تا پیشرفته", "en": "Intermediate to Advanced", "zh": "中级至高级" },
     "title": { "fa": "گراپلینگ", "en": "Grappling", "zh": "摔法" },
-    "desc": { "fa": "قفل‌های مفصلی (چین‌نا)، پرتاب‌ها و کنترل ایستاده. تلفیق تجربهٔ کشتی سیفو شایانفر با اصول چینی، این بخش را به یکی از متمایزترین بخش‌های سیستم تبدیل کرده است.", "en": "Joint locks (Chin Na), throws and standing control. The fusion of Sifu Shayanfar's wrestling background with Chinese principles makes this one of the system's most distinctive pillars.", "zh": "擒拿、摔投与站立控制。Shayanfar 师父的摔跤功底与中国原理相融合，使其成为体系中最具特色的支柱之一。" },
+    "desc": { "fa": "قفل‌های مفصلی (چین‌نا)، پرتاب‌ها و کنترل ایستاده. تلفیق تجربهٔ کشتی سی فو شایان فر با اصول چینی، این بخش را به یکی از متمایزترین بخش‌های سیستم تبدیل کرده است.", "en": "Joint locks (Chin Na), throws and standing control. The fusion of Sifu Shayanfar's wrestling background with Chinese principles makes this one of the system's most distinctive pillars.", "zh": "擒拿、摔投与站立控制。Shayanfar 师父的摔跤功底与中国原理相融合，使其成为体系中最具特色的支柱之一。" },
     "keys": { "fa": ["زاویه به جای زور", "کنترل مرکز ثقل", "تسلیم بدون آسیب"], "en": ["Angle over force", "Control the center of gravity", "Submission without injury"], "zh": ["以角度代替蛮力", "控制重心", "制服而不伤害"] }
   },
   {

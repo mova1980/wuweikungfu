@@ -10,6 +10,11 @@
       "fa": "وسیع باش و تنها، سر به زیر و سخت",
       "en": "Be vast and alone, humble and unyielding",
       "zh": "浩瀚而孤独，谦逊而坚毅"
+    },
+    "slogan2": {
+      "fa": "اگر همه جا تاریک بود، دوباره بنگر! شاید نور خود تو باشی",
+      "en": "If all around is darkness, look again — perhaps the light is you.",
+      "zh": "若四周皆暗，再看一次——也许光就是你自己。"
     }
   },
   "payment": {
@@ -52,9 +57,9 @@
     },
     {
       "year": "۱۳۹۵ / 2016",
-      "fa": "شاگردی نزد سیفو قهرمانی و ورود به سیستم وو وی تائو",
-      "en": "Studying under Sifu Ghahremani; entering the Wu Wei Tao system",
-      "zh": "师从 Ghahremani 师父，进入无为道体系"
+      "fa": "شاگردی نزد اساتید به‌نام ایران و ورود به سیستم وو وی",
+      "en": "Studying under Iran's renowned masters; entering the Wu Wei system",
+      "zh": "师从伊朗著名武术大师，进入无为体系"
     },
     {
       "year": "۱۳۹۹ / 2020",
@@ -102,38 +107,6 @@
       "zh": "无为道气功权威著作作者"
     }
   ],
-  "coaches": [
-    {
-      "fa": "مربی ارشد بخش کودکان و نوجوانان",
-      "en": "Head coach, kids & teens division",
-      "zh": "少儿部总教练",
-      "name": {
-        "fa": "مربی رضا کاویانی",
-        "en": "Coach Reza Kaviani",
-        "zh": "Reza Kaviani 教练"
-      }
-    },
-    {
-      "fa": "مربی چی سائو و آدمک چوبی",
-      "en": "Chi Sau & Wooden Dummy instructor",
-      "zh": "黐手与木人桩教练",
-      "name": {
-        "fa": "مربی مهدی توکلی",
-        "en": "Coach Mahdi Tavakoli",
-        "zh": "Mahdi Tavakoli 教练"
-      }
-    },
-    {
-      "fa": "مربی چی‌گونگ و حرکات اصلاحی",
-      "en": "Qigong & corrective movement instructor",
-      "zh": "气功与矫正运动教练",
-      "name": {
-        "fa": "مربی سارا نیک‌نام",
-        "en": "Coach Sara Niknam",
-        "zh": "Sara Niknam 教练"
-      }
-    }
-  ],
   "belts": [
     {
       "fa": "سفید — آغاز",
@@ -145,13 +118,13 @@
       "fa": "زرد — بیداری",
       "en": "Yellow — Awakening",
       "zh": "黄带——觉醒",
-      "color": "#E5C878"
+      "color": "#E8C84B"
     },
     {
       "fa": "سبز — رشد",
       "en": "Green — Growth",
       "zh": "绿带——成长",
-      "color": "#4C9A6B"
+      "color": "#3E9B5F"
     },
     {
       "fa": "آبی — جریان",
@@ -160,16 +133,28 @@
       "color": "#3A6EA5"
     },
     {
+      "fa": "بنفش — بینش",
+      "en": "Purple — Insight",
+      "zh": "紫带——洞见",
+      "color": "#7B4FA5"
+    },
+    {
       "fa": "قهوه‌ای — ریشه",
       "en": "Brown — Rooting",
       "zh": "棕带——扎根",
       "color": "#8B5E3C"
     },
     {
+      "fa": "قرمز — انرژی",
+      "en": "Red — Energy",
+      "zh": "红带——能量",
+      "color": "#C41E24"
+    },
+    {
       "fa": "مشکی — سکون",
       "en": "Black — Stillness",
       "zh": "黑带——静",
-      "color": "#C9A84C"
+      "color": "#1c1c1e"
     }
   ]
 }
