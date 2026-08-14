@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { readCollection, writeCollection, newId, type Collection } from "@/lib/db";
 
-const ALLOWED: Collection[] = ["content", "posts", "techniques", "videos", "events", "products", "testimonials", "messages", "registrations", "orders"];
+const ALLOWED: Collection[] = ["content", "posts", "techniques", "videos", "events", "products", "testimonials", "messages", "registrations", "orders", "coaches", "assessments"];
 
 function guard(req: NextRequest) {
   return req.cookies.get("wuwei_admin")?.value === "granted";

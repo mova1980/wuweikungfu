@@ -35,6 +35,7 @@ export default function Navbar({ locale, dict }: { locale: Locale; dict: any }) 
     [`/${locale}/shop`, dict.nav.shop],
     [`/${locale}/videos`, dict.nav.videos],
     [`/${locale}/events`, dict.nav.events],
+    [`/${locale}/corrective`, dict.nav.corrective],
     [`/${locale}/contact`, dict.nav.contact],
   ];
 
@@ -52,7 +53,7 @@ export default function Navbar({ locale, dict }: { locale: Locale; dict: any }) 
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-5 text-sm lg:flex">
+        <nav className="hidden items-center gap-4 text-[13px] lg:flex">
           {links.map(([href, label]) => {
             const active = pathname === href;
             return (
@@ -88,6 +89,14 @@ export default function Navbar({ locale, dict }: { locale: Locale; dict: any }) 
               ))}
             </div>
           </div>
+          <Link href={`/${locale}/assessment`}
+            className="btn-energy hidden items-center gap-1.5 rounded-full border border-[#c41e24]/60 bg-[#c41e24]/15 px-3.5 py-2 text-xs font-bold text-[#ff8a85] transition hover:scale-105 hover:bg-[#c41e24]/25 xl:flex">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute h-full w-full animate-ping rounded-full bg-[#e04b46] opacity-70" />
+              <span className="relative h-2 w-2 rounded-full bg-[#e04b46]" />
+            </span>
+            {dict.nav.assessment}
+          </Link>
           <Link href={`/${locale}/register`}
             className="btn-energy hidden rounded-full bg-gradient-to-l from-[#c9a84c] to-[#9a7b2e] px-4 py-2 text-xs font-bold text-black transition hover:brightness-110 md:block">
             {dict.nav.register}
@@ -101,7 +110,7 @@ export default function Navbar({ locale, dict }: { locale: Locale; dict: any }) 
 
       {open && (
         <nav className="nav-glass mx-4 mt-2 flex flex-col gap-1 rounded-2xl p-3 lg:hidden">
-          {[...links, [`/${locale}/register`, dict.nav.register] as [string, string]].map(([href, label]) => (
+          {[...links, [`/${locale}/assessment`, `🩺 ${dict.nav.assessment}`] as [string, string], [`/${locale}/register`, dict.nav.register] as [string, string]].map(([href, label]) => (
             <Link key={href} href={href}
               className={`rounded-xl px-4 py-2.5 text-sm transition hover:bg-[rgba(201,168,76,0.1)] ${pathname === href ? "text-[#e5c878]" : "text-[var(--fg)]/85"}`}>
               {label}

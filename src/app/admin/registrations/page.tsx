@@ -31,7 +31,7 @@ export default function RegistrationsAdmin() {
       <div className="card overflow-x-auto rounded-2xl">
         <table className="admin-table w-full">
           <thead>
-            <tr><th>نام</th><th>تلفن</th><th>سطح</th><th>زمان</th><th>وضعیت</th><th>عملیات</th></tr>
+            <tr><th>نام</th><th>تلفن</th><th>رشته‌ها</th><th>سطح</th><th>زمان</th><th>وضعیت</th><th>عملیات</th></tr>
           </thead>
           <tbody>
             {items.map((r) => {
@@ -40,6 +40,7 @@ export default function RegistrationsAdmin() {
                 <tr key={r.id} className="transition hover:bg-white/[0.03]">
                   <td className="font-bold">{r.fullName}<div className="text-[10px] font-normal text-[var(--muted)]" dir="ltr">{r.email}</div></td>
                   <td dir="ltr">{r.phone}</td>
+                  <td className="max-w-44"><span className="line-clamp-2 text-xs">{Array.isArray(r.sports) && r.sports.length ? r.sports.join("، ") : "—"}</span></td>
                   <td>{r.level}</td>
                   <td className="max-w-40 truncate">{r.time}</td>
                   <td><span className="badge" style={{ color, borderColor: color + "66" }}>{label}</span></td>
@@ -53,7 +54,7 @@ export default function RegistrationsAdmin() {
                 </tr>
               );
             })}
-            {!items.length && <tr><td colSpan={6} className="py-12 text-center text-[var(--muted)]">هنوز ثبت‌نامی انجام نشده است.</td></tr>}
+            {!items.length && <tr><td colSpan={7} className="py-12 text-center text-[var(--muted)]">هنوز ثبت‌نامی انجام نشده است.</td></tr>}
           </tbody>
         </table>
       </div>

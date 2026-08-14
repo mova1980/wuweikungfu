@@ -10,6 +10,8 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: any }) 
     [`/${locale}/shop`, dict.nav.shop],
     [`/${locale}/videos`, dict.nav.videos],
     [`/${locale}/events`, dict.nav.events],
+    [`/${locale}/corrective`, dict.nav.corrective],
+    [`/${locale}/assessment`, dict.nav.assessment],
     [`/${locale}/register`, dict.nav.register],
     [`/${locale}/contact`, dict.nav.contact],
   ];
@@ -45,7 +47,12 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: any }) 
           <ul className="space-y-3 text-sm text-[var(--muted)]">
             <li className="flex gap-2"><span>📍</span>{dict.contact.addressVal}</li>
             <li className="flex gap-2"><span>📞</span><a href="tel:09123686344" dir="ltr" className="hover:text-[#e5c878]">0912 368 6344</a></li>
-            <li className="flex gap-2"><span>✉️</span><a href="mailto:info@wuweikungfu.com" dir="ltr" className="hover:text-[#e5c878]">info@wuweikungfu.com</a></li>
+            <li className="flex gap-2"><span>✉️</span>
+              <span className="flex flex-col gap-1">
+                <a href="mailto:info@wuweikungfu.com" dir="ltr" className="hover:text-[#e5c878]">info@wuweikungfu.com</a>
+                <a href="mailto:ehsan_shayanfar@yahoo.com" dir="ltr" className="hover:text-[#e5c878]">ehsan_shayanfar@yahoo.com</a>
+              </span>
+            </li>
           </ul>
         </div>
       </div>

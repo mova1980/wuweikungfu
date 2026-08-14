@@ -25,7 +25,7 @@ export default function LocaleLayout({
 
   return (
     <div dir={dir} lang={locale} className={`${font} min-h-screen`}>
-      <EnergyField />
+      <EnergyField locale={locale} />
       <ScrollMood labels={{ mood: dict.misc.mood, calm: dict.misc.moodCalm, aggr: dict.misc.moodAggr, neutral: dict.misc.moodNeutral }} />
       <Navbar locale={locale} dict={dict} />
       <main className="relative z-10">{children}</main>

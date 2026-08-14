@@ -3,10 +3,26 @@ import { useState } from "react";
 import { type Locale } from "@/lib/i18n";
 import Reveal from "@/components/Reveal";
 
+const SPORT_ICONS = ["🐉", "🥋", "☯️", "🛡️", "⚔️", "🤸", "🧘", "🏋️", "💪", "🩰", "🪢", "🦴", "💃"];
+
 export default function RegisterClient({ locale, dict }: { locale: Locale; dict: any }) {
   const [step, setStep] = useState(0);
   const [done, setDone] = useState(false);
-  const [form, setForm] = useState({ fullName: "", phone: "", email: "", age: "", level: dict.register.levels[0], time: dict.register.times[0] });
+  const [form, setForm] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    age: "",
+    sports: [] as string[],
+    level: dict.register.levels[0],
+    time: dict.register.times[0],
+  });
+
+  const toggleSport = (s: string) =>
+    setForm((f) => ({
+      ...f,
+      sports: f.sports.includes(s) ? f.sports.filter((x) => x !== s) : [...f.sports, s],
+    }));
 
   const submit = async () => {
     await fetch("/api/register", {
@@ -17,8 +33,8 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
     setDone(true);
   };
 
-  const steps = [dict.register.step1, dict.register.step2, dict.register.step3];
-  const canNext = step === 0 ? form.fullName && form.phone : true;
+  const steps = [dict.register.step1, dict.register.stepSports, dict.register.step2, dict.register.step3];
+  const canNext = step === 0 ? Boolean(form.fullName && form.phone) : step === 1 ? form.sports.length > 0 : true;
 
   return (
     <div className="mx-auto mt-14 max-w-2xl">
@@ -30,7 +46,7 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
               <div className={`grid h-11 w-11 place-items-center rounded-full border-2 text-sm font-black transition-all duration-500 ${i <= step ? "border-[#c9a84c] bg-[#c9a84c] text-black shadow-[0_0_24px_rgba(201,168,76,0.5)]" : "border-[var(--line)] text-[var(--muted)]"}`}>
                 {done || i < step ? "✓" : i + 1}
               </div>
-              <div className={`mt-2 text-[10px] ${i <= step ? "text-[#e5c878]" : "text-[var(--muted)]"}`}>{s}</div>
+              <div className={`mt-2 text-center text-[10px] leading-4 ${i <= step ? "text-[#e5c878]" : "text-[var(--muted)]"}`}>{s}</div>
             </div>
             {i < steps.length - 1 && <div className={`mx-2 h-0.5 flex-1 transition-all duration-700 ${i < step ? "bg-[#c9a84c]" : "bg-[var(--line)]"}`} />}
           </div>
@@ -46,6 +62,7 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
             </div>
           ) : (
             <>
+              {/* step 0 — personal info */}
               {step === 0 && (
                 <div className="space-y-5">
                   <div>
@@ -68,7 +85,34 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
                   </div>
                 </div>
               )}
+
+              {/* step 1 — disciplines (multi-select) */}
               {step === 1 && (
+                <div>
+                  <p className="mb-4 text-center text-xs text-[var(--muted)]">✨ {dict.register.sportsHint}</p>
+                  <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                    {(dict.register.sports as string[]).map((s, i) => {
+                      const on = form.sports.includes(s);
+                      return (
+                        <button key={s} onClick={() => toggleSport(s)}
+                          className={`group relative flex flex-col items-center gap-2 rounded-2xl border p-4 text-center transition-all duration-300 ${on ? "border-[#c9a84c] bg-[rgba(201,168,76,0.16)] shadow-[0_0_24px_-6px_rgba(201,168,76,0.5)] scale-[1.02]" : "border-[var(--line)] hover:border-[#c9a84c]/60 hover:bg-[rgba(201,168,76,0.05)]"}`}>
+                          <span className={`text-2xl transition-transform duration-300 ${on ? "scale-125" : "group-hover:scale-110"}`}>{SPORT_ICONS[i] || "🥋"}</span>
+                          <span className={`text-xs font-bold leading-5 ${on ? "text-[#e5c878]" : "text-[var(--fg)]/80"}`}>{s}</span>
+                          <span className={`absolute top-2 grid h-5 w-5 place-items-center rounded-full text-[10px] font-black transition-all duration-300 ltr:right-2 rtl:left-2 ${on ? "bg-[#c9a84c] text-black scale-100" : "scale-0"}`}>✓</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {form.sports.length > 0 && (
+                    <p className="mt-4 text-center text-xs text-[#e5c878]">
+                      {form.sports.length} ✓ — {form.sports.join(" · ")}
+                    </p>
+                  )}
+                </div>
+              )}
+
+              {/* step 2 — level & time */}
+              {step === 2 && (
                 <div className="space-y-7">
                   <div>
                     <label className="mb-3 block text-xs text-[var(--muted)]">{dict.register.level}</label>
@@ -94,12 +138,22 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
                   </div>
                 </div>
               )}
-              {step === 2 && (
+
+              {/* step 3 — confirmation */}
+              {step === 3 && (
                 <div className="space-y-3">
-                  {[[dict.register.fullName, form.fullName], [dict.register.phone, form.phone], [dict.register.email, form.email || "—"], [dict.register.age, form.age || "—"], [dict.register.level, form.level], [dict.register.time, form.time]].map(([k, v]) => (
-                    <div key={k as string} className="flex justify-between rounded-xl border border-[var(--line)] p-3.5 text-sm">
-                      <span className="text-[var(--muted)]">{k}</span>
-                      <span className="font-bold text-[#e5c878]">{v}</span>
+                  {[
+                    [dict.register.fullName, form.fullName],
+                    [dict.register.phone, form.phone],
+                    [dict.register.email, form.email || "—"],
+                    [dict.register.age, form.age || "—"],
+                    [dict.register.stepSports, form.sports.join("، ") || "—"],
+                    [dict.register.level, form.level],
+                    [dict.register.time, form.time],
+                  ].map(([k, v]) => (
+                    <div key={k as string} className="flex justify-between gap-4 rounded-xl border border-[var(--line)] p-3.5 text-sm">
+                      <span className="shrink-0 text-[var(--muted)]">{k}</span>
+                      <span className="text-end font-bold text-[#e5c878]">{v}</span>
                     </div>
                   ))}
                 </div>
@@ -110,7 +164,7 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
                   className="rounded-full border border-[var(--line)] px-6 py-2.5 text-sm text-[var(--muted)] transition hover:border-[#c9a84c] disabled:opacity-30">
                   ← {dict.register.prev}
                 </button>
-                {step < 2 ? (
+                {step < 3 ? (
                   <button onClick={() => canNext && setStep((s) => s + 1)} disabled={!canNext}
                     className="btn-energy rounded-full bg-gradient-to-l from-[#e5c878] to-[#9a7b2e] px-7 py-2.5 text-sm font-black text-black transition hover:brightness-110 disabled:opacity-40">
                     {dict.register.next} →
@@ -118,7 +172,7 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
                 ) : (
                   <button onClick={submit}
                     className="btn-energy rounded-full bg-gradient-to-l from-[#e5c878] to-[#9a7b2e] px-7 py-2.5 text-sm font-black text-black transition hover:brightness-110">
-                    {dict.register.submit} ⚡
+                    {dict.register.submit}
                   </button>
                 )}
               </div>

@@ -9,6 +9,7 @@ import seedVideos from "../../data/videos.json";
 import seedEvents from "../../data/events.json";
 import seedProducts from "../../data/products.json";
 import seedTestimonials from "../../data/testimonials.json";
+import seedCoaches from "../../data/coaches.json";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 
@@ -22,7 +23,9 @@ export type Collection =
   | "testimonials"
   | "messages"
   | "registrations"
-  | "orders";
+  | "orders"
+  | "coaches"
+  | "assessments";
 
 const FILES: Record<Collection, string> = {
   content: "content.json",
@@ -35,6 +38,8 @@ const FILES: Record<Collection, string> = {
   messages: "messages.json",
   registrations: "registrations.json",
   orders: "orders.json",
+  coaches: "coaches.json",
+  assessments: "assessments.json",
 };
 
 const SEEDS: Record<Collection, any> = {
@@ -48,6 +53,8 @@ const SEEDS: Record<Collection, any> = {
   messages: [],
   registrations: [],
   orders: [],
+  coaches: seedCoaches,
+  assessments: [],
 };
 
 /* ---------------------------------------------------------------------------

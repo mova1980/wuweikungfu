@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getDict, pick, type Locale } from "@/lib/i18n";
 import { readCollection } from "@/lib/db";
 import Reveal from "@/components/Reveal";
+import BeltIcon from "@/components/BeltIcon";
 
 export const dynamic = "force-dynamic";
 
@@ -61,14 +62,15 @@ export default async function Techniques({ params }: { params: { locale: Locale 
           <h2 className="text-3xl font-black">{dict.tech.belts}</h2>
           <p className="mt-3 text-sm text-[var(--muted)]">{dict.tech.beltsSub}</p>
         </Reveal>
-        <div className="relative mx-auto mt-14 max-w-4xl">
-          <div className="absolute top-5 h-0.5 w-full bg-gradient-to-r from-[#f5f0e8]/30 via-[#c9a84c] to-[#c9a84c]" />
-          <div className="grid grid-cols-3 gap-y-10 md:grid-cols-6">
+        <div className="relative mx-auto mt-14 max-w-5xl">
+          <div className="absolute top-7 h-0.5 w-full bg-gradient-to-r from-[#f5f0e8]/30 via-[#c9a84c] to-[#1c1c1e]" />
+          <div className="grid grid-cols-4 gap-y-10 md:grid-cols-8">
             {(content.belts || []).map((b: any, i: number) => (
-              <Reveal key={i} delay={i * 140} className="text-center">
-                <div className="belt-dot relative z-10 mx-auto h-10 w-10 rounded-full border-2 border-[var(--bg)]"
-                  style={{ background: b.color, color: b.color }} />
-                <div className="mt-3 text-xs leading-5 text-[var(--muted)]">{pick(b, locale)}</div>
+              <Reveal key={i} delay={i * 120} className="text-center">
+                <div className="relative z-10 mx-auto w-fit">
+                  <BeltIcon color={b.color} />
+                </div>
+                <div className="mt-2 text-xs leading-5 text-[var(--muted)]">{pick(b, locale)}</div>
               </Reveal>
             ))}
           </div>

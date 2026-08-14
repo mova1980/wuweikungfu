@@ -9,7 +9,10 @@ export const dynamic = "force-dynamic";
 export default async function About({ params }: { params: { locale: Locale } }) {
   const locale = params.locale;
   const dict = getDict(locale);
-  const content = await readCollection<any>("content");
+  const [content, coaches] = await Promise.all([
+    readCollection<any>("content"),
+    readCollection<any[]>("coaches"),
+  ]);
   const gallery = ["/images/class.jpg", "/images/dummy.jpg", "/images/kick.jpg", "/images/weapons.jpg", "/images/qigong.jpg", "/images/hero.jpg"];
 
   return (
@@ -106,15 +109,20 @@ export default async function About({ params }: { params: { locale: Locale } }) 
       <section className="mt-24">
         <Reveal className="text-center">
           <div className="ink-divider mx-auto mb-4" />
-          <h2 className="text-3xl font-black">{locale === "fa" ? "تیم مربیان" : locale === "zh" ? "教练团队" : "Coaching Team"}</h2>
+          <h2 className="text-3xl font-black">{locale === "fa" ? "مربیان ما" : locale === "zh" ? "我们的教练" : "Our Coaches"}</h2>
         </Reveal>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {(content.coaches || []).map((c: any, i: number) => (
-            <Reveal key={i} delay={i * 130}>
-              <div className="card rounded-2xl p-7 text-center">
-                <div className="mx-auto mb-4 grid h-16 w-16 place-items-center rounded-full border border-[#c9a84c]/40 bg-[rgba(201,168,76,0.08)] text-2xl">🥋</div>
-                <div className="font-bold text-[#e5c878]">{pick(c.name, locale)}</div>
-                <div className="mt-2 text-sm text-[var(--muted)]">{pick(c, locale)}</div>
+        <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
+          {(coaches || []).map((c: any, i: number) => (
+            <Reveal key={c.id || i} delay={i * 90}>
+              <div className="card sheen group overflow-hidden text-center">
+                <div className="relative h-52 overflow-hidden">
+                  <Image src={c.image || "/images/coach-m1.jpg"} alt={pick(c.name, locale)} fill className="img-gold object-cover object-top" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+                </div>
+                <div className="p-4">
+                  <div className="text-sm font-black text-[#e5c878]">{pick(c.name, locale)}</div>
+                  <div className="mt-1.5 text-[11px] leading-5 text-[var(--muted)]">{pick(c.role, locale)}</div>
+                </div>
               </div>
             </Reveal>
           ))}

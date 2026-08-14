@@ -5,7 +5,6 @@ import { readCollection } from "@/lib/db";
 import Reveal from "@/components/Reveal";
 import { Counter, Typewriter } from "@/components/Motion";
 import EnergyButton from "@/components/EnergyButton";
-import TestimonialSlider from "@/components/TestimonialSlider";
 import HeroMedia from "@/components/HeroMedia";
 import YinYang from "@/components/YinYang";
 
@@ -14,19 +13,19 @@ export const dynamic = "force-dynamic";
 export default async function Home({ params }: { params: { locale: Locale } }) {
   const locale = params.locale;
   const dict = getDict(locale);
-  const [content, posts, testimonials, techniques] = await Promise.all([
+  const [content, posts, techniques] = await Promise.all([
     readCollection<any>("content"),
     readCollection<any[]>("posts"),
-    readCollection<any[]>("testimonials"),
     readCollection<any[]>("techniques"),
   ]);
 
   const stats = content.stats || { students: 350, years: 25, styles: 8, medals: 40 };
   const slogan = pick(content.hero?.slogan, locale) || dict.hero.slogan;
+  const slogan2 = pick(content.hero?.slogan2, locale) || dict.hero.slogan2;
 
   return (
     <>
-      {/* ============ HERO — video + stills cycle ============ */}
+      {/* ============ HERO ============ */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
         <HeroMedia />
         <div className="hero-vignette absolute inset-0" />
@@ -43,32 +42,29 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
           </span>
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pb-36 pt-28 text-center">
-          <Reveal>
-            <div className="badge mx-auto mb-6">☯ Wu Wei Tao — 無為道</div>
-          </Reveal>
-          <Reveal delay={150}>
-            <h1 className="mx-auto max-w-3xl [text-wrap:balance]">
-              <span className="stretch-word gold-text block text-3xl font-black leading-[1.25] sm:text-4xl md:text-5xl md:leading-[1.2]">
-                {dict.hero.title.split("؛")[0].split(";")[0]}
-              </span>
-              <span className="mt-4 block text-lg font-bold leading-relaxed md:text-2xl" style={{ color: "#f5f0e8" }}>
-                {dict.hero.title.includes("؛") ? dict.hero.title.split("؛")[1] : dict.hero.title.split(";")[1] || ""}
-              </span>
-            </h1>
-          </Reveal>
-          <Reveal delay={350}>
-            <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-[#f5f0e8]/70 md:text-base">{dict.hero.subtitle}</p>
-            <p className="slogan-shimmer mx-auto mt-5 max-w-2xl text-base font-black leading-relaxed md:text-xl">
-              « {slogan} »
-            </p>
-          </Reveal>
-          <Reveal delay={550}>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
-              <EnergyButton href={`/${locale}/register`}>{dict.hero.cta} ⚡</EnergyButton>
-              <EnergyButton href={`/${locale}/about`} variant="ghost">{dict.hero.cta2}</EnergyButton>
-            </div>
-          </Reveal>
+        {/* central display title */}
+        <div className="relative z-10 mx-auto w-full max-w-5xl px-6 pb-40 pt-28 text-center">
+          <h1 className="[text-wrap:balance]">
+            <span className="hero-line1 block text-2xl font-bold tracking-wide md:text-4xl" style={{ color: "#f5f0e8" }}>
+              {dict.hero.line1}
+            </span>
+            <span className="hero-wuwei mt-4 block text-6xl font-black leading-none sm:text-7xl md:text-8xl lg:text-9xl">
+              {dict.hero.line2}
+            </span>
+          </h1>
+          <div className="hero-brush mx-auto mt-8 w-48 md:w-72" />
+
+          {/* mobile CTA (in-flow, centered) */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 sm:hidden">
+            <EnergyButton href={`/${locale}/register`}>{dict.hero.cta}</EnergyButton>
+            <EnergyButton href={`/${locale}/about`} variant="ghost">{dict.hero.cta2}</EnergyButton>
+          </div>
+        </div>
+
+        {/* desktop CTA — bottom corner, mirroring the AI assistant on the other side */}
+        <div className="absolute bottom-24 z-20 hidden flex-col items-stretch gap-3 sm:flex" style={{ insetInlineStart: "1.25rem" }}>
+          <EnergyButton href={`/${locale}/register`}>{dict.hero.cta}</EnergyButton>
+          <EnergyButton href={`/${locale}/about`} variant="ghost">{dict.hero.cta2}</EnergyButton>
         </div>
 
         <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-center">
@@ -143,7 +139,7 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
               <Image src="/images/kick.jpg" alt="" fill className="img-gold object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
               <div className="absolute bottom-0 p-7">
-                <div className="mb-2 text-4xl font-black text-[#c41e24]">壹</div>
+                <div className="mb-2 font-zh text-5xl font-black text-[#c41e24]">力</div>
                 <h3 className="text-2xl font-black text-white">{dict.home.layer1}</h3>
                 <p className="mt-2 text-sm leading-6 text-white/65">{dict.home.layer1d}</p>
               </div>
@@ -155,7 +151,7 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
               <Image src="/images/dummy.jpg" alt="" fill className="img-gold object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
               <div className="absolute bottom-0 p-7">
-                <div className="mb-2 text-4xl font-black text-[#c9a84c]">貳</div>
+                <div className="mb-2 font-zh text-5xl font-black text-[#c9a84c]">衡</div>
                 <h3 className="text-2xl font-black text-white">{dict.home.layer2}</h3>
                 <p className="mt-2 text-sm leading-6 text-white/65">{dict.home.layer2d}</p>
               </div>
@@ -167,7 +163,7 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
               <Image src="/images/qigong.jpg" alt="" fill className="img-gold object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#101c28] via-[#101c28]/40 to-transparent" />
               <div className="absolute bottom-0 p-7">
-                <div className="mb-2 text-4xl font-black text-[#6f9fd8]">叁</div>
+                <div className="mb-2 font-zh text-5xl font-black text-[#6f9fd8]">化</div>
                 <h3 className="text-2xl font-black text-white">{dict.home.layer3}</h3>
                 <p className="mt-2 text-sm leading-6 text-white/65">{dict.home.layer3d}</p>
               </div>
@@ -250,15 +246,48 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
         </div>
       </section>
 
-      {/* ============ TESTIMONIALS ============ */}
-      <section className="relative z-10 mx-auto max-w-6xl px-4 py-20">
+      {/* ============ ESSENTIAL LINKS ============ */}
+      <section className="relative z-10 mx-auto max-w-5xl px-4 py-20">
         <Reveal className="mb-10 text-center">
           <div className="ink-divider mx-auto mb-4" />
-          <h2 className="text-3xl font-black">{dict.home.testimonials}</h2>
+          <h2 className="text-3xl font-black">{dict.home.links.title}</h2>
+          <p className="mt-2 text-sm text-[var(--muted)]">{dict.home.links.sub}</p>
         </Reveal>
-        <Reveal variant="scale">
-          <TestimonialSlider items={testimonials} locale={locale} />
-        </Reveal>
+        <div className="grid gap-6 md:grid-cols-2">
+          <Reveal>
+            <a href="https://athlete.ifsm.ir/login" target="_blank" rel="noreferrer"
+              className="card link-card sheen group flex items-center gap-5 overflow-hidden rounded-3xl p-7">
+              <span className="link-icon grid h-20 w-20 shrink-0 place-items-center rounded-2xl border border-[#3E9B5F]/40 bg-[#3E9B5F]/10 text-[#5fc98a]">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" />
+                  <path d="M12 8v6M9 11h6" />
+                </svg>
+              </span>
+              <span className="flex-1">
+                <span className="block text-lg font-black transition group-hover:text-[#e5c878]">{dict.home.links.insurance}</span>
+                <span className="mt-1.5 block text-sm leading-6 text-[var(--muted)]">{dict.home.links.insuranceDesc}</span>
+                <span className="badge mt-3 group-hover:border-[#c9a84c]">{dict.home.links.insuranceCta} ↗</span>
+              </span>
+            </a>
+          </Reveal>
+          <Reveal delay={150}>
+            <a href="https://iranwushufed.ir/" target="_blank" rel="noreferrer"
+              className="card link-card sheen group flex items-center gap-5 overflow-hidden rounded-3xl p-7">
+              <span className="link-icon grid h-20 w-20 shrink-0 place-items-center rounded-2xl border border-[#c9a84c]/40 bg-[rgba(201,168,76,0.1)] text-[#e5c878]">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                  <path d="M3 10h18M7 15h4" />
+                  <circle cx="16.5" cy="15" r="1.4" />
+                </svg>
+              </span>
+              <span className="flex-1">
+                <span className="block text-lg font-black transition group-hover:text-[#e5c878]">{dict.home.links.wushu}</span>
+                <span className="mt-1.5 block text-sm leading-6 text-[var(--muted)]">{dict.home.links.wushuDesc}</span>
+                <span className="badge mt-3 group-hover:border-[#c9a84c]">{dict.home.links.wushuCta} ↗</span>
+              </span>
+            </a>
+          </Reveal>
+        </div>
       </section>
 
       {/* ============ FINAL CTA ============ */}
@@ -267,9 +296,9 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
           <div className="card relative overflow-hidden rounded-3xl border-[#c9a84c]/30 p-14">
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.14),transparent_60%)]" />
             <YinYang size={64} className="yinyang mx-auto mb-6" />
-            <h2 className="gold-text mx-auto max-w-2xl text-3xl font-black leading-snug md:text-4xl">{dict.hero.title}</h2>
+            <h2 className="slogan-shimmer mx-auto max-w-3xl text-2xl font-black leading-relaxed md:text-4xl md:leading-relaxed">« {slogan2} »</h2>
             <div className="mt-8">
-              <EnergyButton href={`/${locale}/register`}>{dict.hero.cta} ⚡</EnergyButton>
+              <EnergyButton href={`/${locale}/register`}>{dict.hero.cta}</EnergyButton>
             </div>
           </div>
         </Reveal>

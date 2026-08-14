@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 
 export default function ContactClient({ locale, dict }: { locale: Locale; dict: any }) {
   const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", phone: "", message: "" });
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,8 +36,8 @@ export default function ContactClient({ locale, dict }: { locale: Locale; dict: 
                 <input required className="input" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
               </div>
               <div>
-                <label className="mb-1.5 block text-xs text-[var(--muted)]">{dict.contact.email}</label>
-                <input required type="email" dir="ltr" className="input" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+                <label className="mb-1.5 block text-xs text-[var(--muted)]">{dict.contact.phoneField}</label>
+                <input required dir="ltr" inputMode="tel" className="input" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
               </div>
               <div>
                 <label className="mb-1.5 block text-xs text-[var(--muted)]">{dict.contact.message}</label>
@@ -45,8 +45,9 @@ export default function ContactClient({ locale, dict }: { locale: Locale; dict: 
               </div>
               <button disabled={state === "sending"}
                 className="btn-energy w-full rounded-full bg-gradient-to-l from-[#e5c878] to-[#9a7b2e] py-3.5 font-black text-black transition hover:brightness-110 disabled:opacity-60">
-                {state === "sending" ? dict.contact.sending : `${dict.contact.send} ⚡`}
+                {state === "sending" ? dict.contact.sending : dict.contact.send}
               </button>
+              <p className="text-center text-[11px] leading-5 text-[var(--muted)]">🔒 {dict.contact.note}</p>
             </>
           )}
         </form>

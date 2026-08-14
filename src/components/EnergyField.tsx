@@ -12,9 +12,9 @@ import { useEffect, useRef } from "react";
  *  original star field — only the particle shape changed.
  */
 
-const GLYPHS = ["無", "為", "功", "夫"];
-
-export default function EnergyField() {
+export default function EnergyField({ locale = "fa" }: { locale?: string }) {
+  // fa/en → tiny latin "Wu"/"Wei" tokens · zh → the original Chinese glyphs
+  const GLYPHS = locale === "zh" ? ["無", "為", "功", "夫"] : ["Wu", "Wei"];
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -78,10 +78,13 @@ export default function EnergyField() {
 
     // canvas cannot resolve CSS var() in ctx.font — read the real family name
     // of the Noto Sans SC font loaded by next/font, with safe CJK fallbacks
-    const notoFamily =
-      getComputedStyle(document.documentElement).getPropertyValue("--font-noto-sc").trim() ||
-      '"Noto Sans SC"';
-    const fontStack = `${notoFamily}, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif`;
+    const cssVar = locale === "zh" ? "--font-noto-sc" : "--font-montserrat";
+    const family =
+      getComputedStyle(document.documentElement).getPropertyValue(cssVar).trim() ||
+      (locale === "zh" ? '"Noto Sans SC"' : "Montserrat");
+    const fontStack = locale === "zh"
+      ? `${family}, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif`
+      : `${family}, Montserrat, Arial, sans-serif`;
 
     const tick = (now: number) => {
       const mood = document.documentElement.dataset.mood || "neutral";
@@ -143,11 +146,11 @@ export default function EnergyField() {
         const a = 0.25 + 0.3 * Math.abs(Math.sin(p.phase));
 
         // tiny glyph instead of a dot — size maps from the old star radius
-        const fs = 6 + p.r * 3.2; // ≈ 8.5–13px, star-scale
+        const fs = locale === "zh" ? 6 + p.r * 3.2 : 5 + p.r * 2.6; // star-scale (latin tokens slightly smaller — they are wider)
         ctx.save();
         ctx.translate(p.x, p.y);
         ctx.rotate(p.rot);
-        ctx.font = `${fs.toFixed(1)}px ${fontStack}`;
+        ctx.font = `${locale === "zh" ? "" : "600 "}${fs.toFixed(1)}px ${fontStack}`;
         ctx.fillStyle = colorOf(p, mood, a);
         ctx.fillText(p.ch, 0, 0);
         ctx.restore();
@@ -179,7 +182,7 @@ export default function EnergyField() {
       window.removeEventListener("resize", onResize);
       window.removeEventListener("pointermove", onMove);
     };
-  }, []);
+  }, [locale]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <canvas

@@ -7,11 +7,13 @@ import { useEffect } from "react";
 const items: [string, string, string][] = [
   ["/admin", "📊", "داشبورد"],
   ["/admin/orders", "🧾", "سفارش‌ها و پرداخت"],
+  ["/admin/assessments", "🩺", "درخواست‌های ارزیابی"],
   ["/admin/posts", "✍️", "مقالات"],
   ["/admin/techniques", "🥋", "تکنیک‌ها"],
   ["/admin/videos", "🎬", "ویدئوها"],
   ["/admin/events", "🏆", "رویدادها"],
   ["/admin/products", "🛍", "محصولات"],
+  ["/admin/coaches", "🥋", "مربیان"],
   ["/admin/testimonials", "💬", "نظرات شاگردان"],
   ["/admin/messages", "✉️", "پیام‌ها"],
   ["/admin/registrations", "📝", "ثبت‌نام‌ها"],

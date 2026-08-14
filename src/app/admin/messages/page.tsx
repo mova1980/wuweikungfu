@@ -29,7 +29,7 @@ export default function MessagesAdmin() {
               <div className="flex items-center gap-3">
                 {!m.read && <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-[#c41e24]" />}
                 <span className="font-bold">{m.name}</span>
-                <a href={`mailto:${m.email}`} dir="ltr" className="text-xs text-[#c9a84c]">{m.email}</a>
+                <a href={`tel:${m.phone || ""}`} dir="ltr" className="text-xs text-[#c9a84c]">{m.phone || m.email || ""}</a>
               </div>
               <div className="flex items-center gap-3 text-xs text-[var(--muted)]">
                 <span dir="ltr">{new Date(m.date).toLocaleString("fa-IR")}</span>
