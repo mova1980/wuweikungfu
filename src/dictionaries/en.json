@@ -7,16 +7,18 @@
     "techniques": "Techniques",
     "blog": "Blog",
     "shop": "Shop",
-    "videos": "Videos",
+    "videos": "Video Gallery",
     "events": "Events",
     "contact": "Contact",
     "register": "Join Classes",
     "search": "Search",
     "corrective": "Corrective Exercise",
-    "assessment": "Free Assessment"
+    "assessment": "Free Posture Assessment",
+    "gallery": "Gallery",
+    "galleryGroup": "Gallery"
   },
   "hero": {
-    "title": "Wu Wei Tao; The Ancient Art of Effortless Action",
+    "title": "Wu Wei; The Ancient Art of Effortless Action",
     "subtitle": "Authentic Chinese Kung Fu — Power, Serenity, Energy & Balance",
     "slogan": "Be vast and alone, humble and unyielding",
     "cta": "Start Your Journey",
@@ -49,7 +51,7 @@
     "readMore": "Read more",
     "viewAll": "View all",
     "bookTitle": "The Qigong Book",
-    "bookDesc": "\"Qigong the Authentic Chinese Kung Fu Way (Wu Wei Tao)\" by Sifu Ehsan Shayanfar explores the art of electromagnetic energy, corrective movements, acupressure and massage therapy.",
+    "bookDesc": "\"Qigong the Authentic Chinese Kung Fu Way (Wu Wei)\" by Sifu Ehsan Shayanfar explores the art of electromagnetic energy, corrective movements, acupressure and massage therapy.",
     "bookCta": "Discover & Buy the Book",
     "links": {
       "title": "Essential Links",
@@ -65,21 +67,21 @@
   "about": {
     "title": "About Us",
     "sifuTitle": "Sifu Ehsan Shayanfar",
-    "sifuRole": "Founder & Head Instructor | Official Wu Wei Tao Representative of Alborz Province",
-    "sifuBio": "Sifu Ehsan Shayanfar, the official representative of Wu Wei Tao in Alborz Province, has over two decades of experience across Karate, Wrestling, Boxing, Wing Chun, Bodybuilding, TRX and CrossFit, making him one of the most well-rounded martial arts masters in Iran. He is the author of \"Qigong the Authentic Chinese Kung Fu Way (Wu Wei Tao)\" and president of the Wushu Federation of West Tehran Province.",
+    "sifuRole": "Founder & Head Instructor | Official Wu Wei Representative of Alborz Province",
+    "sifuBio": "Sifu Ehsan Shayanfar, the official representative of Wu Wei in Alborz Province, has over two decades of experience across Karate, Wrestling, Boxing, Wing Chun, Bodybuilding, TRX and CrossFit, making him one of the most well-rounded martial arts masters in Iran. He is the author of \"Qigong the Authentic Chinese Kung Fu Way (Wu Wei)\" and president of the Wushu Federation of West Tehran Province.",
     "timeline": "Journey Timeline",
-    "philosophyTitle": "The Philosophy of Wu Wei Tao",
+    "philosophyTitle": "The Philosophy of Wu Wei",
     "bookTitle": "The Qigong Book",
     "galleryTitle": "Gallery",
     "honors": "Honors & Achievements"
   },
   "tech": {
     "title": "Training & Techniques",
-    "sub": "The Six Pillars of the Wu Wei Tao System",
+    "sub": "The Six Pillars of the Wu Wei System",
     "level": "Suggested level",
     "keys": "Key points",
     "belts": "The Belt Path",
-    "beltsSub": "Stages of progress in Wu Wei Tao — a luminous path from hardness to stillness",
+    "beltsSub": "Stages of progress in Wu Wei — a luminous path from hardness to stillness",
     "schedule": "Class Schedule"
   },
   "blog": {
@@ -170,11 +172,11 @@
     "phone": "Phone number",
     "email": "Email",
     "age": "Age",
-    "level": "Level",
+    "level": "Class Type",
     "levels": [
-      "Beginner",
-      "Intermediate",
-      "Advanced"
+      "Group",
+      "Semi-Private",
+      "Private"
     ],
     "time": "Class time",
     "times": [
@@ -217,7 +219,9 @@
       "TRX",
       "Corrective Exercise",
       "Rhythmic Movement"
-    ]
+    ],
+    "perMonth": "per month",
+    "tuitionFee": "Monthly Tuition"
   },
   "searchPage": {
     "title": "Advanced Search",
@@ -233,7 +237,7 @@
     }
   },
   "footer": {
-    "desc": "Wu Wei Tao; the ancient art of effortless action. Authentic Chinese Kung Fu under Sifu Ehsan Shayanfar.",
+    "desc": "Wu Wei; the ancient art of effortless action. Authentic Chinese Kung Fu under Sifu Ehsan Shayanfar.",
     "quick": "Quick Links",
     "contact": "Contact Info",
     "rights": "© 2026 Wu Wei Kung Fu — All rights reserved."
@@ -262,8 +266,8 @@
     "moodNeutral": "Balanced"
   },
   "assessment": {
-    "badge": "100% Free",
-    "title": "Structural & Muscular Imbalance Assessment",
+    "badge": "🩺 Free Posture Assessment",
+    "title": "Free Posture Assessment",
     "sub": "A specialized posture, skeletal and muscular evaluation session — completely free",
     "pitch": "Do you suffer from lower-back arch, rounded shoulders, uneven shoulders, bow legs or chronic muscle pain? Our specialist team, led by Sifu Ehsan Shayanfar — author of the book on Qigong, corrective movement and acupressure — scientifically evaluates your body's structure and gives you a free correction roadmap.",
     "benefits": [
@@ -315,7 +319,7 @@
     "stepsTitle": "The correction path at Wu Wei Academy",
     "steps": [
       [
-        "Free assessment",
+        "Free posture assessment",
         "Full posture analysis & imbalance detection"
       ],
       [
@@ -331,7 +335,18 @@
         "Measuring progress & updating the plan"
       ]
     ],
-    "cta": "Start with a Free Assessment",
+    "cta": "Start with a Free Posture Assessment",
     "bookNote": "The scientific foundations of this program follow the book \"Qigong the Authentic Chinese Kung Fu Way\" by Sifu Ehsan Shayanfar."
+  },
+  "gallery": {
+    "title": "Events Gallery",
+    "sub": "A smile of Wu Wei's lasting moments",
+    "intro": "Seminars, competitions, congresses and behind-the-scenes moments of the Wu Wei Kung Fu academy — every frame, a step on the path of power, balance and transformation.",
+    "search": "Search photos…",
+    "all": "All",
+    "photos": "photos",
+    "empty": "No photos in this category yet.",
+    "noResult": "No results found.",
+    "back": "Back"
   }
 }

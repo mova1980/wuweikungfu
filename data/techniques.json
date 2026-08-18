@@ -16,7 +16,7 @@
     "icon": "腿",
     "level": { "fa": "مبتدی تا پیشرفته", "en": "Beginner to Advanced", "zh": "初级至高级" },
     "title": { "fa": "ضربات پا", "en": "Kicks", "zh": "腿法" },
-    "desc": { "fa": "ضربات پای کوتاه، سریع و پنهان وو وی تائو؛ همیشه زیر خط کمر، همیشه هم‌زمان با کار دست. پا در وو وی تائو ابزار قطع تعادل حریف است.", "en": "The short, fast and hidden kicks of Wu Wei Tao; always below the waist, always simultaneous with hand work. In Wu Wei Tao the leg is a tool for breaking the opponent's balance.", "zh": "无为道短促、迅疾、隐蔽的腿法；始终低于腰线，始终与手法同步。在无为道中，腿是破坏对手平衡的工具。" },
+    "desc": { "fa": "ضربات پای کوتاه، سریع و پنهان وو وی؛ همیشه زیر خط کمر، همیشه هم‌زمان با کار دست. پا در وو وی ابزار قطع تعادل حریف است.", "en": "The short, fast and hidden kicks of Wu Wei; always below the waist, always simultaneous with hand work. In Wu Wei the leg is a tool for breaking the opponent's balance.", "zh": "无为短促、迅疾、隐蔽的腿法；始终低于腰线，始终与手法同步。在无为中，腿是破坏对手平衡的工具。" },
     "keys": { "fa": ["ضربه بدون تلگراف", "تعادل روی یک پا", "هماهنگی دست و پا"], "en": ["Kick without telegraphing", "Balance on one leg", "Hand-foot coordination"], "zh": ["出腿不露先兆", "单腿平衡", "手脚协调"] }
   },
   {
@@ -36,7 +36,7 @@
     "icon": "械",
     "level": { "fa": "پیشرفته", "en": "Advanced", "zh": "高级" },
     "title": { "fa": "سلاح سرد", "en": "Weapons", "zh": "兵器" },
-    "desc": { "fa": "چوب بلند، شمشیرهای پروانه‌ای و چوب سه‌تکه (سانجیه‌گان). سلاح در وو وی تائو امتداد دست است؛ آینه‌ای که کوچک‌ترین تقلای اضافه را آشکار می‌کند.", "en": "Long pole, butterfly swords and the three-section staff (Sanjiegun). In Wu Wei Tao the weapon is an extension of the hand; a mirror revealing the slightest excess effort.", "zh": "长棍、蝴蝶双刀与三节棍。在无为道中，兵器是手的延伸，是一面照出丝毫多余用力的镜子。" },
+    "desc": { "fa": "چوب بلند، شمشیرهای پروانه‌ای و چوب سه‌تکه (سانجیه‌گان). سلاح در وو وی امتداد دست است؛ آینه‌ای که کوچک‌ترین تقلای اضافه را آشکار می‌کند.", "en": "Long pole, butterfly swords and the three-section staff (Sanjiegun). In Wu Wei the weapon is an extension of the hand; a mirror revealing the slightest excess effort.", "zh": "长棍、蝴蝶双刀与三节棍。在无为中，兵器是手的延伸，是一面照出丝毫多余用力的镜子。" },
     "keys": { "fa": ["سلاح، امتداد بدن", "کنترل فاصله", "رهاسازی مچ"], "en": ["The weapon extends the body", "Distance control", "Wrist release"], "zh": ["兵器为身体之延伸", "距离控制", "手腕放松"] }
   },
   {

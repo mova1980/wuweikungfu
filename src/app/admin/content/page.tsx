@@ -18,6 +18,8 @@ export default function ContentAdmin() {
     })();
   }, []);
 
+  const setPricing = (fn: (p: any) => any) => setContent((c: any) => ({ ...c, pricing: fn(c.pricing) }));
+
   if (!content) return <p className="text-[var(--muted)]">در حال بارگذاری…</p>;
 
   const save = async () => {
@@ -142,6 +144,51 @@ export default function ContentAdmin() {
             </label>
           ))}
         </div>
+      </div>
+
+      <div className="card mb-6 rounded-2xl p-6">
+        <h2 className="mb-1 font-black text-[#e5c878]">💰 شهریه کلاس‌ها (نوع کلاس در ثبت‌نام)</h2>
+        <p className="mb-4 text-xs text-[var(--muted)]">
+          این مقادیر در مرحلهٔ سوم ثبت‌نام نمایش داده می‌شوند (عمومی / نیمه خصوصی / خصوصی) و مبلغ هر ثبت‌نام بر اساس همان ذخیره می‌شود.
+        </p>
+        <div className="mb-4 grid gap-4 md:grid-cols-3">
+          {(["fa", "en", "zh"] as const).map((l) => (
+            <label key={l} className="block">
+              <span className="mb-1 block text-xs text-[var(--muted)]">واحد پول ({l.toUpperCase()})</span>
+              <input dir={l === "fa" ? "rtl" : "ltr"} className="input"
+                value={content.pricing?.currency?.[l] || ""}
+                onChange={(e) => setPricing((p: any) => ({ ...p, currency: { ...p?.currency, [l]: e.target.value } }))} />
+            </label>
+          ))}
+        </div>
+        <div className="space-y-4">
+          {(content.pricing?.classes || []).map((c: any, i: number) => (
+            <div key={i} className="rounded-xl border border-[var(--line)] p-4">
+              <div className="grid items-end gap-3 md:grid-cols-[repeat(3,1fr)_140px_auto]">
+                {(["fa", "en", "zh"] as const).map((l) => (
+                  <label key={l} className="block">
+                    <span className="mb-1 block text-[10px] text-[var(--muted)]">عنوان {l.toUpperCase()}</span>
+                    <input dir={l === "fa" ? "rtl" : "ltr"} className="input !py-2 text-xs"
+                      value={(typeof c.label === "object" ? c.label?.[l] : c.label) || ""}
+                      onChange={(e) => setPricing((p: any) => ({ ...p, classes: p.classes.map((x: any, k: number) => k === i ? { ...x, label: { ...(typeof x.label === "object" ? x.label : {}), [l]: e.target.value } } : x) }))} />
+                  </label>
+                ))}
+                <label className="block">
+                  <span className="mb-1 block text-[10px] text-[var(--muted)]">مبلغ ماهانه (تومان)</span>
+                  <input dir="ltr" type="number" className="input !py-2 text-xs"
+                    value={c.monthly ?? 0}
+                    onChange={(e) => setPricing((p: any) => ({ ...p, classes: p.classes.map((x: any, k: number) => k === i ? { ...x, monthly: Number(e.target.value) } : x) }))} />
+                </label>
+                <button onClick={() => setPricing((p: any) => ({ ...p, classes: p.classes.filter((_: any, k: number) => k !== i) }))}
+                  className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-[#c41e24]/40 text-xs text-[#ff8a85] transition hover:bg-[#c41e24]/20">✕</button>
+              </div>
+            </div>
+          ))}
+        </div>
+        <button onClick={() => setPricing((p: any) => ({ ...p, classes: [...(p?.classes || []), { id: `cls-${Date.now().toString(36)}`, label: { fa: "", en: "", zh: "" }, monthly: 0 }] }))}
+          className="mt-4 rounded-full border border-[#c9a84c]/60 bg-[#c9a84c]/10 px-5 py-2 text-xs font-bold text-[#e5c878] transition hover:scale-105">
+          + افزودن نوع کلاس
+        </button>
       </div>
 
       <div className="card rounded-2xl p-6">

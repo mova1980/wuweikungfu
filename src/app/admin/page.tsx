@@ -33,7 +33,7 @@ export default function AdminDashboard() {
         const data = responses[i];
         if (data == null) return;
         all[c] = data;
-        if (c !== "content") out[c] = Array.isArray(data) ? data.length : 1;
+        if (c !== "content") out[c] = Array.isArray(data) ? (c === "gallery" ? data.reduce((s: number, x: any) => s + (x.images?.length || 0), 0) : data.length) : 1;
       });
       setCounts(out);
       setBackup(JSON.stringify(all, null, 2));

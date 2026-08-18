@@ -31,7 +31,7 @@ export default function RegistrationsAdmin() {
       <div className="card overflow-x-auto rounded-2xl">
         <table className="admin-table w-full">
           <thead>
-            <tr><th>نام</th><th>تلفن</th><th>رشته‌ها</th><th>سطح</th><th>زمان</th><th>وضعیت</th><th>عملیات</th></tr>
+            <tr><th>نام</th><th>تلفن</th><th>رشته‌ها</th><th>نوع کلاس</th><th>زمان</th><th>وضعیت</th><th>عملیات</th></tr>
           </thead>
           <tbody>
             {items.map((r) => {

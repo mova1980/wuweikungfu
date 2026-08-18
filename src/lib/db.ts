@@ -10,6 +10,7 @@ import seedEvents from "../../data/events.json";
 import seedProducts from "../../data/products.json";
 import seedTestimonials from "../../data/testimonials.json";
 import seedCoaches from "../../data/coaches.json";
+import seedGallery from "../../data/gallery.json";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 
@@ -25,7 +26,8 @@ export type Collection =
   | "registrations"
   | "orders"
   | "coaches"
-  | "assessments";
+  | "assessments"
+  | "gallery";
 
 const FILES: Record<Collection, string> = {
   content: "content.json",
@@ -40,6 +42,7 @@ const FILES: Record<Collection, string> = {
   orders: "orders.json",
   coaches: "coaches.json",
   assessments: "assessments.json",
+  gallery: "gallery.json",
 };
 
 const SEEDS: Record<Collection, any> = {
@@ -54,22 +57,60 @@ const SEEDS: Record<Collection, any> = {
   registrations: [],
   orders: [],
   coaches: seedCoaches,
+  gallery: seedGallery as any,
   assessments: [],
 };
 
 /* ---------------------------------------------------------------------------
- * Storage backends
- *  1) Upstash Redis (REST) — for Vercel / serverless (read-only filesystem).
- *     Set UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN
- *     (or Vercel KV: KV_REST_API_URL + KV_REST_API_TOKEN).
- *  2) Local JSON files in ./data — for VPS / local development.
+ * Storage backends (in order of precedence)
+ *  1) Supabase Postgres (JSONB key-value via PostgREST) — recommended for Vercel.
+ *     Set SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY
+ *     Table: collections(key text pk, data jsonb, updated_at timestamptz)
+ *     On first read, existing Redis/file/seed data is auto-imported (lazy migration),
+ *     so switching backends never loses admin-saved content.
+ *  2) Upstash Redis (REST) — kept as replica/fallback when its env vars exist.
+ *  3) Local JSON files in ./data — for VPS / local development.
  * ------------------------------------------------------------------------- */
+const SB_URL = (process.env.SUPABASE_URL || "").replace(/\/+$/, "");
+const SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY || "";
+const useSupabase = Boolean(SB_URL && SB_KEY && /^https?:\/\//.test(SB_URL));
+
 const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL || "";
 const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN || "";
 const useRedis = Boolean(REDIS_URL && REDIS_TOKEN);
 
 const rkey = (name: Collection) => `wuwei:${name}`;
 
+/* ---- Supabase (PostgREST) ---- */
+const sbHeaders: Record<string, string> = {
+  apikey: SB_KEY,
+  Authorization: `Bearer ${SB_KEY}`,
+  "Content-Type": "application/json",
+};
+
+async function sbGet(key: string): Promise<any | null> {
+  const res = await fetch(
+    `${SB_URL}/rest/v1/collections?select=data&key=eq.${encodeURIComponent(key)}`,
+    { headers: { ...sbHeaders, Accept: "application/json" }, cache: "no-store" }
+  );
+  if (!res.ok) throw new Error(`supabase read ${res.status}`);
+  const rows = await res.json();
+  return Array.isArray(rows) && rows.length ? rows[0].data : null;
+}
+
+async function sbSet(key: string, data: any): Promise<void> {
+  const res = await fetch(`${SB_URL}/rest/v1/collections?on_conflict=key`, {
+    method: "POST",
+    headers: { ...sbHeaders, Prefer: "resolution=merge-duplicates" },
+    body: JSON.stringify({ key, data, updated_at: new Date().toISOString() }),
+  });
+  if (!res.ok) {
+    const body = await res.text().catch(() => "");
+    throw new Error(`supabase write ${res.status} ${body.slice(0, 200)}`);
+  }
+}
+
+/* ---- legacy backends (Redis → local file → bundled seed) ---- */
 async function redisGet(key: string): Promise<string | null> {
   const res = await fetch(`${REDIS_URL}/get/${encodeURIComponent(key)}`, {
     headers: { Authorization: `Bearer ${REDIS_TOKEN}` },
@@ -88,7 +129,7 @@ async function redisSet(key: string, value: string): Promise<void> {
   });
 }
 
-export async function readCollection<T = any>(name: Collection): Promise<T> {
+async function readLegacy<T = any>(name: Collection): Promise<T> {
   if (useRedis) {
     try {
       const raw = await redisGet(rkey(name));
@@ -104,13 +145,40 @@ export async function readCollection<T = any>(name: Collection): Promise<T> {
   }
 }
 
-export async function writeCollection(name: Collection, data: any): Promise<void> {
+async function writeLegacy(name: Collection, data: any): Promise<void> {
   if (useRedis) {
     await redisSet(rkey(name), JSON.stringify(data));
     return;
   }
   await fs.mkdir(DATA_DIR, { recursive: true });
   await fs.writeFile(path.join(DATA_DIR, FILES[name]), JSON.stringify(data, null, 2), "utf-8");
+}
+
+export async function readCollection<T = any>(name: Collection): Promise<T> {
+  if (useSupabase) {
+    try {
+      const row = await sbGet(rkey(name));
+      if (row != null) return row as T;
+      // one-time lazy migration: import Redis/file/seed data into Supabase
+      const legacy = await readLegacy<T>(name);
+      void sbSet(rkey(name), legacy).catch(() => {});
+      return legacy;
+    } catch {
+      // Supabase unreachable → serve from legacy so the site stays up
+      return readLegacy<T>(name);
+    }
+  }
+  return readLegacy<T>(name);
+}
+
+export async function writeCollection(name: Collection, data: any): Promise<void> {
+  if (useSupabase) {
+    await sbSet(rkey(name), data);
+    // keep the Redis replica in sync when configured (non-blocking)
+    if (useRedis) void redisSet(rkey(name), JSON.stringify(data)).catch(() => {});
+    return;
+  }
+  await writeLegacy(name, data);
 }
 
 export function newId(): string {

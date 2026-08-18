@@ -5,18 +5,34 @@ import Reveal from "@/components/Reveal";
 
 const SPORT_ICONS = ["🐉", "🥋", "☯️", "🛡️", "⚔️", "🤸", "🧘", "🏋️", "💪", "🩰", "🪢", "🦴", "💃"];
 
-export default function RegisterClient({ locale, dict }: { locale: Locale; dict: any }) {
+type Cls = { id: string; label: Record<string, string> | string; monthly?: number };
+
+const lblOf = (c: Cls, locale: string) =>
+  (typeof c.label === "string" ? c.label : c.label?.[locale] || c.label?.fa || c.id) as string;
+
+export default function RegisterClient({ locale, dict, pricing }: { locale: Locale; dict: any; pricing?: any }) {
   const [step, setStep] = useState(0);
   const [done, setDone] = useState(false);
+
+  const classes: Cls[] =
+    pricing?.classes?.length
+      ? pricing.classes
+      : (dict.register.levels as string[]).map((l) => ({ id: l, label: l, monthly: 0 }));
+  const currency: string =
+    (typeof pricing?.currency === "object" && (pricing.currency[locale] || pricing.currency.fa)) || "";
+  const fmt = (n: number) => Number(n || 0).toLocaleString(locale === "fa" ? "fa-IR" : locale === "zh" ? "zh-CN" : "en-US");
+
   const [form, setForm] = useState({
     fullName: "",
     phone: "",
     email: "",
     age: "",
     sports: [] as string[],
-    level: dict.register.levels[0],
+    classType: classes[0]?.id || "",
     time: dict.register.times[0],
   });
+
+  const selCls = classes.find((c) => c.id === form.classType) || classes[0];
 
   const toggleSport = (s: string) =>
     setForm((f) => ({
@@ -28,7 +44,11 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
     await fetch("/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
+      body: JSON.stringify({
+        ...form,
+        classLabel: selCls ? lblOf(selCls, locale) : form.classType,
+        price: selCls?.monthly ?? 0,
+      }),
     });
     setDone(true);
   };
@@ -111,19 +131,32 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
                 </div>
               )}
 
-              {/* step 2 — level & time */}
+              {/* step 2 — class type & time */}
               {step === 2 && (
                 <div className="space-y-7">
                   <div>
                     <label className="mb-3 block text-xs text-[var(--muted)]">{dict.register.level}</label>
                     <div className="grid grid-cols-3 gap-3">
-                      {dict.register.levels.map((l: string) => (
-                        <button key={l} onClick={() => setForm({ ...form, level: l })}
-                          className={`rounded-xl border p-3.5 text-sm transition ${form.level === l ? "border-[#c9a84c] bg-[rgba(201,168,76,0.15)] text-[#e5c878]" : "border-[var(--line)] text-[var(--muted)] hover:border-[#c9a84c]/50"}`}>
-                          {l}
-                        </button>
-                      ))}
+                      {classes.map((c) => {
+                        const on = form.classType === c.id;
+                        return (
+                          <button key={c.id} onClick={() => setForm({ ...form, classType: c.id })}
+                            className={`rounded-2xl border p-3.5 text-center transition-all duration-300 ${on ? "border-[#c9a84c] bg-[rgba(201,168,76,0.15)] text-[#e5c878] shadow-[0_0_24px_-8px_rgba(201,168,76,0.6)] scale-[1.02]" : "border-[var(--line)] text-[var(--muted)] hover:border-[#c9a84c]/50"}`}>
+                            <span className="block text-sm font-black">{lblOf(c, locale)}</span>
+                            {Boolean(c.monthly) && (
+                              <span className={`mt-1.5 block text-[11px] font-bold ${on ? "text-[#e5c878]" : "text-[var(--fg)]/60"}`}>
+                                {fmt(c.monthly!)} {currency}
+                              </span>
+                            )}
+                          </button>
+                        );
+                      })}
                     </div>
+                    {selCls?.monthly ? (
+                      <p className="mt-3 text-center text-xs text-[#e5c878]">
+                        💰 {dict.register.tuitionFee}: {fmt(selCls.monthly)} {currency} — {dict.register.perMonth}
+                      </p>
+                    ) : null}
                   </div>
                   <div>
                     <label className="mb-3 block text-xs text-[var(--muted)]">{dict.register.time}</label>
@@ -148,7 +181,8 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
                     [dict.register.email, form.email || "—"],
                     [dict.register.age, form.age || "—"],
                     [dict.register.stepSports, form.sports.join("، ") || "—"],
-                    [dict.register.level, form.level],
+                    [dict.register.level, selCls ? lblOf(selCls, locale) : "—"],
+                    ...(selCls?.monthly ? [[dict.register.tuitionFee, `${fmt(selCls.monthly)} ${currency} — ${dict.register.perMonth}`]] : []),
                     [dict.register.time, form.time],
                   ].map(([k, v]) => (
                     <div key={k as string} className="flex justify-between gap-4 rounded-xl border border-[var(--line)] p-3.5 text-sm">
@@ -185,12 +219,19 @@ export default function RegisterClient({ locale, dict }: { locale: Locale; dict:
       <Reveal>
         <h3 className="mb-4 mt-14 text-center text-xl font-black text-[#e5c878]">{dict.register.tuition}</h3>
         <div className="card overflow-hidden rounded-2xl">
-          {dict.register.tuitionRows.map(([k, v]: [string, string], i: number) => (
-            <div key={i} className="flex justify-between border-b border-[var(--line)]/50 p-4 text-sm transition last:border-0 hover:bg-[rgba(201,168,76,0.05)]">
-              <span className="text-[var(--muted)]">{k}</span>
-              <span className="font-bold">{v}</span>
-            </div>
-          ))}
+          {classes.some((c) => c.monthly)
+            ? classes.filter((c) => c.monthly).map((c) => (
+                <div key={c.id} className="flex justify-between border-b border-[var(--line)]/50 p-4 text-sm transition last:border-0 hover:bg-[rgba(201,168,76,0.05)]">
+                  <span className="text-[var(--muted)]">{lblOf(c, locale)}</span>
+                  <span className="font-bold">{fmt(c.monthly!)} {currency} <span className="text-[10px] font-normal text-[var(--muted)]">/ {dict.register.perMonth}</span></span>
+                </div>
+              ))
+            : dict.register.tuitionRows.map(([k, v]: [string, string], i: number) => (
+                <div key={i} className="flex justify-between border-b border-[var(--line)]/50 p-4 text-sm transition last:border-0 hover:bg-[rgba(201,168,76,0.05)]">
+                  <span className="text-[var(--muted)]">{k}</span>
+                  <span className="font-bold">{v}</span>
+                </div>
+              ))}
         </div>
       </Reveal>
     </div>

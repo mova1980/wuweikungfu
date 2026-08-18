@@ -1,0 +1,1230 @@
+[
+  {
+    "id": "men-seminars",
+    "title": "سمینار آقایان",
+    "titleEn": "Men's Seminars",
+    "titleZh": "男子研讨会",
+    "icon": "🥋",
+    "order": 1,
+    "cover": "/images/gallery/men-seminars/g00.jpg",
+    "images": [
+      {
+        "id": "men-seminars-00",
+        "src": "/images/gallery/men-seminars/g00.jpg",
+        "caption": "سمینار شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_213023-1024x597.jpg"
+      },
+      {
+        "id": "men-seminars-01",
+        "src": "/images/gallery/men-seminars/g01.jpg",
+        "caption": "سمینار شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_213624-1024x694.jpg"
+      },
+      {
+        "id": "men-seminars-02",
+        "src": "/images/gallery/men-seminars/g02.jpg",
+        "caption": "سمینار وو وی کونگ فو",
+        "desc": "14 شهریور 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_092840-1-1024x461.jpg"
+      },
+      {
+        "id": "men-seminars-03",
+        "src": "/images/gallery/men-seminars/g03.jpg",
+        "caption": "سمینار شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_213325-1024x470.jpg"
+      },
+      {
+        "id": "men-seminars-04",
+        "src": "/images/gallery/men-seminars/g04.jpg",
+        "caption": "سمینار شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_213438-1024x472.jpg"
+      },
+      {
+        "id": "men-seminars-05",
+        "src": "/images/gallery/men-seminars/g05.jpg",
+        "caption": "سمینار شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_213856-1024x753.jpg"
+      },
+      {
+        "id": "men-seminars-06",
+        "src": "/images/gallery/men-seminars/g06.jpg",
+        "caption": "سمینار شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_213755-1024x594.jpg"
+      },
+      {
+        "id": "men-seminars-07",
+        "src": "/images/gallery/men-seminars/g07.jpg",
+        "caption": "سمینار شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_213730-1024x515.jpg"
+      },
+      {
+        "id": "men-seminars-08",
+        "src": "/images/gallery/men-seminars/g08.jpg",
+        "caption": "سمینار وو وی شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_092840-1024x461.jpg"
+      },
+      {
+        "id": "men-seminars-09",
+        "src": "/images/gallery/men-seminars/g09.jpg",
+        "caption": "سمینار شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_213813-686x1024.jpg"
+      },
+      {
+        "id": "men-seminars-10",
+        "src": "/images/gallery/men-seminars/g10.jpg",
+        "caption": "سمینار شهریور 1404 و قبولی در آزمون سی فویی نماینده آذربایجان غربی",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG-20250906-WA0007-copy.jpg"
+      },
+      {
+        "id": "men-seminars-11",
+        "src": "/images/gallery/men-seminars/g11.jpg",
+        "caption": "سمینار شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_213056-1024x512.jpg"
+      },
+      {
+        "id": "men-seminars-12",
+        "src": "/images/gallery/men-seminars/g12.jpg",
+        "caption": "سمینار 30 خرداد 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/08/33.jpg"
+      },
+      {
+        "id": "men-seminars-13",
+        "src": "/images/gallery/men-seminars/g13.jpg",
+        "caption": "پدر پسری",
+        "desc": "آکادمی تخصصی ورزشی رعد",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/1000331228.jpg"
+      },
+      {
+        "id": "men-seminars-14",
+        "src": "/images/gallery/men-seminars/g14.jpg",
+        "caption": "سمینار خرداد 1404",
+        "desc": "دریافت حکم پایان سطح چاقوهای پروانه ای- سی فو زمانی",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/ffda6a868-300x300-1.jpg"
+      },
+      {
+        "id": "men-seminars-15",
+        "src": "/images/gallery/men-seminars/g15.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/08/photo_2025-08-09_18-55-27-1024x461.jpg"
+      },
+      {
+        "id": "men-seminars-16",
+        "src": "/images/gallery/men-seminars/g16.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/f8774bd9f92595bfIMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB9DBB4DBB0DBB5DBB3-1024x637.jpg"
+      },
+      {
+        "id": "men-seminars-17",
+        "src": "/images/gallery/men-seminars/g17.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/e2827221f019ddb1IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB9DBB4DBB0DBB1DBB4-1024x665.jpg"
+      },
+      {
+        "id": "men-seminars-18",
+        "src": "/images/gallery/men-seminars/g18.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/e970b8f6796626d8IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB1DBB1DBB8DBB4DBB0-1024x766.jpg"
+      },
+      {
+        "id": "men-seminars-19",
+        "src": "/images/gallery/men-seminars/g19.jpg",
+        "caption": "24 اسفند 1403",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/db821271IMG_20250314_11313820copy-300x300-1.jpg"
+      },
+      {
+        "id": "men-seminars-20",
+        "src": "/images/gallery/men-seminars/g20.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/e684ffcff8119e8dIMG_DBB2DBB0DBB2DBB1DBB0DBB9DBB2DBB3_DBB2DBB1DBB3DBB5DBB0DBB7-1024x768.jpg"
+      },
+      {
+        "id": "men-seminars-21",
+        "src": "/images/gallery/men-seminars/g21.webp",
+        "caption": "23 آذر 1403",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/c3319d28IMG_20241213_230558_079-576x1024.webp"
+      },
+      {
+        "id": "men-seminars-22",
+        "src": "/images/gallery/men-seminars/g22.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/c0bedeec96Sea80ce4-2048x1444-1-1024x722.jpg"
+      },
+      {
+        "id": "men-seminars-23",
+        "src": "/images/gallery/men-seminars/g23.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/b61b3ee9IMG_20250314_11305020copy-150x150-1.jpg"
+      },
+      {
+        "id": "men-seminars-24",
+        "src": "/images/gallery/men-seminars/g24.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/ab2a8d615-1536x691-1-1024x461.jpg"
+      },
+      {
+        "id": "men-seminars-25",
+        "src": "/images/gallery/men-seminars/g25.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/90cfd1dbae492aa6IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB9DBB3DBB4DBB2DBB0-1006x1024-1.jpg"
+      },
+      {
+        "id": "men-seminars-26",
+        "src": "/images/gallery/men-seminars/g26.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/7100a8cc6-1024x461.jpg"
+      },
+      {
+        "id": "men-seminars-27",
+        "src": "/images/gallery/men-seminars/g27.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/5c1a33e677f26062IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB9DBB4DBB2DBB4DBB5-1024x804.jpg"
+      },
+      {
+        "id": "men-seminars-28",
+        "src": "/images/gallery/men-seminars/g28.jpg",
+        "caption": "9 شهریور 1403",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/3b81314aD8B33-1024x461.jpg"
+      },
+      {
+        "id": "men-seminars-29",
+        "src": "/images/gallery/men-seminars/g29.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/f8774bd9f92595bfIMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB9DBB4DBB0DBB5DBB3-1024x637.jpg"
+      },
+      {
+        "id": "men-seminars-30",
+        "src": "/images/gallery/men-seminars/g30.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/e2827221f019ddb1IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB9DBB4DBB0DBB1DBB4-1024x665.jpg"
+      },
+      {
+        "id": "men-seminars-31",
+        "src": "/images/gallery/men-seminars/g31.jpg",
+        "caption": "سمینار شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_213705-1024x615.jpg"
+      },
+      {
+        "id": "men-seminars-32",
+        "src": "/images/gallery/men-seminars/g32.jpg",
+        "caption": "باشگاه رعد کرج",
+        "desc": "باشگاه رعد کرج",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/e684ffcff8119e8dIMG_DBB2DBB0DBB2DBB1DBB0DBB9DBB2DBB3_DBB2DBB1DBB3DBB5DBB0DBB7-1024x768.jpg"
+      },
+      {
+        "id": "men-seminars-33",
+        "src": "/images/gallery/men-seminars/g33.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/8471a93a6d588355IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB9DBB4DBB1DBB3DBB8-1024x652.jpg"
+      },
+      {
+        "id": "men-seminars-34",
+        "src": "/images/gallery/men-seminars/g34.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/e970b8f6796626d8IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB1DBB1DBB8DBB4DBB0-1024x766.jpg"
+      },
+      {
+        "id": "men-seminars-35",
+        "src": "/images/gallery/men-seminars/g35.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/db821271IMG_20250314_11313820copy-1024x461.jpg"
+      },
+      {
+        "id": "men-seminars-36",
+        "src": "/images/gallery/men-seminars/g36.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/bffc3e6dD8B34-1024x556.jpg"
+      },
+      {
+        "id": "men-seminars-37",
+        "src": "/images/gallery/men-seminars/g37.jpg",
+        "caption": "سمینار 1400",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/400139000740_470866.jpg"
+      },
+      {
+        "id": "men-seminars-38",
+        "src": "/images/gallery/men-seminars/g38.jpg",
+        "caption": "سمینار 1401",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/400232800557_18840-1-1024x558.jpg"
+      },
+      {
+        "id": "men-seminars-39",
+        "src": "/images/gallery/men-seminars/g39.jpg",
+        "caption": "سمینار 1401",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20201211_112733-1024x516.jpg"
+      },
+      {
+        "id": "men-seminars-40",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۳۰۶۰۹_۲۲۱۶۵۴.jpg",
+        "caption": "دریافت درجه سی فویی",
+        "desc": "سی فو حضرتی",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۳۰۶۰۹_۲۲۱۶۵۴.jpg"
+      },
+      {
+        "id": "men-seminars-41",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۳۰۶۰۹_۲۲۱۸۰۸.jpg",
+        "caption": "دریافت درجه سی فویی",
+        "desc": "سی فو مظاهری",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۳۰۶۰۹_۲۲۱۸۰۸.jpg"
+      },
+      {
+        "id": "men-seminars-42",
+        "src": "/images/gallery/men-seminars/g42.jpg",
+        "caption": "سمینار 1400",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG-20211217-WA0010.jpg"
+      },
+      {
+        "id": "men-seminars-43",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۲۰۸_۲۱۲۳۴۴۵۸۲-1024x436.jpg",
+        "caption": "17 آذر 1402",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۲۰۸_۲۱۲۳۴۴۵۸۲-1024x436.jpg"
+      },
+      {
+        "id": "men-seminars-44",
+        "src": "/images/gallery/men-seminars/g44.jpg",
+        "caption": "سمینار 1401",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Untitled-1-954x1024.jpg"
+      }
+    ]
+  },
+  {
+    "id": "women-seminars",
+    "title": "سمینار بانوان",
+    "titleEn": "Women's Seminars",
+    "titleZh": "女子研讨会",
+    "icon": "🌸",
+    "order": 2,
+    "cover": "/images/gallery/women-seminars/g00.jpg",
+    "images": [
+      {
+        "id": "women-seminars-00",
+        "src": "/images/gallery/women-seminars/g00.jpg",
+        "caption": "آزمون ارتقائ رتبه دختران رعد",
+        "desc": "خرداد 1405",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/07/Polish_20260612_164259128.jpg"
+      },
+      {
+        "id": "women-seminars-01",
+        "src": "/images/gallery/women-seminars/g01.jpg",
+        "caption": "سمینار بانوان- آذر 1404",
+        "desc": "بانوان توانمند وو وی",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/02/IMG_20251219_161459-copy-1024x547.jpg"
+      },
+      {
+        "id": "women-seminars-02",
+        "src": "/images/gallery/women-seminars/g02.jpg",
+        "caption": "سمینار بانوان 13 شهریور 1404",
+        "desc": "سی فو مظاهری",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250907_101358-1024x684.jpg"
+      },
+      {
+        "id": "women-seminars-03",
+        "src": "/images/gallery/women-seminars/g03.jpg",
+        "caption": "سی جه فعله گری",
+        "desc": "دریافت حکم پایان سطح آدمک چوبی. شهریور 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250905_120032-1024x461.jpg"
+      },
+      {
+        "id": "women-seminars-04",
+        "src": "/images/gallery/women-seminars/g04.jpg",
+        "caption": "سمینار بانوان خرداد 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/fe584765IMG_20250314_16462020copy-scaled-1-1024x461.jpg"
+      },
+      {
+        "id": "women-seminars-05",
+        "src": "/images/gallery/women-seminars/g05.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/fe3d61dbD8B35-100x100-1.jpg"
+      },
+      {
+        "id": "women-seminars-06",
+        "src": "/images/gallery/women-seminars/g06.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/d1d83fc24-1024x461-1.jpg"
+      },
+      {
+        "id": "women-seminars-07",
+        "src": "/images/gallery/women-seminars/g07.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/b9b6c002f7c6b5cdIMG_DBB2DBB0DBB2DBB1DBB1DBB2DBB1DBB7_DBB1DBB7DBB1DBB4DBB3DBB6-scaled-1-1024x496.jpg"
+      },
+      {
+        "id": "women-seminars-08",
+        "src": "/images/gallery/women-seminars/g08.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/34c13d18IMG_20250314_14134420copy-600x270-1.jpg"
+      },
+      {
+        "id": "women-seminars-09",
+        "src": "/images/gallery/women-seminars/g09.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/14f873467363c1f5IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB7DBB1DBB9DBB1DBB6-150x150-1.jpg"
+      },
+      {
+        "id": "women-seminars-10",
+        "src": "/images/gallery/women-seminars/g10.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/0c3fe5c0ac95f2f7IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB9DBB4DBB8DBB5DBB8-300x300-1.jpg"
+      },
+      {
+        "id": "women-seminars-11",
+        "src": "/images/gallery/women-seminars/g11.jpg",
+        "caption": "سمینار شهریور 1404- دختران رعد- سی فو مظاهری",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250904_155838-1024x542.jpg"
+      },
+      {
+        "id": "women-seminars-12",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۲۰۹_۰۶۴۳۱۵۶۸۰-1-1024x436.jpg",
+        "caption": "1401",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۲۰۹_۰۶۴۳۱۵۶۸۰-1-1024x436.jpg"
+      },
+      {
+        "id": "women-seminars-13",
+        "src": "/images/gallery/women-seminars/g13.jpg",
+        "caption": "1400",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG-20210912-WA0006.jpg"
+      },
+      {
+        "id": "women-seminars-14",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۹۰۹_۱۷۲۳۰۷-1024x766.jpg",
+        "caption": "1401",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۹۰۹_۱۷۲۳۰۷-1024x766.jpg"
+      },
+      {
+        "id": "women-seminars-15",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۹۰۹_۱۹۵۲۴۳-1024x694.jpg",
+        "caption": "1400",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۹۰۹_۱۹۵۲۴۳-1024x694.jpg"
+      }
+    ]
+  },
+  {
+    "id": "kids-seminars",
+    "title": "سمینار کودکان و نونهالان",
+    "titleEn": "Kids & Juniors Seminars",
+    "titleZh": "儿童研讨会",
+    "icon": "🧒",
+    "order": 3,
+    "cover": "/images/gallery/kids-seminars/g00.jpg",
+    "images": [
+      {
+        "id": "kids-seminars-00",
+        "src": "/images/gallery/kids-seminars/g00.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/88dcdb26234a6738IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB3DBB2DBB1DBB4DBB1-1024x768.jpg"
+      },
+      {
+        "id": "kids-seminars-01",
+        "src": "/images/gallery/kids-seminars/g01.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/02ee4f7ae17f85bfIMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB1DBB3DBB2DBB3DBB3-1024x766.jpg"
+      },
+      {
+        "id": "kids-seminars-02",
+        "src": "/images/gallery/kids-seminars/g02.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/9f569367D8B31-1024x692.jpg"
+      },
+      {
+        "id": "kids-seminars-03",
+        "src": "/images/gallery/kids-seminars/g03.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/c873492bD8B3-1024x462.jpg"
+      },
+      {
+        "id": "kids-seminars-04",
+        "src": "/images/gallery/kids-seminars/g04.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/e701c58c1-1024x461.jpg"
+      },
+      {
+        "id": "kids-seminars-05",
+        "src": "/images/gallery/kids-seminars/g05.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/3cc7aa2f3-1024x461.jpg"
+      },
+      {
+        "id": "kids-seminars-06",
+        "src": "/images/gallery/kids-seminars/g06.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/9350393aIMG_20250314_13200020copy-1024x461.jpg"
+      },
+      {
+        "id": "kids-seminars-07",
+        "src": "/images/gallery/kids-seminars/g07.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/4a08f3ecce3d9962IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB9DBB5DBB1DBB5DBB0-1024x685.jpg"
+      },
+      {
+        "id": "kids-seminars-08",
+        "src": "/images/gallery/kids-seminars/g08.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/74d885a0c8c7ff96IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB2DBB3DBB8DBB0DBB7-1024x766.jpg"
+      },
+      {
+        "id": "kids-seminars-09",
+        "src": "/images/gallery/kids-seminars/g09.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/02ee4f7ae17f85bfIMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB1DBB3DBB2DBB3DBB3-150x150-1.jpg"
+      },
+      {
+        "id": "kids-seminars-10",
+        "src": "/images/gallery/kids-seminars/g10.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/9f569367D8B31-1024x692.jpg"
+      },
+      {
+        "id": "kids-seminars-11",
+        "src": "/images/gallery/kids-seminars/g11.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/88dcdb26234a6738IMG_DBB2DBB0DBB2DBB2DBB0DBB9DBB0DBB9_DBB1DBB3DBB2DBB1DBB4DBB1-150x150-1.jpg"
+      },
+      {
+        "id": "kids-seminars-12",
+        "src": "/images/gallery/kids-seminars/g12.jpg",
+        "caption": "29 خرداد 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/08/photo_2025-08-09_18-55-29-1024x625.jpg"
+      },
+      {
+        "id": "kids-seminars-13",
+        "src": "/images/gallery/kids-seminars/g13.jpg",
+        "caption": "ووشو آکادمی تخصصی ورزشی رعد. شهریور 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250827_170944-1024x671.jpg"
+      },
+      {
+        "id": "kids-seminars-14",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۹۰۹_۱۳۲۲۰۴-1024x768.jpg",
+        "caption": "سمینار 1400",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۹۰۹_۱۳۲۲۰۴-1024x768.jpg"
+      }
+    ]
+  },
+  {
+    "id": "city-seminars",
+    "title": "سمینار شهرستان ها",
+    "titleEn": "Provincial Seminars",
+    "titleZh": "外省研讨会",
+    "icon": "🗺️",
+    "order": 4,
+    "cover": "/images/gallery/city-seminars/g00.jpg",
+    "images": [
+      {
+        "id": "city-seminars-00",
+        "src": "/images/gallery/city-seminars/g00.jpg",
+        "caption": "ارتقاء رتبه هنرجویان توانمند بوکان",
+        "desc": "سمینار بهمن 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/02/l-1024x683.jpg"
+      },
+      {
+        "id": "city-seminars-01",
+        "src": "/images/gallery/city-seminars/g01.jpg",
+        "caption": "سمینار بوکان 14 خرداد 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/08/8-1024x462.jpg"
+      },
+      {
+        "id": "city-seminars-02",
+        "src": "/images/gallery/city-seminars/g02.jpg",
+        "caption": "سمینار بوکان",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/de61a783d7deaa62IMG_DBB2DBB0DBB2DBB2DBB0DBB2DBB1DBB8_DBB1DBB3DBB1DBB9DBB5DBB0-1024x768.jpg"
+      },
+      {
+        "id": "city-seminars-03",
+        "src": "/images/gallery/city-seminars/g03.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/c3aad0c7df4bc31cIMG_DBB2DBB0DBB2DBB2DBB0DBB2DBB1DBB8_DBB1DBB3DBB1DBB6DBB1DBB9-150x150-1.jpg"
+      },
+      {
+        "id": "city-seminars-04",
+        "src": "/images/gallery/city-seminars/g04.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/b7f5dbdcq1-300x162-1.jpg"
+      },
+      {
+        "id": "city-seminars-05",
+        "src": "/images/gallery/city-seminars/g05.jpg",
+        "caption": "سمینار بوکان",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/07/60e273cf6a8571a4IMG_DBB2DBB0DBB2DBB2DBB1DBB0DBB0DBB7_DBB1DBB4DBB3DBB2DBB0DBB7-1024x576.jpg"
+      },
+      {
+        "id": "city-seminars-06",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۴۰۲۰۹_۲۳۳۲۳۵۰۵۵-1024x819.jpg",
+        "caption": "سمینار بوکان",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۴۰۲۰۹_۲۳۳۲۳۵۰۵۵-1024x819.jpg"
+      },
+      {
+        "id": "city-seminars-07",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۴۰۲۰۹_۲۳۳۳۴۹۶۵۰-1024x819.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۴۰۲۰۹_۲۳۳۳۴۹۶۵۰-1024x819.jpg"
+      },
+      {
+        "id": "city-seminars-08",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۴۰۲۰۹_۲۳۳۴۵۸۰۳۸-1024x819.jpg",
+        "caption": "",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۴۰۲۰۹_۲۳۳۴۵۸۰۳۸-1024x819.jpg"
+      },
+      {
+        "id": "city-seminars-09",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۴۰۷۱۹_۱۹۵۵۴۸۷۸۸-1024x1024.jpg",
+        "caption": "سمینار 1401",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۴۰۷۱۹_۱۹۵۵۴۸۷۸۸-1024x1024.jpg"
+      }
+    ]
+  },
+  {
+    "id": "competitions",
+    "title": "مسابقات",
+    "titleEn": "Competitions",
+    "titleZh": "比赛集锦",
+    "icon": "🏆",
+    "order": 5,
+    "cover": "/images/gallery/competitions/g00.jpg",
+    "images": [
+      {
+        "id": "competitions-00",
+        "src": "/images/gallery/competitions/g00.jpg",
+        "caption": "مسابقات انتخابی لیگ برتر ووشو",
+        "desc": "کسب عناوین توسط هنرجویان آکادمی تخصصی ورزشی رعد",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/07/IMG_20260717_184804.jpg"
+      },
+      {
+        "id": "competitions-01",
+        "src": "/images/gallery/competitions/g01.jpg",
+        "caption": "نمایی از مسابقات",
+        "desc": "هنرنمایی و کسب مدال های رنگارنگ هنرجویان آکادمی رعد در مسابقات قهرمانی ووشو از سال 1402 تا 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_20260520_124040222.jpg"
+      },
+      {
+        "id": "competitions-02",
+        "src": "/images/gallery/competitions/g02.jpg",
+        "caption": "مسابقات ووشو قهرمانی استان البرز-10 آبان 1404-ساندا",
+        "desc": "کسب مدال های رنگین. 18 طلا و 2 برنز توسط آکادمی وو وی کونگ فو",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/11/IMG-20251031-WA0012-1024x739.jpg"
+      },
+      {
+        "id": "competitions-03",
+        "src": "/images/gallery/competitions/g03.jpg",
+        "caption": "مسابقات ووشو قهرمانی استان البرز-10 آبان 1404 - تالو",
+        "desc": "کسب مدال های رنگین. 18 طلا و 2 برنز توسط هنرجویان باشگاه رعد",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/11/IMG-20251031-WA0011-1024x728.jpg"
+      },
+      {
+        "id": "competitions-04",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/10/Polish_۲۰۲۵۱۰۲۴_۲۳۴۲۰۵۸۷۲-1024x819.jpg",
+        "caption": "مقام اول و سوم در مسابقات استانی",
+        "desc": "آکادمی رعد-ووشو",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/10/Polish_۲۰۲۵۱۰۲۴_۲۳۴۲۰۵۸۷۲-1024x819.jpg"
+      },
+      {
+        "id": "competitions-05",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/10/IMG_۲۰۲۵۱۰۲۴_۲۲۳۲۴۹-1011x1024.jpg",
+        "caption": "داوری مسابقات استانی",
+        "desc": "2 آبان 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/10/IMG_۲۰۲۵۱۰۲۴_۲۲۳۲۴۹-1011x1024.jpg"
+      },
+      {
+        "id": "competitions-06",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/10/Polish_۲۰۲۵۱۰۲۴_۲۳۵۸۳۰۹۹۷-1024x576.jpg",
+        "caption": "داوری مسابقات استانی",
+        "desc": "ووشو البرز-آبان 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/10/Polish_۲۰۲۵۱۰۲۴_۲۳۵۸۳۰۹۹۷-1024x576.jpg"
+      },
+      {
+        "id": "competitions-07",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/10/Polish_۲۰۲۵۱۰۲۶_۰۷۲۷۴۷۳۹۳-1024x819.jpg",
+        "caption": "آماده سازی جهت شرکت در مسابقات",
+        "desc": "ووشو نونهالان1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/10/Polish_۲۰۲۵۱۰۲۶_۰۷۲۷۴۷۳۹۳-1024x819.jpg"
+      },
+      {
+        "id": "competitions-08",
+        "src": "/images/gallery/competitions/g08.jpg",
+        "caption": "1404",
+        "desc": "کسب مقام دوم مسابقات استانی ووشو در استان البرز- 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/SAVE_20250809_134801-1024x926.jpg"
+      },
+      {
+        "id": "competitions-09",
+        "src": "/images/gallery/competitions/g09.jpg",
+        "caption": "1404",
+        "desc": "کسب مقام اول و دوم در مسابقات استانی ووشو- البرز - 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250808_230202-1024x821.jpg"
+      },
+      {
+        "id": "competitions-10",
+        "src": "/images/gallery/competitions/g10.jpg",
+        "caption": "1403",
+        "desc": "کسب مقام اول تیمی در مسابقات فرم های گروهی به میزبانی هیئت ووشو استان البرز- 1403",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250110_150213-1024x472.jpg"
+      },
+      {
+        "id": "competitions-11",
+        "src": "/images/gallery/competitions/g11.jpg",
+        "caption": "1403",
+        "desc": "داوری مسابقات ووشو 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250208_233426-1024x461.jpg"
+      },
+      {
+        "id": "competitions-12",
+        "src": "/images/gallery/competitions/g12.jpg",
+        "caption": "1403",
+        "desc": "داوری مسابقات ووشو 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250228_142842-1024x557.jpg"
+      },
+      {
+        "id": "competitions-13",
+        "src": "/images/gallery/competitions/g13.jpg",
+        "caption": "داوری مسابقات استانی- 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250809_084555-1024x579.jpg"
+      },
+      {
+        "id": "competitions-14",
+        "src": "/images/gallery/competitions/g14.jpg",
+        "caption": "مسابقات آمادگی جسمانی به میزبانی استان البرز- 1404",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250828_190704-1024x513.jpg"
+      },
+      {
+        "id": "competitions-15",
+        "src": "/images/gallery/competitions/g15.jpg",
+        "caption": "داوری ووشو 1403",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/SAVE_20250208_164028-1024x678.jpg"
+      },
+      {
+        "id": "competitions-16",
+        "src": "/images/gallery/competitions/g16.jpg",
+        "caption": "داوری ووشو 1403",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/SAVE_20250208_164046-1024x478.jpg"
+      },
+      {
+        "id": "competitions-17",
+        "src": "/images/gallery/competitions/g17.jpg",
+        "caption": "دختران رعد",
+        "desc": "مسابقات استانی",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/1000370979.jpg"
+      },
+      {
+        "id": "competitions-18",
+        "src": "/images/gallery/competitions/g18.jpg",
+        "caption": "مسابقات تالو- فرم های سنتی",
+        "desc": "کسب مقام اول تیمی",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/1000302639.jpg"
+      },
+      {
+        "id": "competitions-19",
+        "src": "/images/gallery/competitions/g19.jpg",
+        "caption": "مسابقه هنرهای فردی",
+        "desc": "1401",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/1678561247750-1024x797.jpg"
+      },
+      {
+        "id": "competitions-20",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۲۲۵_۱۴۵۵۳۷-768x1024.jpg",
+        "caption": "کسب طلای استان",
+        "desc": "مسابقات ووشو 1400",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۲۲۵_۱۴۵۵۳۷-768x1024.jpg"
+      },
+      {
+        "id": "competitions-21",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۰۱۳_۲۳۰۱۴۱۷۹۶-1024x1024.jpg",
+        "caption": "مسابقه ژیمناستیک",
+        "desc": "آکادمی تخصصی ورزشی رعد",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۰۱۳_۲۳۰۱۴۱۷۹۶-1024x1024.jpg"
+      },
+      {
+        "id": "competitions-22",
+        "src": "/images/gallery/competitions/g22.jpg",
+        "caption": "لیگ برتر ووشو",
+        "desc": "استاد مظاهری",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG-20210210-WA0014.jpg"
+      },
+      {
+        "id": "competitions-23",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/10/Polish_۲۰۲۵۱۰۲۴_۲۳۴۳۱۰۲۱۷-1024x819.jpg",
+        "caption": "کسب عناوین ووشوکاران رعد",
+        "desc": "2 آبان 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/10/Polish_۲۰۲۵۱۰۲۴_۲۳۴۳۱۰۲۱۷-1024x819.jpg"
+      },
+      {
+        "id": "competitions-24",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۰۱۳_۱۸۰۸۵۱۹۵۰-1024x1024.jpg",
+        "caption": "مسابقه ژیمناستیک",
+        "desc": "آکادمی تخصصی ورزشی رعد",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۰۱۳_۱۸۰۸۵۱۹۵۰-1024x1024.jpg"
+      },
+      {
+        "id": "competitions-25",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۰۱۳_۲۳۰۱۴۱۷۹۶-1-1024x1024.jpg",
+        "caption": "مسابقه",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۰۱۳_۲۳۰۱۴۱۷۹۶-1-1024x1024.jpg"
+      },
+      {
+        "id": "competitions-26",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۰۱۳_۲۳۳۲۴۷۴۹۸-1024x1024.jpg",
+        "caption": "ژیمناستیک رعد",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۰۱۳_۲۳۳۲۴۷۴۹۸-1024x1024.jpg"
+      }
+    ]
+  },
+  {
+    "id": "congresses",
+    "title": "همایش ها",
+    "titleEn": "Congresses",
+    "titleZh": "研讨大会",
+    "icon": "🎓",
+    "order": 6,
+    "cover": "/images/gallery/congresses/g00.jpg",
+    "images": [
+      {
+        "id": "congresses-00",
+        "src": "/images/gallery/congresses/g00.jpg",
+        "caption": "رو زن 1404",
+        "desc": "استاد مظاهری",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۵۱۲۱۱_۱۵۳۰۱۱۳۷۹.jpg"
+      },
+      {
+        "id": "congresses-01",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/10/Polish_۲۰۲۵۱۰۱۷_۱۵۰۵۳۳۴۱۶-1024x819.jpg",
+        "caption": "همایش هفته تربیت بدنی",
+        "desc": "مهر 1404- در کنار سرپرست اداره ورزش و جوانان شهرستان کرج",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/10/Polish_۲۰۲۵۱۰۱۷_۱۵۰۵۳۳۴۱۶-1024x819.jpg"
+      },
+      {
+        "id": "congresses-02",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۰۲۱_۰۷۰۰۵۱۷۴۷-1024x819.jpg",
+        "caption": "هفته تربیت بدنی",
+        "desc": "آکادمی تخصصی ورزشی رعد",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/Polish_۲۰۲۳۱۰۲۱_۰۷۰۰۵۱۷۴۷-1024x819.jpg"
+      },
+      {
+        "id": "congresses-03",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۱۱۰۲۰_۲۱۵۸۲۸-1024x837.jpg",
+        "caption": "هفته تربیت بدنی 1401",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۱۱۰۲۰_۲۱۵۸۲۸-1024x837.jpg"
+      },
+      {
+        "id": "congresses-04",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۲۰۴_۱۵۲۴۵۴-905x1024.jpg",
+        "caption": "همایش تای جی و چی گونگ 1400",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۲۰۴_۱۵۲۴۵۴-905x1024.jpg"
+      }
+    ]
+  },
+  {
+    "id": "org-meetings",
+    "title": "جلسات سازمانی",
+    "titleEn": "Organizational Meetings",
+    "titleZh": "组织会议",
+    "icon": "🤝",
+    "order": 7,
+    "cover": "",
+    "images": []
+  },
+  {
+    "id": "other-programs",
+    "title": "سایر برنامه ها",
+    "titleEn": "Other Programs",
+    "titleZh": "其他活动",
+    "icon": "✨",
+    "order": 8,
+    "cover": "/images/gallery/other-programs/g00.jpg",
+    "images": [
+      {
+        "id": "other-programs-00",
+        "src": "/images/gallery/other-programs/g00.jpg",
+        "caption": "تمرین مشترک کونگ فو چینی و ووشو",
+        "desc": "تیرماه 14505",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/07/Polish_۲۰۲۶۰۷۰۹_۰۱۲۰۲۳۶۲۶1.jpg"
+      },
+      {
+        "id": "other-programs-01",
+        "src": "/images/gallery/other-programs/g01.jpg",
+        "caption": "تمرین مشترک کونگ فو چینی و ووشو",
+        "desc": "تیرماه 1405",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/07/Polish_۲۰۲۶۰۷۱۵_۱۹۴۶۰۱۷۲۶.jpg"
+      },
+      {
+        "id": "other-programs-02",
+        "src": "/images/gallery/other-programs/g02.jpg",
+        "caption": "آکادمی تخصصی ورزشی رعد",
+        "desc": "هنرهای رزمی- تناسب اندام",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/07/IMG_20260323_094511.jpg"
+      },
+      {
+        "id": "other-programs-03",
+        "src": "/images/gallery/other-programs/g03.jpg",
+        "caption": "سرپرست هیئت ووشو شهرستان کرج. غرب",
+        "desc": "اردیبهشت 1405",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۶۰۵۱۸_۲۳۵۴۲۷۶۵۰.jpg"
+      },
+      {
+        "id": "other-programs-04",
+        "src": "/images/gallery/other-programs/g04.jpg",
+        "caption": "آدمک چوبی",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_20260513_102145816.jpg"
+      },
+      {
+        "id": "other-programs-05",
+        "src": "/images/gallery/other-programs/g05.jpg",
+        "caption": "ورزش و خانواده",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_20260516_223746060.jpg"
+      },
+      {
+        "id": "other-programs-06",
+        "src": "/images/gallery/other-programs/g06.jpg",
+        "caption": "جشن تولد پرهام عزیز",
+        "desc": "اذر 1404",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/12/IMG_20251201_162554-1024x461.jpg"
+      },
+      {
+        "id": "other-programs-07",
+        "src": "/images/gallery/other-programs/g07.jpg",
+        "caption": "جشن شالبند مشکی",
+        "desc": "آکادمی تخصصی ورزشی رعد",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250908_160752-1024x461.jpg"
+      },
+      {
+        "id": "other-programs-08",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/08/۲۰۱۹۰۵۰۹_۱۶۵۰۰۶-1024x768.jpg",
+        "caption": "چی گونگ",
+        "desc": "رونمایی از اولین کتاب در حوزه چی گونگ و انرژی مغناطیسی",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/08/۲۰۱۹۰۵۰۹_۱۶۵۰۰۶-1024x768.jpg"
+      },
+      {
+        "id": "other-programs-09",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/04/ad35167cف-1024x496.jpg",
+        "caption": "تمرین با سی فوهای سازمان",
+        "desc": "آکادمی تخصصی ورزشی رعد",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/04/ad35167cف-1024x496.jpg"
+      },
+      {
+        "id": "other-programs-10",
+        "src": "/images/gallery/other-programs/g10.jpg",
+        "caption": "آکادمی تخصصی ورزشی رعد",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_20250826_160615-1024x888.jpg"
+      },
+      {
+        "id": "other-programs-11",
+        "src": "/images/gallery/other-programs/g11.jpg",
+        "caption": "سمن نشاط و تندرستس تیراگ",
+        "desc": "دوره کمک های اولیه",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG-20211119-WA0037.jpg"
+      },
+      {
+        "id": "other-programs-12",
+        "src": "/images/gallery/other-programs/g12.jpg",
+        "caption": "تمرین با معلواین اسایشگاه",
+        "desc": "سال 1399",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/photo_2016-03-16_19-30-47.jpg"
+      },
+      {
+        "id": "other-programs-13",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۳۲۸_۰۹۳۲۳۰-1024x678.jpg",
+        "caption": "تمرین مشترک- لی چوان ووشو 1400",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۳۲۸_۰۹۳۲۳۰-1024x678.jpg"
+      },
+      {
+        "id": "other-programs-14",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۳۲۸_۰۹۳۱۲۷-1024x704.jpg",
+        "caption": "تمرین مشترک. انتخابی لیگ",
+        "desc": "1400",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۳۲۸_۰۹۳۱۲۷-1024x704.jpg"
+      },
+      {
+        "id": "other-programs-15",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۳۲۸_۰۹۳۱۴۳.jpg",
+        "caption": "جلسه با رئیس اداره تامین کل اجتماعی",
+        "desc": "پیگیری بیمه ورزشکاران و مربیان",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۳۲۸_۰۹۳۱۴۳.jpg"
+      },
+      {
+        "id": "other-programs-16",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۳۲۸_۰۹۳۳۱۲-1024x488.jpg",
+        "caption": "همایش تربیت بدنی 1401",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۳۲۸_۰۹۳۳۱۲-1024x488.jpg"
+      },
+      {
+        "id": "other-programs-17",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۷۲۹_۱۰۳۱۰۰-1024x768.jpg",
+        "caption": "همایش ووشو",
+        "desc": "1400",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۰۷۲۹_۱۰۳۱۰۰-1024x768.jpg"
+      },
+      {
+        "id": "other-programs-18",
+        "src": "/images/gallery/other-programs/g18.jpg",
+        "caption": "لیگ برتر ووشو",
+        "desc": "1401",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/55555-1.jpg"
+      },
+      {
+        "id": "other-programs-19",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/۲۰۲۴۰۲۲۵_۱۲۰۷۰۶-1024x577.jpg",
+        "caption": "جشن طلایی",
+        "desc": "1402",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/۲۰۲۴۰۲۲۵_۱۲۰۷۰۶-1024x577.jpg"
+      },
+      {
+        "id": "other-programs-20",
+        "src": "/images/gallery/other-programs/g20.jpg",
+        "caption": "assessment 2",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/assessment-2.tif"
+      },
+      {
+        "id": "other-programs-21",
+        "src": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۱۱۱۸_۱۱۵۷۵۷-1024x578.jpg",
+        "caption": "سمن نشاط و تندرستی تیراگ",
+        "desc": "کارگاه روانشناسی-1400",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG_۲۰۲۲۱۱۱۸_۱۱۵۷۵۷-1024x578.jpg"
+      },
+      {
+        "id": "other-programs-22",
+        "src": "/images/gallery/other-programs/g22.jpg",
+        "caption": "نانچیکو",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/6o-1024x946.jpg"
+      },
+      {
+        "id": "other-programs-23",
+        "src": "/images/gallery/other-programs/g23.jpg",
+        "caption": "چی گونگ",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/7y-968x1024.jpg"
+      },
+      {
+        "id": "other-programs-24",
+        "src": "/images/gallery/other-programs/g24.jpg",
+        "caption": "چاقوهای پروانه ای",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/sifu3-683x1024.jpg"
+      },
+      {
+        "id": "other-programs-25",
+        "src": "/images/gallery/other-programs/g25.jpg",
+        "caption": "چاقوهای پروانه ای",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/8o-1024x873.jpg"
+      },
+      {
+        "id": "other-programs-26",
+        "src": "/images/gallery/other-programs/g26.jpg",
+        "caption": "مدیکال چی گونگ",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/IMG-20200927-WA0026-818x1024.jpg"
+      },
+      {
+        "id": "other-programs-27",
+        "src": "/images/gallery/other-programs/g27.jpg",
+        "caption": "بدلکاری",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/212-681x1024.jpg"
+      },
+      {
+        "id": "other-programs-28",
+        "src": "/images/gallery/other-programs/g28.jpg",
+        "caption": "انعطاف",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/DSC_8460-739x1024.jpg"
+      },
+      {
+        "id": "other-programs-29",
+        "src": "/images/gallery/other-programs/g29.jpg",
+        "caption": "انعطاف",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/DSC_8465-1024x740.jpg"
+      },
+      {
+        "id": "other-programs-30",
+        "src": "/images/gallery/other-programs/g30.jpg",
+        "caption": "آدمک چوبی",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2025/09/r8-844x1024.jpg"
+      },
+      {
+        "id": "other-programs-31",
+        "src": "/images/gallery/other-programs/g31.jpg",
+        "caption": "ژیمناستیک رعد",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۵۱۱۲۶_۱۹۰۴۲۶۳۷۲.jpg"
+      },
+      {
+        "id": "other-programs-32",
+        "src": "/images/gallery/other-programs/g32.jpg",
+        "caption": "ووشو رعد",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۵۱۱۲۶_۱۹۱۵۲۰۳۴۳.jpg"
+      },
+      {
+        "id": "other-programs-33",
+        "src": "/images/gallery/other-programs/g33.jpg",
+        "caption": "تناسب اندام رعد",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۵۱۲۰۸_۱۲۲۰۰۲۵۰۶.jpg"
+      },
+      {
+        "id": "other-programs-34",
+        "src": "/images/gallery/other-programs/g34.jpg",
+        "caption": "ووشو نونهالان",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۶۰۲۲۴_۱۷۴۵۰۸۹۱۷.jpg"
+      },
+      {
+        "id": "other-programs-35",
+        "src": "/images/gallery/other-programs/g35.jpg",
+        "caption": "وو وی کونگ فو",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۶۰۳۲۵_۰۰۱۹۲۲۱۰۱.jpg"
+      },
+      {
+        "id": "other-programs-36",
+        "src": "/images/gallery/other-programs/g36.jpg",
+        "caption": "نمایی از تمرین",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۶۰۴۱۴_۱۰۳۵۰۵۱۳۳.jpg"
+      },
+      {
+        "id": "other-programs-37",
+        "src": "/images/gallery/other-programs/g37.jpg",
+        "caption": "آدمک چویی",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۶۰۴۲۲_۱۲۲۷۴۹۱۷۰.jpg"
+      },
+      {
+        "id": "other-programs-38",
+        "src": "/images/gallery/other-programs/g38.jpg",
+        "caption": "چوب بلند",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۶۰۴۲۲_۱۴۴۶۱۴۰۵۷.jpg"
+      },
+      {
+        "id": "other-programs-39",
+        "src": "/images/gallery/other-programs/g39.jpg",
+        "caption": "مبارزه آزاد",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۶۰۴۲۶_۱۱۳۵۱۳۵۴۵.jpg"
+      },
+      {
+        "id": "other-programs-40",
+        "src": "/images/gallery/other-programs/g40.jpg",
+        "caption": "ژیمناستیک رعد",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_20260427_171638314.jpg"
+      },
+      {
+        "id": "other-programs-41",
+        "src": "/images/gallery/other-programs/g41.jpg",
+        "caption": "سلاح سرد",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۶۰۴۲۸_۰۶۵۰۲۳۳۴۶.jpg"
+      },
+      {
+        "id": "other-programs-42",
+        "src": "/images/gallery/other-programs/g42.jpg",
+        "caption": "انعطاف در کونگ فو چینی",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۶۰۵۰۲_۱۸۳۸۵۹۹۵۹.jpg"
+      },
+      {
+        "id": "other-programs-43",
+        "src": "/images/gallery/other-programs/g43.jpg",
+        "caption": "وینگ چون نوین",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_۲۰۲۶۰۵۱۳_۱۸۵۹۲۲۵۵۱.jpg"
+      },
+      {
+        "id": "other-programs-44",
+        "src": "/images/gallery/other-programs/g44.jpg",
+        "caption": "نمایی از هنرجویان ژیمناستیک هنری رعد",
+        "desc": "",
+        "origin": "https://wuweikungfu.com/wp-content/uploads/2026/05/Polish_20260518_183350343.jpg"
+      }
+    ]
+  }
+]

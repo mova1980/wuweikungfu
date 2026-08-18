@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Wu Wei Kung Fu",
   },
   description:
-    "وو وی تائو؛ هنر باستانی کنش بدون تلاش. کونگ فوی اصیل چینی زیر نظر سی فو احسان شایان فر — Wu Wei Tao; The Ancient Art of Effortless Action.",
+    "وو وی؛ هنر باستانی کنش بدون تلاش. کونگ فوی اصیل چینی زیر نظر سی فو احسان شایان فر — Wu Wei; The Ancient Art of Effortless Action.",
   keywords: ["Wu Wei", "Kung Fu", "وو وی", "کونگ فو", "وینگ چون", "چی گونگ", "سی فو شایان فر", "无为功夫"],
   openGraph: {
     title: "Wu Wei Kung Fu | وو وی کونگ فو",

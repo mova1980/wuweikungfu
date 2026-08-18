@@ -63,9 +63,9 @@
     },
     {
       "year": "۱۳۹۹ / 2020",
-      "fa": "دریافت نمایندگی رسمی وو وی تائو در استان البرز",
-      "en": "Becoming official Wu Wei Tao representative of Alborz Province",
-      "zh": "成为无为道阿尔博尔兹省官方代表"
+      "fa": "دریافت نمایندگی رسمی وو وی در استان البرز",
+      "en": "Becoming official Wu Wei representative of Alborz Province",
+      "zh": "成为无为阿尔博尔兹省官方代表"
     },
     {
       "year": "۱۴۰۲ / 2023",
@@ -92,9 +92,9 @@
       "zh": "8 个武术与体能项目的认证教练"
     },
     {
-      "fa": "نمایندهٔ رسمی وو وی تائو در استان البرز",
-      "en": "Official Wu Wei Tao representative of Alborz Province",
-      "zh": "无为道阿尔博尔兹省官方代表"
+      "fa": "نمایندهٔ رسمی وو وی در استان البرز",
+      "en": "Official Wu Wei representative of Alborz Province",
+      "zh": "无为阿尔博尔兹省官方代表"
     },
     {
       "fa": "رئیس فدراسیون ووشو غرب استان تهران",
@@ -102,9 +102,9 @@
       "zh": "德黑兰省西部武术联合会主席"
     },
     {
-      "fa": "نویسندهٔ کتاب مرجع چی‌گونگ به روش وو وی تائو",
-      "en": "Author of the reference book on Wu Wei Tao Qigong",
-      "zh": "无为道气功权威著作作者"
+      "fa": "نویسندهٔ کتاب مرجع چی‌گونگ به روش وو وی",
+      "en": "Author of the reference book on Wu Wei Qigong",
+      "zh": "无为气功权威著作作者"
     }
   ],
   "belts": [
@@ -156,5 +156,41 @@
       "zh": "黑带——静",
       "color": "#1c1c1e"
     }
-  ]
+  ],
+  "pricing": {
+    "currency": {
+      "fa": "تومان",
+      "en": "Toman",
+      "zh": "土曼"
+    },
+    "classes": [
+      {
+        "id": "general",
+        "label": {
+          "fa": "عمومی",
+          "en": "Group",
+          "zh": "团体班"
+        },
+        "monthly": 2500000
+      },
+      {
+        "id": "semi",
+        "label": {
+          "fa": "نیمه خصوصی",
+          "en": "Semi-Private",
+          "zh": "半私教"
+        },
+        "monthly": 4000000
+      },
+      {
+        "id": "private",
+        "label": {
+          "fa": "خصوصی",
+          "en": "Private",
+          "zh": "私教"
+        },
+        "monthly": 6000000
+      }
+    ]
+  }
 }

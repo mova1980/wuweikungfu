@@ -10,6 +10,7 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: any }) 
     [`/${locale}/shop`, dict.nav.shop],
     [`/${locale}/videos`, dict.nav.videos],
     [`/${locale}/events`, dict.nav.events],
+    [`/${locale}/gallery`, dict.nav.gallery],
     [`/${locale}/corrective`, dict.nav.corrective],
     [`/${locale}/assessment`, dict.nav.assessment],
     [`/${locale}/register`, dict.nav.register],

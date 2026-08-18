@@ -10,6 +10,7 @@ const localeNames: Record<string, string> = { fa: "فارسی", en: "English", z
 export default function Navbar({ locale, dict }: { locale: Locale; dict: any }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [galOpen, setGalOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [light, setLight] = useState(false);
 
@@ -33,11 +34,16 @@ export default function Navbar({ locale, dict }: { locale: Locale; dict: any }) 
     [`/${locale}/techniques`, dict.nav.techniques],
     [`/${locale}/blog`, dict.nav.blog],
     [`/${locale}/shop`, dict.nav.shop],
-    [`/${locale}/videos`, dict.nav.videos],
-    [`/${locale}/events`, dict.nav.events],
     [`/${locale}/corrective`, dict.nav.corrective],
     [`/${locale}/contact`, dict.nav.contact],
   ];
+
+  const galLinks: [string, string, string][] = [
+    [`/${locale}/videos`, "🎬", dict.nav.videos],
+    [`/${locale}/events`, "🏆", dict.nav.events],
+    [`/${locale}/gallery`, "🖼️", dict.nav.gallery],
+  ];
+  const galActive = galLinks.some(([href]) => pathname === href);
 
   const pathNoLocale = pathname.replace(/^\/(fa|en|zh)/, "") || "";
 
@@ -65,6 +71,27 @@ export default function Navbar({ locale, dict }: { locale: Locale; dict: any }) 
               </Link>
             );
           })}
+
+          {/* ---------- گالری — dropdown group ---------- */}
+          <div className="group/gal relative">
+            <Link href={`/${locale}/gallery`}
+              className={`stretch-word relative flex items-center gap-1 py-1 transition-colors hover:text-[var(--gold-light,#e5c878)] ${galActive ? "text-[#e5c878]" : "text-[var(--fg)]/80"}`}
+              style={galActive ? { color: "#e5c878" } : undefined}>
+              {dict.nav.galleryGroup}
+              <span className="text-[8px] opacity-70 transition-transform duration-300 group-hover/gal:rotate-180">▾</span>
+              {galActive && <span className="absolute -bottom-0.5 left-0 h-px w-full bg-gradient-to-r from-transparent via-[#c9a84c] to-transparent" />}
+            </Link>
+            <div className="invisible absolute top-full z-50 pt-2 opacity-0 transition-all duration-300 group-hover/gal:visible group-hover/gal:opacity-100 ltr:left-0 rtl:right-0">
+              <div className="glass-strong min-w-48 rounded-2xl border border-[var(--line)] p-1.5 shadow-[0_20px_60px_-15px_rgba(201,168,76,0.35)]" style={{ background: "var(--bg-2)" }}>
+                {galLinks.map(([href, icon, label]) => (
+                  <Link key={href} href={href}
+                    className={`flex items-center gap-2.5 whitespace-nowrap rounded-xl px-3.5 py-2.5 text-xs font-bold transition hover:bg-[rgba(201,168,76,0.12)] ${pathname === href ? "text-[#e5c878]" : "text-[var(--fg)]/80"}`}>
+                    <span className="text-sm">{icon}</span> {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -110,7 +137,31 @@ export default function Navbar({ locale, dict }: { locale: Locale; dict: any }) 
 
       {open && (
         <nav className="nav-glass mx-4 mt-2 flex flex-col gap-1 rounded-2xl p-3 lg:hidden">
-          {[...links, [`/${locale}/assessment`, `🩺 ${dict.nav.assessment}`] as [string, string], [`/${locale}/register`, dict.nav.register] as [string, string]].map(([href, label]) => (
+          {links.map(([href, label]) => (
+            <Link key={href} href={href}
+              className={`rounded-xl px-4 py-2.5 text-sm transition hover:bg-[rgba(201,168,76,0.1)] ${pathname === href ? "text-[#e5c878]" : "text-[var(--fg)]/85"}`}>
+              {label}
+            </Link>
+          ))}
+
+          {/* ---------- گالری — mobile group ---------- */}
+          <button onClick={() => setGalOpen(!galOpen)}
+            className={`flex items-center justify-between rounded-xl px-4 py-2.5 text-sm transition hover:bg-[rgba(201,168,76,0.1)] ${galActive ? "text-[#e5c878]" : "text-[var(--fg)]/85"}`}>
+            <span className="flex items-center gap-2"><span>🖼️</span> {dict.nav.galleryGroup}</span>
+            <span className={`text-[10px] transition-transform duration-300 ${galOpen ? "rotate-180" : ""}`}>▾</span>
+          </button>
+          {galOpen && (
+            <div className="ms-4 flex flex-col gap-1 border-s border-[var(--line)] ps-2">
+              {galLinks.map(([href, icon, label]) => (
+                <Link key={href} href={href}
+                  className={`rounded-xl px-4 py-2 text-[13px] transition hover:bg-[rgba(201,168,76,0.1)] ${pathname === href ? "text-[#e5c878]" : "text-[var(--fg)]/75"}`}>
+                  {icon} {label}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          {[[`/${locale}/assessment`, `🩺 ${dict.nav.assessment}`] as [string, string], [`/${locale}/register`, dict.nav.register] as [string, string]].map(([href, label]) => (
             <Link key={href} href={href}
               className={`rounded-xl px-4 py-2.5 text-sm transition hover:bg-[rgba(201,168,76,0.1)] ${pathname === href ? "text-[#e5c878]" : "text-[var(--fg)]/85"}`}>
               {label}

@@ -27,7 +27,7 @@ export default function AssessmentsAdmin() {
   return (
     <div>
       <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-2xl font-black text-[#e5c878]">درخواست‌های ارزیابی رایگان</h1>
+        <h1 className="text-2xl font-black text-[#e5c878]">درخواست‌های ارزیابی قامتی رایگان</h1>
         <span className="badge">🆕 جدید: {items.filter((x) => x.status === "new").length}</span>
       </div>
       <div className="space-y-4">

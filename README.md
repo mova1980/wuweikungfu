@@ -107,3 +107,31 @@ npm run build && npm start          # داده‌ها در data/*.json ذخیر�
 ---
 
 **تماس برند:** info@wuweikungfu.com · 0912 368 6344 · کرج، آزادگان، خیابان برغان
+
+## دیتابیس Supabase (پیشنهادی برای Vercel)
+
+لایه ذخیره‌سازی به‌ترتیب اولویت: **Supabase → Upstash Redis → فایل‌های محلی `data/`**
+
+اتصال به Supabase:
+1. در [supabase.com](https://supabase.com) یک پروژه بسازید.
+2. در **SQL Editor** این را اجرا کنید:
+
+```sql
+create table if not exists public.collections (
+  key        text primary key,
+  data       jsonb not null default '[]'::jsonb,
+  updated_at timestamptz not null default now()
+);
+alter table public.collections enable row level security;
+```
+
+3. از **Settings → API** مقدار `Project URL` و `service_role` key را بردارید و به‌عنوان متغیر محیطی تنظیم کنید:
+
+```
+SUPABASE_URL=https://xxxx.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=eyJhbGci...
+```
+
+- کلید `service_role` فقط سمت سرور استفاده می‌شود و هرگز به مرورگر نمی‌رود؛ RLS روشن است و anon دسترسی ندارد.
+- بار اول که سایت بالا بیاید، داده‌های فعلی (Redis/فایل/seed) **به‌صورت خودکار** به جدول `collections` منتقل می‌شوند (کلیدهایی مثل `wuwei:content`).
+- اگر قبلاً Upstash داشته‌اید، متغیرهایش را نگه دارید تا به‌عنوان رپلیکا هم‌زمان بمانند؛ هر وقت مطمئن شدید می‌توانید حذفشان کنید.

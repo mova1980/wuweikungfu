@@ -4,7 +4,7 @@ import { readCollection } from "@/lib/db";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = "https://wuweikungfu.com";
   const posts = await readCollection<any[]>("posts");
-  const pages = ["", "/about", "/techniques", "/blog", "/shop", "/videos", "/events", "/contact", "/register", "/search"];
+  const pages = ["", "/about", "/techniques", "/blog", "/shop", "/videos", "/events", "/gallery", "/corrective", "/assessment", "/contact", "/register", "/search"];
   const out: MetadataRoute.Sitemap = [];
   for (const locale of ["fa", "en", "zh"]) {
     for (const p of pages) {

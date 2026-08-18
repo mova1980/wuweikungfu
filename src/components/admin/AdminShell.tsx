@@ -12,6 +12,7 @@ const items: [string, string, string][] = [
   ["/admin/techniques", "🥋", "تکنیک‌ها"],
   ["/admin/videos", "🎬", "ویدئوها"],
   ["/admin/events", "🏆", "رویدادها"],
+  ["/admin/gallery", "🖼️", "گالری تصاویر"],
   ["/admin/products", "🛍", "محصولات"],
   ["/admin/coaches", "🥋", "مربیان"],
   ["/admin/testimonials", "💬", "نظرات شاگردان"],
