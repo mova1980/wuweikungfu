@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import DBStatusCard from "@/components/admin/DBStatusCard";
 
 const cards: [string, string, string, string][] = [
   ["orders", "🧾", "سفارش‌ها", "/admin/orders"],
@@ -50,6 +51,7 @@ export default function AdminDashboard() {
 
   return (
     <div>
+      <DBStatusCard />
       <div className="mb-8 flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-black text-[#e5c878]">داشبورد مدیریت</h1>
