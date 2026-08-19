@@ -71,7 +71,11 @@ const SEEDS: Record<Collection, any> = {
  *  2) Upstash Redis (REST) — kept as replica/fallback when its env vars exist.
  *  3) Local JSON files in ./data — for VPS / local development.
  * ------------------------------------------------------------------------- */
-const SB_URL = (process.env.SUPABASE_URL || "").replace(/\/+$/, "");
+const SB_URL = (process.env.SUPABASE_URL || "")
+  .trim()
+  .replace(/\/+$/, "")          // trailing slashes
+  .replace(/\/rest\/v1$/i, "")  // tolerate pasted "Data API URL" too
+  .replace(/\/+$/, "");
 const SB_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY || "";
 const useSupabase = Boolean(SB_URL && SB_KEY && /^https?:\/\//.test(SB_URL));
 
@@ -183,4 +187,33 @@ export async function writeCollection(name: Collection, data: any): Promise<void
 
 export function newId(): string {
   return Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+}
+
+/* ---------------------------------------------------------------------------
+ * Health probe — used by /api/admin/db-status so the admin can SEE which
+ * backend is live and whether Supabase answers. Never exposes secrets.
+ * ------------------------------------------------------------------------- */
+export async function dbStatus() {
+  const hostOf = (u: string) => {
+    try {
+      return new URL(u).host;
+    } catch {
+      return u.replace(/^https?:\/\//, "").split("/")[0] || null;
+    }
+  };
+  const out: any = {
+    primary: useSupabase ? "supabase" : useRedis ? "redis" : "local-files",
+    supabase: { configured: useSupabase, host: SB_URL ? hostOf(SB_URL) : null, ping: null as string | null },
+    redis: { configured: useRedis, host: REDIS_URL ? hostOf(REDIS_URL) : null },
+  };
+  if (useSupabase) {
+    try {
+      await sbGet("wuwei:__ping__"); // 200 with [] (or a row) both mean: reachable
+      out.supabase.ping = "ok";
+    } catch (e: any) {
+      out.supabase.ping = String(e?.message || e).slice(0, 160);
+      out.primary += " → supabase unreachable, serving from fallback";
+    }
+  }
+  return out;
 }
