@@ -1,11 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
+import DBStatusCard from "@/components/admin/DBStatusCard";
 
 export default function ContentAdmin() {
   const [content, setContent] = useState<any | null>(null);
   const [raw, setRaw] = useState("");
   const [bad, setBad] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [saveErr, setSaveErr] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -31,13 +33,19 @@ export default function ContentAdmin() {
       setBad(true);
       return;
     }
-    await fetch("/api/admin/content", {
+    const res = await fetch("/api/admin/content", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...content, ...extra }),
     });
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+    if (res.ok) {
+      setSaved(true);
+      setSaveErr("");
+      setTimeout(() => setSaved(false), 2000);
+    } else {
+      const detail = await res.text().catch(() => "");
+      setSaveErr(`ذخیره نشد! (خطای ${res.status}) — اتصال دیتابیس را بررسی کنید. ${detail.slice(0, 140)}`);
+    }
   };
 
   return (
@@ -48,6 +56,14 @@ export default function ContentAdmin() {
           {saved ? "ذخیره شد ✓" : "ذخیرهٔ همه"}
         </button>
       </div>
+
+      {saveErr && (
+        <div className="mb-6 rounded-xl border border-[#c41e24]/60 bg-[#c41e24]/15 px-4 py-3 text-sm leading-7 text-[#ff8a85]">
+          ⛔ {saveErr}
+        </div>
+      )}
+
+      <DBStatusCard />
 
       <div className="card mb-6 rounded-2xl p-6">
         <h2 className="mb-4 font-black text-[#e5c878]">آمار صفحهٔ اصلی</h2>
