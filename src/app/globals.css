@@ -751,3 +751,34 @@ html[dir="rtl"] .g-tab-count,
     animation-delay: 0ms !important;
   }
 }
+
+/* ---------- footer location map ---------- */
+.map-card {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 40px -12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s, box-shadow 0.5s;
+}
+.map-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(201, 168, 76, 0.75);
+  box-shadow: 0 24px 60px -18px rgba(201, 168, 76, 0.35);
+}
+/* نقشه به‌صورت تاریکِ هم‌تم نمایش داده می‌شود و با هاور، رنگ واقعی‌اش را می‌گیرد */
+.map-frame {
+  border: 0;
+  filter: invert(92%) hue-rotate(180deg) saturate(0.75) contrast(0.88) brightness(0.95);
+  transition: filter 0.8s ease;
+}
+.map-card:hover .map-frame {
+  filter: none;
+}
+.map-veil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.25), transparent 30%, transparent 70%, rgba(10, 10, 10, 0.45));
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-card, .map-frame { transition: none; }
+  .map-card:hover { transform: none; }
+}
