@@ -27,7 +27,8 @@ export type Collection =
   | "orders"
   | "coaches"
   | "assessments"
-  | "gallery";
+  | "gallery"
+  | "settings";
 
 const FILES: Record<Collection, string> = {
   content: "content.json",
@@ -43,6 +44,7 @@ const FILES: Record<Collection, string> = {
   coaches: "coaches.json",
   assessments: "assessments.json",
   gallery: "gallery.json",
+  settings: "settings.json",
 };
 
 const SEEDS: Record<Collection, any> = {
@@ -59,6 +61,7 @@ const SEEDS: Record<Collection, any> = {
   coaches: seedCoaches,
   gallery: seedGallery as any,
   assessments: [],
+  settings: {},
 };
 
 /* ---------------------------------------------------------------------------
