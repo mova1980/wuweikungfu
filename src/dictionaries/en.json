@@ -240,7 +240,11 @@
     "desc": "Wu Wei; the ancient art of effortless action. Authentic Chinese Kung Fu under Sifu Ehsan Shayanfar.",
     "quick": "Quick Links",
     "contact": "Contact Info",
-    "rights": "© 2026 Wu Wei Kung Fu — All rights reserved."
+    "rights": "© 2026 Wu Wei Kung Fu — All rights reserved.",
+    "mapTitle": "Our Location",
+    "academy": "Raad Sports Academy",
+    "mapCta": "Directions",
+    "viewMap": "View on map"
   },
   "chat": {
     "title": "Master Companion",
