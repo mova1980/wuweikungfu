@@ -18,7 +18,7 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: any }) 
   ];
   return (
     <footer className="relative z-10 mt-24 border-t border-[var(--line)] bg-[var(--bg-2)]/60">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
             <Image src="/images/logo.png" alt="Wu Wei Kung Fu" width={56} height={56} className="logo-glow rounded-full" />
@@ -47,6 +47,12 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: any }) 
           <h4 className="mb-4 text-sm font-bold text-[#e5c878]">{dict.footer.contact}</h4>
           <ul className="space-y-3 text-sm text-[var(--muted)]">
             <li className="flex gap-2"><span>📍</span>{dict.contact.addressVal}</li>
+            <li className="flex gap-2"><span>🗺️</span>
+              <a href="https://maps.app.goo.gl/bVbd7pewrNHg8xqy6" target="_blank" rel="noreferrer"
+                className="font-bold text-[#e5c878] transition hover:text-[#f0d98c] hover:underline">
+                {dict.footer.academy} ↗
+              </a>
+            </li>
             <li className="flex gap-2"><span>📞</span><a href="tel:09123686344" dir="ltr" className="hover:text-[#e5c878]">0912 368 6344</a></li>
             <li className="flex gap-2"><span>✉️</span>
               <span className="flex flex-col gap-1">
@@ -55,6 +61,33 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: any }) 
               </span>
             </li>
           </ul>
+        </div>
+
+        {/* موقعیت روی نقشه */}
+        <div>
+          <h4 className="mb-4 text-sm font-bold text-[#e5c878]">{dict.footer.mapTitle}</h4>
+          <div className="map-card group relative overflow-hidden rounded-2xl border border-[#c9a84c]/40">
+            <iframe
+              src="https://maps.google.com/maps?q=35.827001,51.002368&z=16&hl=fa&output=embed"
+              title={dict.footer.academy}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="map-frame block h-56 w-full"
+            />
+            <span className="map-veil" aria-hidden />
+            <span className="badge pointer-events-none absolute top-2 border-[#c9a84c]/50 bg-black/70 backdrop-blur-sm" style={{ insetInlineStart: "0.5rem" }}>
+              📌 {dict.footer.academy}
+            </span>
+            <a
+              href="https://maps.app.goo.gl/bVbd7pewrNHg8xqy6"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-energy absolute bottom-2 rounded-full bg-gradient-to-l from-[#e5c878] to-[#9a7b2e] px-4 py-1.5 text-[10px] font-black text-black shadow-lg transition hover:scale-105"
+              style={{ insetInlineEnd: "0.5rem" }}
+            >
+              {dict.footer.mapCta} ↗
+            </a>
+          </div>
         </div>
       </div>
       <div className="border-t border-[var(--line)] py-4 text-center text-xs text-[var(--muted)]">
