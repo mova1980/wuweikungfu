@@ -3,6 +3,7 @@ import { getDict, pick, type Locale } from "@/lib/i18n";
 import { readCollection } from "@/lib/db";
 import Reveal from "@/components/Reveal";
 import EnergyButton from "@/components/EnergyButton";
+import CoachesGrid from "@/components/CoachesGrid";
 
 export const dynamic = "force-dynamic";
 
@@ -111,22 +112,7 @@ export default async function About({ params }: { params: { locale: Locale } }) 
           <div className="ink-divider mx-auto mb-4" />
           <h2 className="text-3xl font-black">{locale === "fa" ? "مربیان ما" : locale === "zh" ? "我们的教练" : "Our Coaches"}</h2>
         </Reveal>
-        <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
-          {(coaches || []).map((c: any, i: number) => (
-            <Reveal key={c.id || i} delay={i * 90}>
-              <div className="card sheen group overflow-hidden text-center">
-                <div className="relative h-52 overflow-hidden">
-                  <Image src={c.image || "/images/coach-m1.jpg"} alt={pick(c.name, locale)} fill className="img-gold object-cover object-top" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-                </div>
-                <div className="p-4">
-                  <div className="text-sm font-black text-[#e5c878]">{pick(c.name, locale)}</div>
-                  <div className="mt-1.5 text-[11px] leading-5 text-[var(--muted)]">{pick(c.role, locale)}</div>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <CoachesGrid locale={locale} coaches={coaches || []} />
       </section>
 
       {/* gallery */}

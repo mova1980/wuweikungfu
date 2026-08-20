@@ -44,11 +44,11 @@ export default function ChatWidget({ dict }: { locale?: string; dict?: any }) {
         {/* rotating energy ring */}
         <span className="chat-ring absolute inset-[-4px] rounded-full" aria-hidden />
         <Image
-          src="/images/logo.png"
-          alt=""
+          src="/images/raad-logo.jpg"
+          alt="آکادمی ورزشی رعد"
           width={52}
           height={52}
-          className="logo-glow relative z-10 rounded-full"
+          className="logo-glow relative z-10 h-[52px] w-[52px] rounded-xl object-contain"
         />
         {/* external-link badge on hover */}
         <span

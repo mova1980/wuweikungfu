@@ -6,7 +6,6 @@ import Reveal from "@/components/Reveal";
 import { Counter, Typewriter } from "@/components/Motion";
 import EnergyButton from "@/components/EnergyButton";
 import HeroMedia from "@/components/HeroMedia";
-import YinYang from "@/components/YinYang";
 
 export const dynamic = "force-dynamic";
 
@@ -295,7 +294,15 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
         <Reveal variant="scale">
           <div className="card relative overflow-hidden rounded-3xl border-[#c9a84c]/30 p-14">
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(201,168,76,0.14),transparent_60%)]" />
-            <YinYang size={64} className="yinyang mx-auto mb-6" />
+            {/* لوگوی آکادمی ورزشی رعد — بزرگ و درخشان */}
+            <Image
+              src="/images/raad-logo.jpg"
+              alt="آکادمی ورزشی رعد"
+              width={140}
+              height={186}
+              className="float mx-auto mb-6 h-32 w-auto rounded-2xl border border-[#c9a84c]/50 object-contain md:h-40"
+              style={{ filter: "drop-shadow(0 0 16px rgba(240,217,140,.75)) drop-shadow(0 0 46px rgba(201,168,76,.45))", boxShadow: "0 18px 60px -18px rgba(201,168,76,.55)" }}
+            />
             <h2 className="slogan-shimmer mx-auto max-w-3xl text-2xl font-black leading-relaxed md:text-4xl md:leading-relaxed">« {slogan2} »</h2>
             <div className="mt-8">
               <EnergyButton href={`/${locale}/register`}>{dict.hero.cta}</EnergyButton>
