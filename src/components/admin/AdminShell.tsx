@@ -19,6 +19,7 @@ const items: [string, string, string][] = [
   ["/admin/messages", "✉️", "پیام‌ها"],
   ["/admin/registrations", "📝", "ثبت‌نام‌ها"],
   ["/admin/content", "⚙️", "محتوای سایت"],
+  ["/admin/settings", "🛡", "تنظیمات و رمز عبور"],
 ];
 
 export default function AdminShell({ children }: { children: React.ReactNode }) {
