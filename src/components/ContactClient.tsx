@@ -58,6 +58,10 @@ export default function ContactClient({ locale, dict }: { locale: Locale; dict: 
           <div className="card rounded-2xl p-6">
             <h3 className="mb-3 flex items-center gap-2 font-bold text-[#e5c878]"><span>📍</span>{dict.contact.address}</h3>
             <p className="text-sm leading-7 text-[var(--muted)]">{dict.contact.addressVal}</p>
+            <a href="https://maps.app.goo.gl/bVbd7pewrNHg8xqy6" target="_blank" rel="noreferrer"
+              className="mt-2 inline-flex items-center gap-1.5 text-sm font-bold text-[#e5c878] transition hover:text-[#f0d98c] hover:underline">
+              🗺️ {dict.footer.academy} ↗
+            </a>
           </div>
           <div className="grid grid-cols-2 gap-5">
             <a href="tel:09123686344" className="card rounded-2xl p-6 transition hover:border-[#c9a84c]">
@@ -77,18 +81,28 @@ export default function ContactClient({ locale, dict }: { locale: Locale; dict: 
               <a className="badge hover:border-[#c9a84c]" href="https://youtube.com" target="_blank" rel="noreferrer">▶️ YouTube</a>
             </div>
           </div>
-          {/* stylized map */}
-          <div className="card relative h-56 overflow-hidden rounded-2xl">
-            <div className="absolute inset-0 opacity-40"
-              style={{ background: "repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(201,168,76,0.12) 29px), repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(201,168,76,0.12) 29px)" }} />
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-              <span className="relative mx-auto block h-5 w-5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#c41e24] opacity-60" />
-                <span className="relative inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#c41e24] text-[10px]">📍</span>
-              </span>
-              <div className="mt-2 text-xs text-[#e5c878]">Karaj · کرج</div>
-              <a className="badge mt-2 hover:border-[#c9a84c]" href="https://maps.google.com/?q=Karaj+Azadegan+Barghan" target="_blank" rel="noreferrer">Google Maps ↗</a>
-            </div>
+          {/* نقشه واقعی آکادمی ورزشی رعد — هم‌تم با فوتر */}
+          <div className="map-card group relative h-64 overflow-hidden rounded-2xl border border-[#c9a84c]/40">
+            <iframe
+              src="https://maps.google.com/maps?q=35.827001,51.002368&z=16&hl=fa&output=embed"
+              title={dict.footer.academy}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="map-frame block h-full w-full"
+            />
+            <span className="map-veil" aria-hidden />
+            <span className="badge pointer-events-none absolute top-3 border-[#c9a84c]/50 bg-black/70 backdrop-blur-sm" style={{ insetInlineStart: "0.75rem" }}>
+              📌 {dict.footer.academy}
+            </span>
+            <a
+              href="https://maps.app.goo.gl/bVbd7pewrNHg8xqy6"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-energy absolute bottom-3 rounded-full bg-gradient-to-l from-[#e5c878] to-[#9a7b2e] px-5 py-2 text-xs font-black text-black shadow-lg transition hover:scale-105"
+              style={{ insetInlineEnd: "0.75rem" }}
+            >
+              {dict.footer.mapCta} ↗
+            </a>
           </div>
         </div>
       </Reveal>
