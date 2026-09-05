@@ -1,0 +1,65 @@
+[
+  {
+    "id": "n1",
+    "date": "2026-09-05",
+    "pinned": true,
+    "image": "/images/class.jpg",
+    "title": {
+      "fa": "آغاز ثبت‌نام ترم پاییز آکادمی ورزشی رعد",
+      "en": "Fall Term Registration Now Open at Raad Sports Academy",
+      "zh": "Raad 体育学院秋季学期报名开始"
+    },
+    "summary": {
+      "fa": "ثبت‌نام ترم جدید کلاس‌های کونگ فوی چینی، ووشو، چی گونگ، حرکات اصلاحی و سایر رشته‌ها آغاز شد — ظرفیت محدود.",
+      "en": "Registration for the new term of Chinese Kung Fu, Wushu, Qigong, corrective exercise and more is now open — limited capacity.",
+      "zh": "中国功夫、武术、气功、矫正运动等新学期报名现已开始——名额有限。"
+    },
+    "body": {
+      "fa": "ثبت‌نام ترم پاییز آکادمی ورزشی رعد از امروز آغاز شد.\n\nکلاس‌های این ترم شامل کونگ فوی چینی، ووشو، چی گونگ، دفاع شخصی، آموزش سلاح‌ها، ژیمناستیک رعد، یوگا، کراس‌فیت، فیتنس، پیلاتس، TRX، حرکات اصلاحی و حرکات موزون است.\n\nبرای ثبت‌نام، از صفحه «ثبت‌نام در کلاس‌ها» اقدام کنید یا برای مشاوره رایگان با شماره ۰۹۱۲۳۶۸۶۳۴۴ تماس بگیرید.",
+      "en": "Registration for the Fall term at Raad Sports Academy starts today.\n\nThis term includes Chinese Kung Fu, Wushu, Qigong, self-defense, weapons training, Raad gymnastics, yoga, CrossFit, fitness, Pilates, TRX, corrective exercise and rhythmic movement.\n\nTo register, use the registration page or call 0912 368 6344 for a free consultation.",
+      "zh": "Raad 体育学院秋季学期报名今日开始。\n\n本学期课程包括中国功夫、武术、气功、防身术、兵器训练、Raad 体操、瑜伽、CrossFit、健身、普拉提、TRX、矫正运动与韵律操。\n\n请通过报名页面报名，或致电 0912 368 6344 免费咨询。"
+    }
+  },
+  {
+    "id": "n2",
+    "date": "2026-09-01",
+    "pinned": false,
+    "image": "/images/gallery/men-seminars/g00.jpg",
+    "title": {
+      "fa": "سمینار بزرگ وو وی کونگ فو — شهریور ۱۴۰۵",
+      "en": "Grand Wu Wei Kung Fu Seminar — Shahrivar 1405",
+      "zh": "无为功夫大型研讨会——1405年沙赫里瓦尔月"
+    },
+    "summary": {
+      "fa": "سمینار یک‌روزه با سی فو احسان شایان فر؛ چی سائو، آدمک چوبی و چی‌گونگ — ویژه تمام سطوح.",
+      "en": "A one-day seminar with Sifu Ehsan Shayanfar: Chi Sau, wooden dummy and Qigong — open to all levels.",
+      "zh": "与 Ehsan Shayanfar 师父共度一日：黐手、木人桩与气功——全级别开放。"
+    },
+    "body": {
+      "fa": "سمینار سراسری وو وی کونگ فو در شهریور ۱۴۰۵ در آکادمی ورزشی رعد (کرج) برگزار می‌شود.\n\nبرنامه سمینار: تکنیک‌های وینگ چون و چی سائو، کار با آدمک چوبی و جلسه چی‌گونگ و تنفس دان‌تیان.\n\nظرفیت محدود است؛ ثبت‌نام از صفحه «ثبت‌نام در سمینار» انجام می‌شود.",
+      "en": "The national Wu Wei Kung Fu seminar will be held in Shahrivar 1405 (September 2026) at Raad Sports Academy, Karaj.\n\nProgram: Wing Chun techniques and Chi Sau, wooden dummy work, and a Qigong & Dantian breathing session.\n\nCapacity is limited; registration is available on the seminar registration page.",
+      "zh": "无为功夫全国研讨会将于 1405 年沙赫里瓦尔月（2026年9月）在卡拉季 Raad 体育学院举行。\n\n内容：咏春与黐手技术、木人桩训练以及气功与丹田呼吸课程。\n\n名额有限；请通过研讨会报名页面报名。"
+    }
+  },
+  {
+    "id": "n3",
+    "date": "2026-08-20",
+    "pinned": false,
+    "image": "",
+    "title": {
+      "fa": "ارزیابی قامتی رایگان در آکادمی ورزشی رعد",
+      "en": "Free Posture Assessment at Raad Sports Academy",
+      "zh": "Raad 体育学院免费体态评估"
+    },
+    "summary": {
+      "fa": "برای هنرجویان جدید، جلسه ارزیابی قامت، اسکلت و عضلات کاملاً رایگان برگزار می‌شود.",
+      "en": "New students can book a completely free posture, skeletal and muscular assessment session.",
+      "zh": "新学员可预约完全免费的体态、骨骼与肌肉评估课程。"
+    },
+    "body": {
+      "fa": "پیش از شروع تمرین، هر هنرجوی جدید می‌تواند از جلسه ارزیابی قامتی رایگان بهره‌مند شود.\n\nدر این جلسه، ناهنجاری‌های ساختاری مانند قوز پشتی، گودی کمر، سر به جلو و کف پای صاف بررسی و برنامه حرکات اصلاحی اختصاصی طراحی می‌شود.\n\nبرای رزرو، فرم «ارزیابی قامتی رایگان» را در سایت پر کنید.",
+      "en": "Before training begins, every new student can benefit from a free posture assessment session.\n\nStructural issues such as kyphosis, lordosis, forward head posture and flat feet are evaluated, and a personal corrective exercise plan is designed.\n\nTo book, fill in the free posture assessment form on the website.",
+      "zh": "训练开始前，每位新学员均可享受免费体态评估。\n\n评估内容包括驼背、腰椎前凸、头前引与扁平足等结构问题，并设计个人矫正运动方案。\n\n预约请填写网站上的免费体态评估表单。"
+    }
+  }
+]
