@@ -31,7 +31,7 @@ export default function Navbar({ locale, dict }: { locale: Locale; dict: any }) 
   const links: [string, string][] = [
     [`/${locale}`, dict.nav.home],
     [`/${locale}/about`, dict.nav.about],
-    [`/${locale}/techniques`, dict.nav.techniques],
+    [`/${locale}/news`, dict.nav.news],
     [`/${locale}/blog`, dict.nav.blog],
     [`/${locale}/shop`, dict.nav.shop],
     [`/${locale}/corrective`, dict.nav.corrective],

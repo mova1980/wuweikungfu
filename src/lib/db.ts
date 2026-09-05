@@ -4,7 +4,7 @@ import path from "path";
 // build-time seeds — guaranteed to be bundled in serverless deployments (Vercel)
 import seedContent from "../../data/content.json";
 import seedPosts from "../../data/posts.json";
-import seedTechniques from "../../data/techniques.json";
+import seedNews from "../../data/news.json";
 import seedVideos from "../../data/videos.json";
 import seedEvents from "../../data/events.json";
 import seedProducts from "../../data/products.json";
@@ -17,7 +17,7 @@ const DATA_DIR = path.join(process.cwd(), "data");
 export type Collection =
   | "content"
   | "posts"
-  | "techniques"
+  | "news"
   | "videos"
   | "events"
   | "products"
@@ -33,7 +33,7 @@ export type Collection =
 const FILES: Record<Collection, string> = {
   content: "content.json",
   posts: "posts.json",
-  techniques: "techniques.json",
+  news: "news.json",
   videos: "videos.json",
   events: "events.json",
   products: "products.json",
@@ -50,7 +50,7 @@ const FILES: Record<Collection, string> = {
 const SEEDS: Record<Collection, any> = {
   content: seedContent,
   posts: seedPosts,
-  techniques: seedTechniques,
+  news: seedNews as any,
   videos: seedVideos,
   events: seedEvents,
   products: seedProducts,

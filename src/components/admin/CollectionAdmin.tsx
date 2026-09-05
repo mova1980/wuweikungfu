@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Props = {
   collection: string;
@@ -13,7 +13,96 @@ type Props = {
 
 const isMl = (v: any) => v && typeof v === "object" && !Array.isArray(v) && ("fa" in v || "en" in v || "zh" in v);
 
+/* ---- client-side image compression (max 1600px, JPEG 82%) → data URL in DB ---- */
+async function fileToDataUrl(file: File, maxSide = 1600, quality = 0.82): Promise<string> {
+  const bmp = await createImageBitmap(file);
+  const scale = Math.min(1, maxSide / Math.max(bmp.width, bmp.height));
+  const w = Math.max(1, Math.round(bmp.width * scale));
+  const h = Math.max(1, Math.round(bmp.height * scale));
+  const canvas = document.createElement("canvas");
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("no ctx");
+  ctx.drawImage(bmp, 0, 0, w, h);
+  return canvas.toDataURL("image/jpeg", quality);
+}
+
+/** Image field: preview + URL/path input + upload from computer (stored in DB) */
+function ImageField({ k, value, onChange }: { k: string; value: string; onChange: (v: string) => void }) {
+  const fileRef = useRef<HTMLInputElement>(null);
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+
+  const onFile = async (f: File | undefined | null) => {
+    if (!f) return;
+    setBusy(true);
+    setErr("");
+    try {
+      const src = await fileToDataUrl(f);
+      if (src.length > 1_600_000) {
+        setErr("تصویر بیش از حد بزرگ است — پس از فشرده‌سازی هم حدود ۱.۶ مگابایت شد. تصویر کوچک‌تری انتخاب کنید.");
+      } else {
+        onChange(src);
+      }
+    } catch {
+      setErr("خواندن فایل ممکن نشد.");
+    }
+    setBusy(false);
+  };
+
+  return (
+    <div className="rounded-xl border border-[var(--line)] p-3">
+      <div className="mb-2 flex items-center justify-between">
+        <span className="text-xs font-bold text-[#e5c878]">{k}</span>
+        <button type="button" onClick={() => fileRef.current?.click()} disabled={busy}
+          className="rounded-full border border-[#c9a84c]/60 bg-[#c9a84c]/10 px-3.5 py-1.5 text-[11px] font-bold text-[#e5c878] transition hover:scale-105 disabled:opacity-50">
+          {busy ? "…" : "📤 آپلود از سیستم"}
+        </button>
+      </div>
+      <input ref={fileRef} type="file" accept="image/*" hidden onChange={(e) => { onFile(e.target.files?.[0]); e.currentTarget.value = ""; }} />
+      <input dir="ltr" className="input text-xs" placeholder="/images/… یا https://…" value={value || ""} onChange={(e) => onChange(e.target.value)} />
+      <div className="mt-2 flex items-start gap-3">
+        {value ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={value} alt="" className="h-20 w-28 shrink-0 rounded-lg border border-[var(--line)] object-cover" />
+        ) : (
+          <div className="grid h-20 w-28 shrink-0 place-items-center rounded-lg border border-dashed border-[var(--line)] text-lg text-[var(--muted)]">🖼️</div>
+        )}
+        <p className="text-[10px] leading-5 text-[var(--muted)]">
+          اختیاری — لینک/مسیر تصویر را بنویسید یا از سیستم آپلود کنید.
+          {value?.startsWith("data:") && <span className="block text-[#7dd87d]">✓ تصویر آپلودی (ذخیره در دیتابیس)</span>}
+          {err && <span className="block text-[#ff8a85]">{err}</span>}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function Field({ k, value, onChange }: { k: string; value: any; onChange: (v: any) => void }) {
+  /* image-like fields → composite uploader field */
+  if (typeof value === "string" && /image|cover|logo|photo|banner|thumb/i.test(k)) {
+    return <ImageField k={k} value={value} onChange={onChange} />;
+  }
+  if (k === "date" && typeof value === "string") {
+    return (
+      <label className="block">
+        <span className="mb-1 block text-xs font-bold text-[#e5c878]">{k}</span>
+        <input dir="ltr" type="date" className="input" value={value || ""} onChange={(e) => onChange(e.target.value)} />
+      </label>
+    );
+  }
+  if (typeof value === "boolean") {
+    return (
+      <label className="flex items-center justify-between rounded-xl border border-[var(--line)] px-4 py-3">
+        <span className="text-xs font-bold text-[#e5c878]">{k}</span>
+        <button type="button" onClick={() => onChange(!value)}
+          className={`relative h-6 w-11 rounded-full transition ${value ? "bg-[#c9a84c]" : "bg-white/10"}`}>
+          <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white transition-all ${value ? "left-[1.4rem]" : "left-0.5"}`} />
+        </button>
+      </label>
+    );
+  }
   if (isMl(value)) {
     return (
       <div className="rounded-xl border border-[var(--line)] p-3">

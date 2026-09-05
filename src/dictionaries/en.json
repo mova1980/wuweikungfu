@@ -4,7 +4,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "techniques": "Techniques",
+    "news": "News & Announcements",
     "blog": "Blog",
     "shop": "Shop",
     "videos": "Video Gallery",
@@ -73,16 +73,9 @@
     "philosophyTitle": "The Philosophy of Wu Wei",
     "bookTitle": "The Qigong Book",
     "galleryTitle": "Gallery",
-    "honors": "Honors & Achievements"
-  },
-  "tech": {
-    "title": "Training & Techniques",
-    "sub": "The Six Pillars of the Wu Wei System",
-    "level": "Suggested level",
-    "keys": "Key points",
-    "belts": "The Belt Path",
-    "beltsSub": "Stages of progress in Wu Wei — a luminous path from hardness to stillness",
-    "schedule": "Class Schedule"
+    "honors": "Honors & Achievements",
+    "beltsTitle": "The Belt Path",
+    "beltsSub": "Stages of progress in Wu Wei — a luminous path from hardness to stillness"
   },
   "blog": {
     "title": "Articles & Blog",
@@ -221,7 +214,17 @@
       "Rhythmic Movement"
     ],
     "perMonth": "per month",
-    "tuitionFee": "Monthly Tuition"
+    "tuitionFee": "Monthly Tuition",
+    "modeTitle": "Registration Type",
+    "modeSub": "Choose one to continue",
+    "modeClass": "Class Registration",
+    "modeClassDesc": "Regular academy courses — all disciplines",
+    "modeSeminar": "Seminar Registration",
+    "modeSeminarDesc": "Special seminars and workshops",
+    "chooseSeminar": "Choose a seminar",
+    "seminarNote": "Note (optional)",
+    "seminarPlaceholder": "e.g. training background, companions…",
+    "noSeminars": "No seminars announced yet — contact us to coordinate"
   },
   "searchPage": {
     "title": "Advanced Search",
@@ -352,5 +355,13 @@
     "empty": "No photos in this category yet.",
     "noResult": "No results found.",
     "back": "Back"
+  },
+  "news": {
+    "title": "News & Announcements",
+    "sub": "The latest events and announcements of Raad Sports Academy",
+    "empty": "No news yet.",
+    "readMore": "Read more",
+    "back": "Back to news",
+    "latest": "Latest News"
   }
 }

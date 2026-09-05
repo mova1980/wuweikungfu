@@ -5,7 +5,7 @@ import type { Locale } from "@/lib/i18n";
 export default function Footer({ locale, dict }: { locale: Locale; dict: any }) {
   const links: [string, string][] = [
     [`/${locale}/about`, dict.nav.about],
-    [`/${locale}/techniques`, dict.nav.techniques],
+    [`/${locale}/news`, dict.nav.news],
     [`/${locale}/blog`, dict.nav.blog],
     [`/${locale}/shop`, dict.nav.shop],
     [`/${locale}/videos`, dict.nav.videos],

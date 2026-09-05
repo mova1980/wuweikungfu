@@ -25,7 +25,7 @@ export default function SearchClient({ locale, dict }: { locale: Locale; dict: a
 
   const hrefOf = (r: any) =>
     r.type === "post" ? `/${locale}/blog/${r.slug}` :
-    r.type === "technique" ? `/${locale}/techniques#${r.slug}` :
+    r.type === "news" ? `/${locale}/news/${r.slug}` :
     r.type === "video" ? `/${locale}/videos` :
     r.type === "event" ? `/${locale}/events` : `/${locale}/shop`;
 

@@ -12,10 +12,10 @@ export const dynamic = "force-dynamic";
 export default async function Home({ params }: { params: { locale: Locale } }) {
   const locale = params.locale;
   const dict = getDict(locale);
-  const [content, posts, techniques] = await Promise.all([
+  const [content, posts, news] = await Promise.all([
     readCollection<any>("content"),
     readCollection<any[]>("posts"),
-    readCollection<any[]>("techniques"),
+    readCollection<any[]>("news"),
   ]);
 
   const stats = content.stats || { students: 350, years: 25, styles: 8, medals: 40 };
@@ -134,7 +134,7 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
         <div className="mx-auto mt-14 grid max-w-7xl gap-6 px-4 md:grid-cols-3">
           {/* Layer 1 — hardness: sharp deconstructed grid */}
           <Reveal delay={0}>
-            <Link href={`/${locale}/techniques`} className="sheen group relative block h-[430px] overflow-hidden hard-edge border border-[#c41e24]/30">
+            <Link href={`/${locale}/register`} className="sheen group relative block h-[430px] overflow-hidden hard-edge border border-[#c41e24]/30">
               <Image src="/images/kick.jpg" alt="" fill className="img-gold object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
               <div className="absolute bottom-0 p-7">
@@ -146,7 +146,7 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
           </Reveal>
           {/* Layer 2 — technique */}
           <Reveal delay={150}>
-            <Link href={`/${locale}/techniques`} className="sheen group relative block h-[430px] overflow-hidden rounded-2xl border border-[#c9a84c]/30 md:mt-10">
+            <Link href={`/${locale}/videos`} className="sheen group relative block h-[430px] overflow-hidden rounded-2xl border border-[#c9a84c]/30 md:mt-10">
               <Image src="/images/dummy.jpg" alt="" fill className="img-gold object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
               <div className="absolute bottom-0 p-7">
@@ -235,14 +235,39 @@ export default async function Home({ params }: { params: { locale: Locale } }) {
             </Reveal>
           ))}
         </div>
-        {/* technique chips */}
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {techniques.map((t) => (
-            <Link key={t.id} href={`/${locale}/techniques#${t.slug}`} className="badge transition hover:scale-105 hover:border-[#c9a84c]">
-              <span className="font-zh text-base">{t.icon}</span> {pick(t.title, locale)}
-            </Link>
-          ))}
-        </div>
+        {/* latest news strip */}
+        {Array.isArray(news) && news.length > 0 && (
+          <div className="mt-14">
+            <Reveal className="mb-6 flex items-end justify-between">
+              <div>
+                <div className="ink-divider mb-4" />
+                <h3 className="text-2xl font-black">📰 {dict.news.latest}</h3>
+              </div>
+              <Link href={`/${locale}/news`} className="badge hover:border-[#c9a84c]">{dict.home.viewAll} →</Link>
+            </Reveal>
+            <div className="grid gap-4 md:grid-cols-3">
+              {[...news]
+                .sort((a: any, b: any) => String(b.date || "").localeCompare(String(a.date || "")))
+                .slice(0, 3)
+                .map((n: any, i: number) => (
+                  <Reveal key={n.id} delay={i * 120}>
+                    <Link href={`/${locale}/news/${n.id}`} className="card sheen group flex h-full items-center gap-4 rounded-2xl p-4">
+                      {n.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={n.image} alt="" className="h-16 w-16 shrink-0 rounded-xl border border-[var(--line)] object-cover" />
+                      ) : (
+                        <span className="grid h-16 w-16 shrink-0 place-items-center rounded-xl border border-[var(--line)] bg-[rgba(201,168,76,0.08)] text-2xl">📰</span>
+                      )}
+                      <span className="min-w-0">
+                        <span className="block text-[10px] font-bold tracking-wider text-[#c9a84c]">{String(n.date || "")}</span>
+                        <span className="mt-1 block truncate text-sm font-bold leading-6 transition group-hover:text-[#e5c878]">{pick(n.title, locale)}</span>
+                      </span>
+                    </Link>
+                  </Reveal>
+                ))}
+            </div>
+          </div>
+        )}
       </section>
 
       {/* ============ ESSENTIAL LINKS ============ */}

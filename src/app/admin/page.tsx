@@ -7,7 +7,7 @@ const cards: [string, string, string, string][] = [
   ["orders", "🧾", "سفارش‌ها", "/admin/orders"],
   ["assessments", "🩺", "ارزیابی‌ها", "/admin/assessments"],
   ["posts", "✍️", "مقالات", "/admin/posts"],
-  ["techniques", "🥋", "تکنیک‌ها", "/admin/techniques"],
+  ["news", "📰", "اخبار و اطلاعیه‌ها", "/admin/news"],
   ["videos", "🎬", "ویدئوها", "/admin/videos"],
   ["events", "🏆", "رویدادها", "/admin/events"],
   ["products", "🛍", "محصولات", "/admin/products"],

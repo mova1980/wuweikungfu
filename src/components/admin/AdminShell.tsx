@@ -9,7 +9,7 @@ const items: [string, string, string][] = [
   ["/admin/orders", "🧾", "سفارش‌ها و پرداخت"],
   ["/admin/assessments", "🩺", "درخواست‌های ارزیابی"],
   ["/admin/posts", "✍️", "مقالات"],
-  ["/admin/techniques", "🥋", "تکنیک‌ها"],
+  ["/admin/news", "📰", "اخبار و اطلاعیه‌ها"],
   ["/admin/videos", "🎬", "ویدئوها"],
   ["/admin/events", "🏆", "رویدادها"],
   ["/admin/gallery", "🖼️", "گالری تصاویر"],

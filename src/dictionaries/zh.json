@@ -4,7 +4,7 @@
   "nav": {
     "home": "首页",
     "about": "关于我们",
-    "techniques": "技法教学",
+    "news": "新闻与公告",
     "blog": "文章",
     "shop": "商店",
     "videos": "视频画廊",
@@ -73,16 +73,9 @@
     "philosophyTitle": "无为哲学",
     "bookTitle": "气功专著",
     "galleryTitle": "图库",
-    "honors": "荣誉与成就"
-  },
-  "tech": {
-    "title": "训练与技法",
-    "sub": "无为体系六大支柱",
-    "level": "建议级别",
-    "keys": "要点",
-    "belts": "腰带之路",
-    "beltsSub": "无为的进阶之路——从刚到静的光明之途",
-    "schedule": "课程时间表"
+    "honors": "荣誉与成就",
+    "beltsTitle": "腰带之路",
+    "beltsSub": "无为的进阶之路——从刚到静的光明之途"
   },
   "blog": {
     "title": "文章与博客",
@@ -221,7 +214,17 @@
       "韵律运动"
     ],
     "perMonth": "每月",
-    "tuitionFee": "月学费"
+    "tuitionFee": "月学费",
+    "modeTitle": "报名类型",
+    "modeSub": "请选择一项继续",
+    "modeClass": "课程报名",
+    "modeClassDesc": "学院常规课程——全部项目",
+    "modeSeminar": "研讨会报名",
+    "modeSeminarDesc": "特别研讨会与工作坊",
+    "chooseSeminar": "选择研讨会",
+    "seminarNote": "备注（可选）",
+    "seminarPlaceholder": "例如：训练经历、同行人员…",
+    "noSeminars": "目前暂无研讨会通知——请联系我们协调"
   },
   "searchPage": {
     "title": "高级搜索",
@@ -352,5 +355,13 @@
     "empty": "此分类暂无照片。",
     "noResult": "未找到结果。",
     "back": "返回"
+  },
+  "news": {
+    "title": "新闻与公告",
+    "sub": "Raad 体育学院的最新动态与通知",
+    "empty": "暂无新闻。",
+    "readMore": "阅读全文",
+    "back": "返回新闻",
+    "latest": "最新消息"
   }
 }

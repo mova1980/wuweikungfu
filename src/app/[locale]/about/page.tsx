@@ -4,6 +4,7 @@ import { readCollection } from "@/lib/db";
 import Reveal from "@/components/Reveal";
 import EnergyButton from "@/components/EnergyButton";
 import CoachesGrid from "@/components/CoachesGrid";
+import BeltIcon from "@/components/BeltIcon";
 
 export const dynamic = "force-dynamic";
 
@@ -113,6 +114,28 @@ export default async function About({ params }: { params: { locale: Locale } }) 
           <h2 className="text-3xl font-black">{locale === "fa" ? "مربیان ما" : locale === "zh" ? "我们的教练" : "Our Coaches"}</h2>
         </Reveal>
         <CoachesGrid locale={locale} coaches={coaches || []} />
+      </section>
+
+      {/* belt path — luminous path (moved from techniques) */}
+      <section className="mt-24">
+        <Reveal className="text-center">
+          <div className="ink-divider mx-auto mb-4" />
+          <h2 className="text-3xl font-black">{dict.about.beltsTitle}</h2>
+          <p className="mt-3 text-sm text-[var(--muted)]">{dict.about.beltsSub}</p>
+        </Reveal>
+        <div className="relative mx-auto mt-14 max-w-5xl">
+          <div className="absolute top-7 h-0.5 w-full bg-gradient-to-r from-[#f5f0e8]/30 via-[#c9a84c] to-[#1c1c1e]" />
+          <div className="grid grid-cols-4 gap-y-10 md:grid-cols-8">
+            {(content.belts || []).map((b: any, i: number) => (
+              <Reveal key={i} delay={i * 120} className="text-center">
+                <div className="relative z-10 mx-auto w-fit">
+                  <BeltIcon color={b.color} />
+                </div>
+                <div className="mt-2 text-xs leading-5 text-[var(--muted)]">{pick(b, locale)}</div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* gallery */}

@@ -22,7 +22,7 @@ export async function GET(req: NextRequest) {
   };
 
   await scan("posts", "post", ["title", "excerpt", "body", "category"], "excerpt");
-  await scan("techniques", "technique", ["title", "desc"], "desc");
+  await scan("news", "news", ["title", "summary", "body"], "summary", "id");
   await scan("videos", "video", ["title", "category"], "category");
   await scan("events", "event", ["title", "desc", "location"], "desc");
   await scan("products", "product", ["title", "desc"], "desc");
