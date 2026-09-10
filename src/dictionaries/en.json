@@ -354,7 +354,10 @@
     "photos": "photos",
     "empty": "No photos in this category yet.",
     "noResult": "No results found.",
-    "back": "Back"
+    "back": "Back",
+    "sortNewest": "Newest",
+    "sortOldest": "Oldest",
+    "dated": "dated"
   },
   "news": {
     "title": "News & Announcements",

@@ -354,7 +354,10 @@
     "photos": "张照片",
     "empty": "此分类暂无照片。",
     "noResult": "未找到结果。",
-    "back": "返回"
+    "back": "返回",
+    "sortNewest": "最新",
+    "sortOldest": "最早",
+    "dated": "有日期"
   },
   "news": {
     "title": "新闻与公告",
