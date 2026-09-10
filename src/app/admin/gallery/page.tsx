@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import JalaliDatePicker from "@/components/JalaliDatePicker";
+import { todayISO } from "@/lib/jalali";
 
-type Img = { id: string; src: string; caption?: string; desc?: string; origin?: string };
+type Img = { id: string; src: string; caption?: string; desc?: string; date?: string; origin?: string };
 type Cat = { id: string; title: string; titleEn?: string; titleZh?: string; icon?: string; order?: number; cover?: string; images: Img[] };
 
 const PLACEHOLDER = "/images/gallery/placeholder.svg";
@@ -121,19 +123,19 @@ export default function GalleryAdmin() {
       if (!f.type.startsWith("image/")) continue;
       const src = await fileToDataUrl(f);
       if (src.length > 1_600_000) { flash(`⚠ ${f.name}: بیش از حد بزرگ — فشرده نشد، رد شد`); continue; }
-      added.push({ id: nid(), src, caption: "" });
+      added.push({ id: nid(), src, caption: "", date: todayISO() });
     }
     setBusy(false);
     if (added.length) {
-      mutate((imgs) => [...imgs, ...added]);
-      flash(`${added.length} تصویر آماده شد — برای ثبت نهایی «ذخیره» بزنید`);
+      mutate((imgs) => [...added, ...imgs]);
+      flash(`${added.length} تصویر آماده شد (تاریخ امروز ثبت شد) — برای ثبت نهایی «ذخیره» بزنید`);
     }
   };
 
   const addByUrl = () => {
     const u = urlAdd.trim();
     if (!u) return;
-    mutate((imgs) => [...imgs, { id: nid(), src: u, caption: "" }]);
+    mutate((imgs) => [{ id: nid(), src: u, caption: "", date: todayISO() }, ...imgs]);
     setUrlAdd("");
   };
 
@@ -210,6 +212,9 @@ export default function GalleryAdmin() {
               </div>
               <input value={img.caption || ""} onChange={(e) => mutate((imgs) => imgs.map((x, k) => (k === i ? { ...x, caption: e.target.value } : x)))}
                 placeholder="عنوان تصویر" className="input mb-2 !py-2 text-xs" />
+              <div className="mb-2">
+                <JalaliDatePicker value={img.date || ""} onChange={(iso) => mutate((imgs) => imgs.map((x, k) => (k === i ? { ...x, date: iso } : x)))} />
+              </div>
               <input value={img.desc || ""} onChange={(e) => mutate((imgs) => imgs.map((x, k) => (k === i ? { ...x, desc: e.target.value } : x)))}
                 placeholder="توضیح کوتاه (مثلاً تاریخ)" className="input mb-2 !py-2 text-xs" />
               <input dir="ltr" value={img.src.startsWith("data:") ? "📎 فایل آپلودی (داخل دیتابیس)" : img.src}
