@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Locale } from "@/lib/i18n";
+import { formatJalali, isoToJalali, J_MONTHS } from "@/lib/jalali";
 
-type Img = { id: string; src: string; caption?: string; desc?: string };
+type Img = { id: string; src: string; caption?: string; desc?: string; date?: string };
 type Cat = { id: string; title: string; titleEn?: string; titleZh?: string; icon?: string; order?: number; images: Img[] };
 
 const PLACEHOLDER = "/images/gallery/placeholder.svg";
@@ -13,10 +14,38 @@ export function catTitle(c: Cat, locale: Locale) {
   return c.titleEn || c.title;
 }
 
+/** localized date label — Shamsi for fa, Gregorian for en/zh */
+function dateLabel(iso: string | undefined, locale: Locale): string {
+  if (!iso) return "";
+  if (locale === "fa") return formatJalali(iso);
+  try {
+    const d = new Date(iso);
+    return d.toLocaleDateString(locale === "zh" ? "zh-CN" : "en-GB", { year: "numeric", month: "long", day: "numeric" });
+  } catch {
+    return iso;
+  }
+}
+
+/** every searchable form of the date (iso, jalali fa/latin digits, month name, years) */
+function dateHaystack(iso: string | undefined): string {
+  if (!iso) return "";
+  const j = isoToJalali(iso);
+  const parts = [iso, iso.replace(/-/g, "/")];
+  if (j) {
+    parts.push(formatJalali(iso, false));            // 20 Shahrivar 1405 (latin)
+    parts.push(String(j.jy), String(j.jy + 621));    // jalali + gregorian year
+    parts.push(J_MONTHS[j.jm - 1]);                  // month name
+    const fa = formatJalali(iso, true);
+    parts.push(fa, fa.replace(/[۰-۹]/g, (d) => String("۰۱۲۳۴۵۶۷۸۹".indexOf(d)))); // fa digits + latin
+  }
+  return parts.join(" ");
+}
+
 export default function GalleryClient({ locale, dict, cats }: { locale: Locale; dict: any; cats: Cat[] }) {
   const rtl = locale === "fa";
   const [active, setActive] = useState<string>("all");
   const [q, setQ] = useState("");
+  const [sort, setSort] = useState<"new" | "old">("new");
   const [lb, setLb] = useState<number | null>(null); // index into visible list
   const searchRef = useRef<HTMLInputElement>(null);
 
@@ -24,15 +53,26 @@ export default function GalleryClient({ locale, dict, cats }: { locale: Locale; 
 
   const visible = useMemo(() => {
     const base = active === "all" ? cats : cats.filter((c) => c.id === active);
-    let items: { cat: Cat; img: Img }[] = [];
-    for (const c of base) for (const img of c.images || []) items.push({ cat: c, img });
+    let items: { cat: Cat; img: Img; i: number }[] = [];
+    let n = 0;
+    for (const c of base) for (const img of c.images || []) items.push({ cat: c, img, i: n++ });
     const s = q.trim().toLowerCase();
-    if (s) items = items.filter(({ img, cat }) =>
-      (img.caption || "").toLowerCase().includes(s) ||
-      (img.desc || "").toLowerCase().includes(s) ||
-      catTitle(cat, locale).toLowerCase().includes(s));
-    return items;
-  }, [cats, active, q, locale]);
+    if (s) {
+      items = items.filter(({ img, cat }) =>
+        (img.caption || "").toLowerCase().includes(s) ||
+        (img.desc || "").toLowerCase().includes(s) ||
+        dateHaystack(img.date).toLowerCase().includes(s) ||
+        catTitle(cat, locale).toLowerCase().includes(s));
+    }
+    // sort: dated items by date; undated (legacy) keep original order
+    const dated = items.filter((x) => Boolean(x.img.date));
+    const undated = items.filter((x) => !Boolean(x.img.date));
+    dated.sort((a, b) =>
+      sort === "new"
+        ? String(b.img.date).localeCompare(String(a.img.date)) || b.i - a.i
+        : String(a.img.date).localeCompare(String(b.img.date)) || a.i - b.i);
+    return sort === "new" ? [...dated, ...undated] : [...undated, ...dated];
+  }, [cats, active, q, sort, locale]);
 
   // keyboard nav + scroll lock for lightbox
   useEffect(() => {
@@ -81,7 +121,7 @@ export default function GalleryClient({ locale, dict, cats }: { locale: Locale; 
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-8 text-[var(--fg)]/80">{t.intro}</p>
       </div>
 
-      {/* ---------- sticky tabs + search ---------- */}
+      {/* ---------- sticky tabs + search + sort ---------- */}
       <div className="glass-strong sticky top-[72px] z-30 -mx-2 mb-8 rounded-2xl border border-[var(--line)] px-3 py-3">
         <div className="flex flex-col gap-3 md:flex-row md:items-center">
           <div className="g-tabs flex flex-1 flex-wrap items-center gap-2">
@@ -99,17 +139,30 @@ export default function GalleryClient({ locale, dict, cats }: { locale: Locale; 
               </button>
             ))}
           </div>
-          <div className="relative md:w-64">
-            <input
-              ref={searchRef}
-              value={q}
-              onChange={(e) => setQ(e.target.value)}
-              placeholder={t.search || "جستجو…"}
-              className="input !rounded-full !py-2.5 pe-10 text-sm"
-            />
-            <span className="pointer-events-none absolute top-1/2 -translate-y-1/2 text-[var(--muted)]" style={{ insetInlineEnd: "0.9rem" }}>
-              {q ? "✕" : "🔍"}
-            </span>
+          <div className="flex items-center gap-2">
+            {/* sort — newest / oldest */}
+            <div className="flex shrink-0 items-center gap-1 rounded-full border border-[var(--line)] p-1" role="group" aria-label="sort">
+              {(["new", "old"] as const).map((k) => (
+                <button key={k} onClick={() => setSort(k)} title={k === "new" ? t.sortNewest : t.sortOldest}
+                  className={`rounded-full px-3 py-1.5 text-[11px] font-bold transition ${sort === k
+                    ? "bg-gradient-to-l from-[#e5c878] to-[#9a7b2e] text-black shadow"
+                    : "text-[var(--muted)] hover:text-[#e5c878]"}`}>
+                  {k === "new" ? "↑" : "↓"} {k === "new" ? t.sortNewest : t.sortOldest}
+                </button>
+              ))}
+            </div>
+            <div className="relative flex-1 md:w-56">
+              <input
+                ref={searchRef}
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+                placeholder={t.search || "جستجو…"}
+                className="input !rounded-full !py-2.5 pe-10 text-sm"
+              />
+              <span className="pointer-events-none absolute top-1/2 -translate-y-1/2 text-[var(--muted)]" style={{ insetInlineEnd: "0.9rem" }}>
+                {q ? "✕" : "🔍"}
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -133,6 +186,13 @@ export default function GalleryClient({ locale, dict, cats }: { locale: Locale; 
                 onError={onImgError}
                 className="w-full transition-transform duration-[1200ms] [transition-timing-function:cubic-bezier(.2,.8,.2,1)] group-hover:scale-[1.06]"
               />
+              {/* date chip — always visible */}
+              {img.date && (
+                <span className="absolute top-2 rounded-full border border-[#c9a84c]/40 bg-black/65 px-2.5 py-1 text-[10px] font-bold text-[#e5c878] backdrop-blur-sm"
+                  style={{ insetInlineStart: "0.5rem" }}>
+                  📅 {dateLabel(img.date, locale)}
+                </span>
+              )}
               <span className="g-item-veil absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <span className="absolute inset-x-0 bottom-0 translate-y-3 p-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                 {img.caption && <span className="block truncate text-[13px] font-bold text-[#f5f0e8]">{img.caption}</span>}
@@ -199,11 +259,16 @@ export default function GalleryClient({ locale, dict, cats }: { locale: Locale; 
               onError={onImgError}
               className="max-h-[80vh] max-w-full rounded-xl border border-[#c9a84c]/35 object-contain shadow-[0_30px_120px_-30px_rgba(201,168,76,0.4)]"
             />
-            {(cur.img.caption || cur.img.desc) && (
+            {(cur.img.caption || cur.img.desc || cur.img.date) && (
               <figcaption className="mt-3 text-center">
                 {cur.img.caption && <div className="gold-text text-sm font-bold">{cur.img.caption}</div>}
                 {cur.img.desc && <div className="mt-1 text-xs text-[var(--muted)]">{cur.img.desc}</div>}
-                <div className="mt-1 text-[10px] tracking-widest text-[#c9a84c]/70">{catTitle(cur.cat, locale)}</div>
+                {cur.img.date && (
+                  <div className="mx-auto mt-2 w-fit rounded-full border border-[#c9a84c]/40 bg-[rgba(201,168,76,0.08)] px-3 py-1 text-[11px] font-bold text-[#e5c878]">
+                    📅 {dateLabel(cur.img.date, locale)}
+                  </div>
+                )}
+                <div className="mt-1.5 text-[10px] tracking-widest text-[#c9a84c]/70">{catTitle(cur.cat, locale)}</div>
               </figcaption>
             )}
           </figure>
